@@ -1,0 +1,23 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  perfil_contratante: 
+  nombre: MyText
+  direccion: MyString
+  poblacion: MyString
+  cp: MyString
+  tlf: MyString
+  fax: MyString
+  email: MyString
+  web: MyText
+
+two:
+  perfil_contratante: 
+  nombre: MyText
+  direccion: MyString
+  poblacion: MyString
+  cp: MyString
+  tlf: MyString
+  fax: MyString
+  email: MyString
+  web: MyText

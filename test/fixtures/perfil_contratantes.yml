@@ -1,0 +1,45 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  tipo_perfil_contratante: 
+  nombre: MyString
+  cif: MyString
+  wikipedia_url: MyText
+  partido_politico: 
+  foto: MyText
+  escudo: MyText
+  habitantes: 1
+  alcalde_voota_link: MyText
+  provincia: 
+  comunidad_autonoma: 
+  direccion: MyText
+  poblacion: MyText
+  cp: MyString
+  tlf: MyString
+  fax: MyString
+  web: MyText
+  email: MyString
+  presupuesto_total: 1.5
+  presupuesto_url: MyText
+
+two:
+  tipo_perfil_contratante: 
+  nombre: MyString
+  cif: MyString
+  wikipedia_url: MyText
+  partido_politico: 
+  foto: MyText
+  escudo: MyText
+  habitantes: 1
+  alcalde_voota_link: MyText
+  provincia: 
+  comunidad_autonoma: 
+  direccion: MyText
+  poblacion: MyText
+  cp: MyString
+  tlf: MyString
+  fax: MyString
+  web: MyText
+  email: MyString
+  presupuesto_total: 1.5
+  presupuesto_url: MyText

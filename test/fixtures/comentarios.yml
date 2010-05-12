@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user: 
+  licitacion: 
+  tipo_licitacion: 
+  comentario: MyText
+  is_vote: false
+
+two:
+  user: 
+  licitacion: 
+  tipo_licitacion: 
+  comentario: MyText
+  is_vote: false

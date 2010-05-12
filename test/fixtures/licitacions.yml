@@ -1,0 +1,43 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  organo_convocante: 
+  expediente: MyString
+  tipo_procedimiento: 
+  tipo_licitacion: 
+  importe: 1.5
+  fecha_publicacion: 2010-05-12 14:50:28
+  fecha_adjudicacion: 2010-05-12 14:50:28
+  titulo: MyString
+  descripcion: MyText
+  codigo_cpv_ppal: MyString
+  estado: 
+  url_licitacion: MyText
+  votes_up: 1
+  votes_down: 1
+  num_comentarios: 1
+  ref_publicacion: MyText
+  fuente_datos: 
+  programa_financion: 
+  fecha_ultima_actualizacion: 2010-05-12 14:50:28
+
+two:
+  organo_convocante: 
+  expediente: MyString
+  tipo_procedimiento: 
+  tipo_licitacion: 
+  importe: 1.5
+  fecha_publicacion: 2010-05-12 14:50:28
+  fecha_adjudicacion: 2010-05-12 14:50:28
+  titulo: MyString
+  descripcion: MyText
+  codigo_cpv_ppal: MyString
+  estado: 
+  url_licitacion: MyText
+  votes_up: 1
+  votes_down: 1
+  num_comentarios: 1
+  ref_publicacion: MyText
+  fuente_datos: 
+  programa_financion: 
+  fecha_ultima_actualizacion: 2010-05-12 14:50:28

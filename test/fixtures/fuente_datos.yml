@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  nombre: MyString
+  ultima_importacion: 2010-05-12 14:48:43
+  web: MyText
+
+two:
+  nombre: MyString
+  ultima_importacion: 2010-05-12 14:48:43
+  web: MyText

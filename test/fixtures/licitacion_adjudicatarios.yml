@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  licitacion: 
+  adjudicatario: 
+  importe: 1.5
+
+two:
+  licitacion: 
+  adjudicatario: 
+  importe: 1.5
