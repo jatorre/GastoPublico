@@ -441,6 +441,7 @@ Migrating to AddPointToLicitationAndComentario (20100512163007)
   [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100512163007')[0m
   [4;35;1mSQL (9.7ms)[0m   [0mCOMMIT[0m
   [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+<<<<<<< HEAD
 DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
   [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
   [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
@@ -573,3 +574,1082 @@ DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in
   [4;36;1mSQL (0.6ms)[0m   [0;1mBEGIN[0m
   [4;35;1mSQL (39.0ms)[0m   [0mINSERT INTO "licitacions" ("expediente", "programa_financion_id", "fecha_ultima_actualizacion", "created_at", "importe", "fecha_adjudicacion", "estado_id", "votes_down", "titulo", "updated_at", "the_geom", "descripcion", "tipo_procedimiento_id", "tipo_licitacion_id", "fecha_publicacion", "url_licitacion", "ref_publicacion", "codigo_cpv_ppal", "num_comentarios", "organo_convocante_id", "votes_up", "fuente_datos_id") VALUES(NULL, NULL, NULL, '2010-05-12 16:49:20.874429', NULL, NULL, NULL, NULL, NULL, '2010-05-12 16:49:20.874429', '0101000020E610000000000000000024400000000000002440', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
   [4;36;1mSQL (3.0ms)[0m   [0;1mCOMMIT[0m
+=======
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Users/simon/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Users/simon/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Users/simon/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Users/simon/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPGError: ERROR: relation "usuarios" does not exist
+LINE 4: WHERE a.attrelid = '"usuarios"'::regclass
+ ^
+: SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"usuarios"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Users/simon/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (3.9ms)[0m   [0;1mCREATE TABLE schema_migrations ("version" character varying(255) NOT NULL) [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateAdjudicatarios (20100512134700)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mCREATE TABLE adjudicatarios ("id" serial primary key, "cif" character varying(255), "nombre" character varying(255), "direction" text, "poblacion" character varying(255), "cp" character varying(255), "tlf" character varying(255), "fax" character varying(255), "email" character varying(255), "web" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCREATE INDEX "index_adjudicatarios_on_cif" ON "adjudicatarios" ("cif")[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100512134700')[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mCOMMIT[0m
+Migrating to CreateComentarios (20100512134744)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (3.5ms)[0m   [0mCREATE TABLE comentarios ("id" serial primary key, "usuario_id" integer, "licitacion_id" integer, "tipo_licitacion_id" integer, "comentario" text, "is_vote" boolean, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCREATE INDEX "index_comentarios_on_usuario_id" ON "comentarios" ("usuario_id")[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCREATE INDEX "index_comentarios_on_licitacion_id" ON "comentarios" ("licitacion_id")[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCREATE INDEX "index_comentarios_on_tipo_licitacion_id" ON "comentarios" ("tipo_licitacion_id")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512134744')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateComunidadAutonomas (20100512134805)
+  [4;35;1mSQL (0.5ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (2.8ms)[0m   [0;1mCREATE TABLE comunidad_autonomas ("id" serial primary key, "nombre" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512134805')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateEstados (20100512134819)
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mCREATE TABLE estados ("id" serial primary key, "nombre" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512134819')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateFuenteDatos (20100512134843)
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (3.6ms)[0m   [0;1mCREATE TABLE fuente_datos ("id" serial primary key, "nombre" character varying(255), "ultima_importacion" timestamp, "web" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512134843')[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateLicitacions (20100512135028)
+  [4;35;1mSQL (0.7ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (3.8ms)[0m   [0;1mCREATE TABLE licitacions ("id" serial primary key, "organo_convocante_id" integer, "expediente" character varying(255), "tipo_procedimiento_id" integer, "tipo_licitacion_id" integer, "importe" float, "fecha_publicacion" timestamp, "fecha_adjudicacion" timestamp, "titulo" character varying(255), "descripcion" text, "codigo_cpv_ppal" character varying(255), "estado_id" integer, "url_licitacion" text, "votes_up" integer, "votes_down" integer, "num_comentarios" integer, "ref_publicacion" text, "fuente_datos_id" integer, "programa_financion_id" integer, "fecha_ultima_actualizacion" timestamp, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCREATE INDEX "index_licitacions_on_expediente" ON "licitacions" ("expediente")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE INDEX "index_licitacions_on_importe" ON "licitacions" ("importe")[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCREATE INDEX "index_licitacions_on_titulo" ON "licitacions" ("titulo")[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCREATE INDEX "index_licitacions_on_codigo_cpv_ppal" ON "licitacions" ("codigo_cpv_ppal")[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mCREATE INDEX "index_licitacions_on_tipo_procedimiento_id" ON "licitacions" ("tipo_procedimiento_id")[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCREATE INDEX "index_licitacions_on_organo_convocante_id" ON "licitacions" ("organo_convocante_id")[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCREATE INDEX "index_licitacions_on_tipo_licitacion_id" ON "licitacions" ("tipo_licitacion_id")[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCREATE INDEX "index_licitacions_on_estado_id" ON "licitacions" ("estado_id")[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCREATE INDEX "index_licitacions_on_fuente_datos_id" ON "licitacions" ("fuente_datos_id")[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCREATE INDEX "index_licitacions_on_programa_financion_id" ON "licitacions" ("programa_financion_id")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512135028')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateLicitacionAdjudicatarios (20100512135113)
+  [4;35;1mSQL (0.7ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mCREATE TABLE licitacion_adjudicatarios ("id" serial primary key, "licitacion_id" integer, "adjudicatario_id" integer, "importe" float, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCREATE INDEX "index_licitacion_adjudicatarios_on_licitacion_id" ON "licitacion_adjudicatarios" ("licitacion_id")[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCREATE INDEX "index_licitacion_adjudicatarios_on_adjudicatario_id" ON "licitacion_adjudicatarios" ("adjudicatario_id")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512135113')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateOrganoConvocantes (20100512135214)
+  [4;35;1mSQL (0.5ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (3.8ms)[0m   [0;1mCREATE TABLE organo_convocantes ("id" serial primary key, "perfil_contratante_id" integer, "nombre" text, "direccion" character varying(255), "poblacion" character varying(255), "cp" character varying(255), "tlf" character varying(255), "fax" character varying(255), "email" character varying(255), "web" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCREATE INDEX "index_organo_convocantes_on_perfil_contratante_id" ON "organo_convocantes" ("perfil_contratante_id")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100512135214')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+Migrating to CreatePartidoPoliticos (20100512135331)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (3.6ms)[0m   [0mCREATE TABLE partido_politicos ("id" serial primary key, "nombre" character varying(255), "siglas" character varying(255), "web" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100512135331')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+Migrating to CreatePerfilContratantes (20100512135522)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (3.8ms)[0m   [0mCREATE TABLE perfil_contratantes ("id" serial primary key, "tipo_perfil_contratante_id" integer, "nombre" character varying(255), "cif" character varying(255), "wikipedia_url" text, "partido_politico_id" integer, "foto" text, "escudo" text, "habitantes" integer, "alcalde_voota_link" text, "provincia_id" integer, "comunidad_autonoma_id" integer, "direccion" text, "poblacion" text, "cp" character varying(255), "tlf" character varying(255), "fax" character varying(255), "web" text, "email" character varying(255), "presupuesto_total" float, "presupuesto_url" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mCREATE INDEX "index_perfil_contratantes_on_cif" ON "perfil_contratantes" ("cif")[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCREATE INDEX "index_perfil_contratantes_on_tipo_perfil_contratante_id" ON "perfil_contratantes" ("tipo_perfil_contratante_id")[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCREATE INDEX "index_perfil_contratantes_on_partido_politico_id" ON "perfil_contratantes" ("partido_politico_id")[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCREATE INDEX "index_perfil_contratantes_on_provincia_id" ON "perfil_contratantes" ("provincia_id")[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCREATE INDEX "index_perfil_contratantes_on_comunidad_autonoma_id" ON "perfil_contratantes" ("comunidad_autonoma_id")[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512135522')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateProgramaFinanciacions (20100512135537)
+  [4;35;1mSQL (0.6ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (3.4ms)[0m   [0;1mCREATE TABLE programa_financiacions ("id" serial primary key, "nombre" character varying(255), "nivel" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512135537')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateProvincias (20100512135559)
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mCREATE TABLE provincias ("id" serial primary key, "nombre" character varying(255), "comunidad_autonoma_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512135559')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateTipoLicitacions (20100512135609)
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mCREATE TABLE tipo_licitacions ("id" serial primary key, "nombre" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512135609')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateTipoPerfilContratantes (20100512135621)
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (2.8ms)[0m   [0;1mCREATE TABLE tipo_perfil_contratantes ("id" serial primary key, "nombre" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512135621')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateTipoProcedimientos (20100512135628)
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mCREATE TABLE tipo_procedimientos ("id" serial primary key, "nombre" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512135628')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateUsuarios (20100512135842)
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (3.5ms)[0m   [0;1mCREATE TABLE usuarios ("id" serial primary key, "token" character varying(255), "nombre" character varying(255), "email" character varying(255), "web" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCREATE INDEX "index_usuarios_on_token" ON "usuarios" ("token")[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCREATE INDEX "index_usuarios_on_email" ON "usuarios" ("email")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512135842')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+Migrating to AddPointToLicitationAndComentario (20100512163007)
+  [4;35;1mSQL (0.5ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (11.5ms)[0m   [0;1mSELECT AddGeometryColumn('licitacions','the_geom',4326,'POINT',2)[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mSELECT AddGeometryColumn('comentarios','the_geom',4326,'POINT',2)[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mSELECT AddGeometryColumn('perfil_contratantes','the_geom',4326,'POINT',2)[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mSELECT AddGeometryColumn('adjudicatarios','the_geom',4326,'POINT',2)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100512163007')[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Users/simon/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mINSERT INTO "usuarios" ("created_at", "nombre", "token", "updated_at", "web", "email") VALUES('2010-05-12 17:46:37.258513', NULL, NULL, '2010-05-12 17:46:37.258513', NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mINSERT INTO "comentarios" ("is_vote", "comentario", "created_at", "usuario_id", "updated_at", "the_geom", "licitacion_id", "tipo_licitacion_id") VALUES(NULL, NULL, '2010-05-12 17:46:37.266884', 1, '2010-05-12 17:46:37.266884', NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (2.5ms)[0m   [0mINSERT INTO "licitacions" ("expediente", "programa_financion_id", "fecha_ultima_actualizacion", "created_at", "importe", "fecha_adjudicacion", "estado_id", "votes_down", "titulo", "updated_at", "the_geom", "descripcion", "tipo_procedimiento_id", "tipo_licitacion_id", "fecha_publicacion", "url_licitacion", "ref_publicacion", "codigo_cpv_ppal", "num_comentarios", "organo_convocante_id", "votes_up", "fuente_datos_id") VALUES(NULL, NULL, NULL, '2010-05-12 17:47:31.388274', NULL, NULL, NULL, NULL, NULL, '2010-05-12 17:47:31.388274', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mCOMMIT[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Users/simon/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO "usuarios" ("created_at", "nombre", "token", "updated_at", "web", "email") VALUES('2010-05-12 17:54:38.923323', NULL, NULL, '2010-05-12 17:54:38.923323', NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mINSERT INTO "comentarios" ("is_vote", "comentario", "created_at", "usuario_id", "updated_at", "the_geom", "licitacion_id", "tipo_licitacion_id") VALUES(NULL, NULL, '2010-05-12 17:54:38.933299', 2, '2010-05-12 17:54:38.933299', NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mINSERT INTO "usuarios" ("created_at", "nombre", "token", "updated_at", "web", "email") VALUES('2010-05-12 18:13:36.842233', E'simon', NULL, '2010-05-12 18:13:36.842233', NULL, E'si@tinypla.net') RETURNING "id"[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mUsuario Load (1.2ms)[0m   [0mSELECT * FROM "usuarios" [0m
+  [4;36;1mUsuario Load (0.4ms)[0m   [0;1mSELECT * FROM "usuarios" [0m
+  [4;35;1mSQL (2.3ms)[0m   [0mSELECT count(*) AS count_all FROM "usuarios" [0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comentarios" [0m
+  [4;35;1mComentario Load (0.9ms)[0m   [0mSELECT * FROM "comentarios" LIMIT 1[0m
+  [4;36;1mComentario Load (0.5ms)[0m   [0;1mSELECT * FROM "comentarios" LIMIT 1[0m
+  [4;35;1mUsuario Load (0.3ms)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mINSERT INTO "licitacions" ("expediente", "programa_financion_id", "fecha_ultima_actualizacion", "created_at", "importe", "fecha_adjudicacion", "estado_id", "votes_down", "titulo", "updated_at", "the_geom", "descripcion", "tipo_procedimiento_id", "tipo_licitacion_id", "fecha_publicacion", "url_licitacion", "ref_publicacion", "codigo_cpv_ppal", "num_comentarios", "organo_convocante_id", "votes_up", "fuente_datos_id") VALUES(NULL, NULL, NULL, '2010-05-12 18:19:27.129897', NULL, NULL, NULL, NULL, NULL, '2010-05-12 18:19:27.129897', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:19:27.138534', NULL, NULL, NULL, '2010-05-12 18:19:27.138534', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mINSERT INTO "licitacion_adjudicatarios" ("adjudicatario_id", "created_at", "importe", "updated_at", "licitacion_id") VALUES(1, '2010-05-12 18:19:27.144998', NULL, '2010-05-12 18:19:27.144998', 2) RETURNING "id"[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mLicitacion Load (1.4ms)[0m   [0mSELECT "licitacions".* FROM "licitacions" INNER JOIN "licitacion_adjudicatarios" ON "licitacions".id = "licitacion_adjudicatarios".licitacion_id WHERE (("licitacion_adjudicatarios".adjudicatario_id = 1)) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.499404', NULL, NULL, NULL, '2010-05-12 18:21:14.499404', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.502378', NULL, NULL, NULL, '2010-05-12 18:21:14.502378', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.504409', NULL, NULL, NULL, '2010-05-12 18:21:14.504409', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.506518', NULL, NULL, NULL, '2010-05-12 18:21:14.506518', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.508831', NULL, NULL, NULL, '2010-05-12 18:21:14.508831', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.510736', NULL, NULL, NULL, '2010-05-12 18:21:14.510736', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.512489', NULL, NULL, NULL, '2010-05-12 18:21:14.512489', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.514175', NULL, NULL, NULL, '2010-05-12 18:21:14.514175', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.515882', NULL, NULL, NULL, '2010-05-12 18:21:14.515882', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.517595', NULL, NULL, NULL, '2010-05-12 18:21:14.517595', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.519265', NULL, NULL, NULL, '2010-05-12 18:21:14.519265', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.520935', NULL, NULL, NULL, '2010-05-12 18:21:14.520935', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.522605', NULL, NULL, NULL, '2010-05-12 18:21:14.522605', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.524294', NULL, NULL, NULL, '2010-05-12 18:21:14.524294', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.525948', NULL, NULL, NULL, '2010-05-12 18:21:14.525948', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.527607', NULL, NULL, NULL, '2010-05-12 18:21:14.527607', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.529371', NULL, NULL, NULL, '2010-05-12 18:21:14.529371', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.531114', NULL, NULL, NULL, '2010-05-12 18:21:14.531114', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.532872', NULL, NULL, NULL, '2010-05-12 18:21:14.532872', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.534625', NULL, NULL, NULL, '2010-05-12 18:21:14.534625', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.536399', NULL, NULL, NULL, '2010-05-12 18:21:14.536399', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.538251', NULL, NULL, NULL, '2010-05-12 18:21:14.538251', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.539976', NULL, NULL, NULL, '2010-05-12 18:21:14.539976', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.541687', NULL, NULL, NULL, '2010-05-12 18:21:14.541687', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.543501', NULL, NULL, NULL, '2010-05-12 18:21:14.543501', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.545259', NULL, NULL, NULL, '2010-05-12 18:21:14.545259', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.547071', NULL, NULL, NULL, '2010-05-12 18:21:14.547071', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.548797', NULL, NULL, NULL, '2010-05-12 18:21:14.548797', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.550501', NULL, NULL, NULL, '2010-05-12 18:21:14.550501', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.552564', NULL, NULL, NULL, '2010-05-12 18:21:14.552564', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.554232', NULL, NULL, NULL, '2010-05-12 18:21:14.554232', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.555888', NULL, NULL, NULL, '2010-05-12 18:21:14.555888', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.557544', NULL, NULL, NULL, '2010-05-12 18:21:14.557544', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.559261', NULL, NULL, NULL, '2010-05-12 18:21:14.559261', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.561039', NULL, NULL, NULL, '2010-05-12 18:21:14.561039', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.562707', NULL, NULL, NULL, '2010-05-12 18:21:14.562707', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.564366', NULL, NULL, NULL, '2010-05-12 18:21:14.564366', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.566016', NULL, NULL, NULL, '2010-05-12 18:21:14.566016', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.568089', NULL, NULL, NULL, '2010-05-12 18:21:14.568089', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.569749', NULL, NULL, NULL, '2010-05-12 18:21:14.569749', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.571413', NULL, NULL, NULL, '2010-05-12 18:21:14.571413', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.573081', NULL, NULL, NULL, '2010-05-12 18:21:14.573081', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.574772', NULL, NULL, NULL, '2010-05-12 18:21:14.574772', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.576425', NULL, NULL, NULL, '2010-05-12 18:21:14.576425', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.578077', NULL, NULL, NULL, '2010-05-12 18:21:14.578077', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.579743', NULL, NULL, NULL, '2010-05-12 18:21:14.579743', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.581402', NULL, NULL, NULL, '2010-05-12 18:21:14.581402', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.582988', NULL, NULL, NULL, '2010-05-12 18:21:14.582988', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.585058', NULL, NULL, NULL, '2010-05-12 18:21:14.585058', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.586745', NULL, NULL, NULL, '2010-05-12 18:21:14.586745', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.588301', NULL, NULL, NULL, '2010-05-12 18:21:14.588301', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.590076', NULL, NULL, NULL, '2010-05-12 18:21:14.590076', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.591755', NULL, NULL, NULL, '2010-05-12 18:21:14.591755', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.593418', NULL, NULL, NULL, '2010-05-12 18:21:14.593418', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.595069', NULL, NULL, NULL, '2010-05-12 18:21:14.595069', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.596755', NULL, NULL, NULL, '2010-05-12 18:21:14.596755', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.598280', NULL, NULL, NULL, '2010-05-12 18:21:14.598280', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.599950', NULL, NULL, NULL, '2010-05-12 18:21:14.599950', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.601779', NULL, NULL, NULL, '2010-05-12 18:21:14.601779', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.603520', NULL, NULL, NULL, '2010-05-12 18:21:14.603520', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.605323', NULL, NULL, NULL, '2010-05-12 18:21:14.605323', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.607068', NULL, NULL, NULL, '2010-05-12 18:21:14.607068', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.608829', NULL, NULL, NULL, '2010-05-12 18:21:14.608829', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.610575', NULL, NULL, NULL, '2010-05-12 18:21:14.610575', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.612297', NULL, NULL, NULL, '2010-05-12 18:21:14.612297', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.614022', NULL, NULL, NULL, '2010-05-12 18:21:14.614022', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.615740', NULL, NULL, NULL, '2010-05-12 18:21:14.615740', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.617471', NULL, NULL, NULL, '2010-05-12 18:21:14.617471', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.619218', NULL, NULL, NULL, '2010-05-12 18:21:14.619218', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.620981', NULL, NULL, NULL, '2010-05-12 18:21:14.620981', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.622729', NULL, NULL, NULL, '2010-05-12 18:21:14.622729', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.624452', NULL, NULL, NULL, '2010-05-12 18:21:14.624452', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.626074', NULL, NULL, NULL, '2010-05-12 18:21:14.626074', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.627684', NULL, NULL, NULL, '2010-05-12 18:21:14.627684', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.629285', NULL, NULL, NULL, '2010-05-12 18:21:14.629285', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.630881', NULL, NULL, NULL, '2010-05-12 18:21:14.630881', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.632595', NULL, NULL, NULL, '2010-05-12 18:21:14.632595', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.634502', NULL, NULL, NULL, '2010-05-12 18:21:14.634502', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.636419', NULL, NULL, NULL, '2010-05-12 18:21:14.636419', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.638187', NULL, NULL, NULL, '2010-05-12 18:21:14.638187', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.639911', NULL, NULL, NULL, '2010-05-12 18:21:14.639911', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.641643', NULL, NULL, NULL, '2010-05-12 18:21:14.641643', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.643376', NULL, NULL, NULL, '2010-05-12 18:21:14.643376', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.645122', NULL, NULL, NULL, '2010-05-12 18:21:14.645122', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.646846', NULL, NULL, NULL, '2010-05-12 18:21:14.646846', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.648595', NULL, NULL, NULL, '2010-05-12 18:21:14.648595', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.650348', NULL, NULL, NULL, '2010-05-12 18:21:14.650348', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.652105', NULL, NULL, NULL, '2010-05-12 18:21:14.652105', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.653892', NULL, NULL, NULL, '2010-05-12 18:21:14.653892', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.655647', NULL, NULL, NULL, '2010-05-12 18:21:14.655647', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.657380', NULL, NULL, NULL, '2010-05-12 18:21:14.657380', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.719919', NULL, NULL, NULL, '2010-05-12 18:21:14.719919', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.721887', NULL, NULL, NULL, '2010-05-12 18:21:14.721887', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.723674', NULL, NULL, NULL, '2010-05-12 18:21:14.723674', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.725445', NULL, NULL, NULL, '2010-05-12 18:21:14.725445', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.727198', NULL, NULL, NULL, '2010-05-12 18:21:14.727198', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.728925', NULL, NULL, NULL, '2010-05-12 18:21:14.728925', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.730656', NULL, NULL, NULL, '2010-05-12 18:21:14.730656', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.732366', NULL, NULL, NULL, '2010-05-12 18:21:14.732366', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:14.734069', NULL, NULL, NULL, '2010-05-12 18:21:14.734069', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.650826', NULL, NULL, NULL, '2010-05-12 18:21:25.650826', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.653471', NULL, NULL, NULL, '2010-05-12 18:21:25.653471', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.655596', NULL, NULL, NULL, '2010-05-12 18:21:25.655596', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.657592', NULL, NULL, NULL, '2010-05-12 18:21:25.657592', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.659505', NULL, NULL, NULL, '2010-05-12 18:21:25.659505', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.661305', NULL, NULL, NULL, '2010-05-12 18:21:25.661305', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.663070', NULL, NULL, NULL, '2010-05-12 18:21:25.663070', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.664881', NULL, NULL, NULL, '2010-05-12 18:21:25.664881', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.666715', NULL, NULL, NULL, '2010-05-12 18:21:25.666715', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.668444', NULL, NULL, NULL, '2010-05-12 18:21:25.668444', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.670150', NULL, NULL, NULL, '2010-05-12 18:21:25.670150', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.671951', NULL, NULL, NULL, '2010-05-12 18:21:25.671951', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.673764', NULL, NULL, NULL, '2010-05-12 18:21:25.673764', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.675463', NULL, NULL, NULL, '2010-05-12 18:21:25.675463', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.677156', NULL, NULL, NULL, '2010-05-12 18:21:25.677156', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.678893', NULL, NULL, NULL, '2010-05-12 18:21:25.678893', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.680652', NULL, NULL, NULL, '2010-05-12 18:21:25.680652', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.682365', NULL, NULL, NULL, '2010-05-12 18:21:25.682365', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.684457', NULL, NULL, NULL, '2010-05-12 18:21:25.684457', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.686142', NULL, NULL, NULL, '2010-05-12 18:21:25.686142', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.687787', NULL, NULL, NULL, '2010-05-12 18:21:25.687787', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.689446', NULL, NULL, NULL, '2010-05-12 18:21:25.689446', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.691161', NULL, NULL, NULL, '2010-05-12 18:21:25.691161', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.692724', NULL, NULL, NULL, '2010-05-12 18:21:25.692724', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.694426', NULL, NULL, NULL, '2010-05-12 18:21:25.694426', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.696097', NULL, NULL, NULL, '2010-05-12 18:21:25.696097', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.697772', NULL, NULL, NULL, '2010-05-12 18:21:25.697772', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.699818', NULL, NULL, NULL, '2010-05-12 18:21:25.699818', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.701500', NULL, NULL, NULL, '2010-05-12 18:21:25.701500', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.703057', NULL, NULL, NULL, '2010-05-12 18:21:25.703057', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.704862', NULL, NULL, NULL, '2010-05-12 18:21:25.704862', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.706565', NULL, NULL, NULL, '2010-05-12 18:21:25.706565', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.708234', NULL, NULL, NULL, '2010-05-12 18:21:25.708234', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.709910', NULL, NULL, NULL, '2010-05-12 18:21:25.709910', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.711581', NULL, NULL, NULL, '2010-05-12 18:21:25.711581', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.713220', NULL, NULL, NULL, '2010-05-12 18:21:25.713220', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.715426', NULL, NULL, NULL, '2010-05-12 18:21:25.715426', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.717233', NULL, NULL, NULL, '2010-05-12 18:21:25.717233', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.719326', NULL, NULL, NULL, '2010-05-12 18:21:25.719326', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.720996', NULL, NULL, NULL, '2010-05-12 18:21:25.720996', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.722661', NULL, NULL, NULL, '2010-05-12 18:21:25.722661', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.724473', NULL, NULL, NULL, '2010-05-12 18:21:25.724473', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.726158', NULL, NULL, NULL, '2010-05-12 18:21:25.726158', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.727932', NULL, NULL, NULL, '2010-05-12 18:21:25.727932', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.729533', NULL, NULL, NULL, '2010-05-12 18:21:25.729533', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.731234', NULL, NULL, NULL, '2010-05-12 18:21:25.731234', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.732928', NULL, NULL, NULL, '2010-05-12 18:21:25.732928', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.734585', NULL, NULL, NULL, '2010-05-12 18:21:25.734585', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.736312', NULL, NULL, NULL, '2010-05-12 18:21:25.736312', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.738109', NULL, NULL, NULL, '2010-05-12 18:21:25.738109', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.740004', NULL, NULL, NULL, '2010-05-12 18:21:25.740004', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.741728', NULL, NULL, NULL, '2010-05-12 18:21:25.741728', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.743560', NULL, NULL, NULL, '2010-05-12 18:21:25.743560', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.745310', NULL, NULL, NULL, '2010-05-12 18:21:25.745310', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.747059', NULL, NULL, NULL, '2010-05-12 18:21:25.747059', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.748807', NULL, NULL, NULL, '2010-05-12 18:21:25.748807', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.750571', NULL, NULL, NULL, '2010-05-12 18:21:25.750571', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.752300', NULL, NULL, NULL, '2010-05-12 18:21:25.752300', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.754015', NULL, NULL, NULL, '2010-05-12 18:21:25.754015', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.755702', NULL, NULL, NULL, '2010-05-12 18:21:25.755702', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.757370', NULL, NULL, NULL, '2010-05-12 18:21:25.757370', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.759007', NULL, NULL, NULL, '2010-05-12 18:21:25.759007', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.760845', NULL, NULL, NULL, '2010-05-12 18:21:25.760845', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.762539', NULL, NULL, NULL, '2010-05-12 18:21:25.762539', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.764203', NULL, NULL, NULL, '2010-05-12 18:21:25.764203', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.765901', NULL, NULL, NULL, '2010-05-12 18:21:25.765901', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.767549', NULL, NULL, NULL, '2010-05-12 18:21:25.767549', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.769224', NULL, NULL, NULL, '2010-05-12 18:21:25.769224', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.770876', NULL, NULL, NULL, '2010-05-12 18:21:25.770876', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.772503', NULL, NULL, NULL, '2010-05-12 18:21:25.772503', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.774165', NULL, NULL, NULL, '2010-05-12 18:21:25.774165', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.775885', NULL, NULL, NULL, '2010-05-12 18:21:25.775885', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.777533', NULL, NULL, NULL, '2010-05-12 18:21:25.777533', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.779186', NULL, NULL, NULL, '2010-05-12 18:21:25.779186', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.780879', NULL, NULL, NULL, '2010-05-12 18:21:25.780879', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.782621', NULL, NULL, NULL, '2010-05-12 18:21:25.782621', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.784351', NULL, NULL, NULL, '2010-05-12 18:21:25.784351', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.786067', NULL, NULL, NULL, '2010-05-12 18:21:25.786067', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.787806', NULL, NULL, NULL, '2010-05-12 18:21:25.787806', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.789597', NULL, NULL, NULL, '2010-05-12 18:21:25.789597', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.791396', NULL, NULL, NULL, '2010-05-12 18:21:25.791396', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.793139', NULL, NULL, NULL, '2010-05-12 18:21:25.793139', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.794910', NULL, NULL, NULL, '2010-05-12 18:21:25.794910', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.796661', NULL, NULL, NULL, '2010-05-12 18:21:25.796661', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.798271', NULL, NULL, NULL, '2010-05-12 18:21:25.798271', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.800053', NULL, NULL, NULL, '2010-05-12 18:21:25.800053', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.801774', NULL, NULL, NULL, '2010-05-12 18:21:25.801774', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.803514', NULL, NULL, NULL, '2010-05-12 18:21:25.803514', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.805241', NULL, NULL, NULL, '2010-05-12 18:21:25.805241', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.806986', NULL, NULL, NULL, '2010-05-12 18:21:25.806986', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.808724', NULL, NULL, NULL, '2010-05-12 18:21:25.808724', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.810513', NULL, NULL, NULL, '2010-05-12 18:21:25.810513', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.812269', NULL, NULL, NULL, '2010-05-12 18:21:25.812269', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.813990', NULL, NULL, NULL, '2010-05-12 18:21:25.813990', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.815701', NULL, NULL, NULL, '2010-05-12 18:21:25.815701', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.817444', NULL, NULL, NULL, '2010-05-12 18:21:25.817444', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.819217', NULL, NULL, NULL, '2010-05-12 18:21:25.819217', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.820971', NULL, NULL, NULL, '2010-05-12 18:21:25.820971', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.822722', NULL, NULL, NULL, '2010-05-12 18:21:25.822722', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:25.885928', NULL, NULL, NULL, '2010-05-12 18:21:25.885928', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:38.179524', NULL, NULL, NULL, '2010-05-12 18:21:38.179524', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:38.182441', NULL, NULL, NULL, '2010-05-12 18:21:38.182441', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:38.184579', NULL, NULL, NULL, '2010-05-12 18:21:38.184579', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:38.187033', NULL, NULL, NULL, '2010-05-12 18:21:38.187033', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:38.189129', NULL, NULL, NULL, '2010-05-12 18:21:38.189129', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:38.191075', NULL, NULL, NULL, '2010-05-12 18:21:38.191075', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:38.192864', NULL, NULL, NULL, '2010-05-12 18:21:38.192864', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:38.194653', NULL, NULL, NULL, '2010-05-12 18:21:38.194653', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:38.196350', NULL, NULL, NULL, '2010-05-12 18:21:38.196350', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:38.198065', NULL, NULL, NULL, '2010-05-12 18:21:38.198065', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:55.723293', NULL, NULL, NULL, '2010-05-12 18:21:55.723293', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "licitacion_adjudicatarios" ("adjudicatario_id", "created_at", "importe", "updated_at", "licitacion_id") VALUES(212, '2010-05-12 18:21:55.725606', NULL, '2010-05-12 18:21:55.725606', 2) RETURNING "id"[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:21:57.458485', NULL, NULL, NULL, '2010-05-12 18:21:57.458485', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "licitacion_adjudicatarios" ("adjudicatario_id", "created_at", "importe", "updated_at", "licitacion_id") VALUES(213, '2010-05-12 18:21:57.460860', NULL, '2010-05-12 18:21:57.460860', 2) RETURNING "id"[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:22:08.635468', NULL, NULL, NULL, '2010-05-12 18:22:08.635468', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "licitacion_adjudicatarios" ("adjudicatario_id", "created_at", "importe", "updated_at", "licitacion_id") VALUES(214, '2010-05-12 18:22:08.637704', NULL, '2010-05-12 18:22:08.637704', 2) RETURNING "id"[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:22:09.370691', NULL, NULL, NULL, '2010-05-12 18:22:09.370691', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "licitacion_adjudicatarios" ("adjudicatario_id", "created_at", "importe", "updated_at", "licitacion_id") VALUES(215, '2010-05-12 18:22:09.373137', NULL, '2010-05-12 18:22:09.373137', 2) RETURNING "id"[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Users/simon/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (3.9ms)[0m   [0;1mCREATE TABLE schema_migrations ("version" character varying(255) NOT NULL) [0m
+  [4;35;1mSQL (1.8ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateAdjudicatarios (20100512134700)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (5.1ms)[0m   [0;1mCREATE TABLE adjudicatarios ("id" serial primary key, "cif" character varying(255), "nombre" character varying(255), "direction" text, "poblacion" character varying(255), "cp" character varying(255), "tlf" character varying(255), "fax" character varying(255), "email" character varying(255), "web" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCREATE INDEX "index_adjudicatarios_on_cif" ON "adjudicatarios" ("cif")[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100512134700')[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mCOMMIT[0m
+Migrating to CreateComentarios (20100512134744)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (3.6ms)[0m   [0mCREATE TABLE comentarios ("id" serial primary key, "usuario_id" integer, "licitacion_id" integer, "tipo_licitacion_id" integer, "comentario" text, "is_vote" boolean, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCREATE INDEX "index_comentarios_on_usuario_id" ON "comentarios" ("usuario_id")[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCREATE INDEX "index_comentarios_on_licitacion_id" ON "comentarios" ("licitacion_id")[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCREATE INDEX "index_comentarios_on_tipo_licitacion_id" ON "comentarios" ("tipo_licitacion_id")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512134744')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateComunidadAutonomas (20100512134805)
+  [4;35;1mSQL (0.5ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (2.7ms)[0m   [0;1mCREATE TABLE comunidad_autonomas ("id" serial primary key, "nombre" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512134805')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateEstados (20100512134819)
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mCREATE TABLE estados ("id" serial primary key, "nombre" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512134819')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateFuenteDatos (20100512134843)
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (3.6ms)[0m   [0;1mCREATE TABLE fuente_datos ("id" serial primary key, "nombre" character varying(255), "ultima_importacion" timestamp, "web" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512134843')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateLicitacions (20100512135028)
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (3.9ms)[0m   [0;1mCREATE TABLE licitacions ("id" serial primary key, "organo_convocante_id" integer, "expediente" character varying(255), "tipo_procedimiento_id" integer, "tipo_licitacion_id" integer, "importe" float, "fecha_publicacion" timestamp, "fecha_adjudicacion" timestamp, "titulo" character varying(255), "descripcion" text, "codigo_cpv_ppal" character varying(255), "estado_id" integer, "url_licitacion" text, "votes_up" integer, "votes_down" integer, "num_comentarios" integer, "ref_publicacion" text, "fuente_datos_id" integer, "programa_financion_id" integer, "fecha_ultima_actualizacion" timestamp, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCREATE INDEX "index_licitacions_on_expediente" ON "licitacions" ("expediente")[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCREATE INDEX "index_licitacions_on_importe" ON "licitacions" ("importe")[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCREATE INDEX "index_licitacions_on_titulo" ON "licitacions" ("titulo")[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCREATE INDEX "index_licitacions_on_codigo_cpv_ppal" ON "licitacions" ("codigo_cpv_ppal")[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCREATE INDEX "index_licitacions_on_tipo_procedimiento_id" ON "licitacions" ("tipo_procedimiento_id")[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCREATE INDEX "index_licitacions_on_organo_convocante_id" ON "licitacions" ("organo_convocante_id")[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCREATE INDEX "index_licitacions_on_tipo_licitacion_id" ON "licitacions" ("tipo_licitacion_id")[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCREATE INDEX "index_licitacions_on_estado_id" ON "licitacions" ("estado_id")[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCREATE INDEX "index_licitacions_on_fuente_datos_id" ON "licitacions" ("fuente_datos_id")[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mCREATE INDEX "index_licitacions_on_programa_financion_id" ON "licitacions" ("programa_financion_id")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512135028')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateLicitacionAdjudicatarios (20100512135113)
+  [4;35;1mSQL (0.7ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mCREATE TABLE licitacion_adjudicatarios ("id" serial primary key, "licitacion_id" integer, "adjudicatario_id" integer, "importe" float, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCREATE INDEX "index_licitacion_adjudicatarios_on_licitacion_id" ON "licitacion_adjudicatarios" ("licitacion_id")[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mCREATE INDEX "index_licitacion_adjudicatarios_on_adjudicatario_id" ON "licitacion_adjudicatarios" ("adjudicatario_id")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512135113')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateOrganoConvocantes (20100512135214)
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (3.6ms)[0m   [0;1mCREATE TABLE organo_convocantes ("id" serial primary key, "perfil_contratante_id" integer, "nombre" text, "direccion" character varying(255), "poblacion" character varying(255), "cp" character varying(255), "tlf" character varying(255), "fax" character varying(255), "email" character varying(255), "web" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCREATE INDEX "index_organo_convocantes_on_perfil_contratante_id" ON "organo_convocantes" ("perfil_contratante_id")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100512135214')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+Migrating to CreatePartidoPoliticos (20100512135331)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (3.6ms)[0m   [0mCREATE TABLE partido_politicos ("id" serial primary key, "nombre" character varying(255), "siglas" character varying(255), "web" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100512135331')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+Migrating to CreatePerfilContratantes (20100512135522)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (4.3ms)[0m   [0mCREATE TABLE perfil_contratantes ("id" serial primary key, "tipo_perfil_contratante_id" integer, "nombre" character varying(255), "cif" character varying(255), "wikipedia_url" text, "partido_politico_id" integer, "foto" text, "escudo" text, "habitantes" integer, "alcalde_voota_link" text, "provincia_id" integer, "comunidad_autonoma_id" integer, "direccion" text, "poblacion" text, "cp" character varying(255), "tlf" character varying(255), "fax" character varying(255), "web" text, "email" character varying(255), "presupuesto_total" float, "presupuesto_url" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCREATE INDEX "index_perfil_contratantes_on_cif" ON "perfil_contratantes" ("cif")[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCREATE INDEX "index_perfil_contratantes_on_tipo_perfil_contratante_id" ON "perfil_contratantes" ("tipo_perfil_contratante_id")[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCREATE INDEX "index_perfil_contratantes_on_partido_politico_id" ON "perfil_contratantes" ("partido_politico_id")[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCREATE INDEX "index_perfil_contratantes_on_provincia_id" ON "perfil_contratantes" ("provincia_id")[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mCREATE INDEX "index_perfil_contratantes_on_comunidad_autonoma_id" ON "perfil_contratantes" ("comunidad_autonoma_id")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512135522')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateProgramaFinanciacions (20100512135537)
+  [4;35;1mSQL (0.6ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (3.5ms)[0m   [0;1mCREATE TABLE programa_financiacions ("id" serial primary key, "nombre" character varying(255), "nivel" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512135537')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateProvincias (20100512135559)
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mCREATE TABLE provincias ("id" serial primary key, "nombre" character varying(255), "comunidad_autonoma_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512135559')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateTipoLicitacions (20100512135609)
+  [4;35;1mSQL (1.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (2.7ms)[0m   [0;1mCREATE TABLE tipo_licitacions ("id" serial primary key, "nombre" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512135609')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateTipoPerfilContratantes (20100512135621)
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mCREATE TABLE tipo_perfil_contratantes ("id" serial primary key, "nombre" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512135621')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateTipoProcedimientos (20100512135628)
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mCREATE TABLE tipo_procedimientos ("id" serial primary key, "nombre" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512135628')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateUsuarios (20100512135842)
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (3.6ms)[0m   [0;1mCREATE TABLE usuarios ("id" serial primary key, "token" character varying(255), "nombre" character varying(255), "email" character varying(255), "web" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCREATE INDEX "index_usuarios_on_token" ON "usuarios" ("token")[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCREATE INDEX "index_usuarios_on_email" ON "usuarios" ("email")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512135842')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+Migrating to AddPointToLicitationAndComentario (20100512163007)
+  [4;35;1mSQL (2.5ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (10.5ms)[0m   [0;1mSELECT AddGeometryColumn('licitacions','the_geom',4326,'POINT',2)[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mSELECT AddGeometryColumn('comentarios','the_geom',4326,'POINT',2)[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mSELECT AddGeometryColumn('perfil_contratantes','the_geom',4326,'POINT',2)[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mSELECT AddGeometryColumn('adjudicatarios','the_geom',4326,'POINT',2)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100512163007')[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Users/simon/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (3.8ms)[0m   [0mINSERT INTO "licitacions" ("expediente", "programa_financion_id", "fecha_ultima_actualizacion", "created_at", "importe", "fecha_adjudicacion", "estado_id", "votes_down", "titulo", "updated_at", "the_geom", "descripcion", "tipo_procedimiento_id", "tipo_licitacion_id", "fecha_publicacion", "url_licitacion", "ref_publicacion", "codigo_cpv_ppal", "num_comentarios", "organo_convocante_id", "votes_up", "fuente_datos_id") VALUES(NULL, NULL, NULL, '2010-05-12 18:23:08.722238', NULL, NULL, NULL, NULL, NULL, '2010-05-12 18:23:08.722238', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:23:08.735656', NULL, NULL, NULL, '2010-05-12 18:23:08.735656', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO "licitacion_adjudicatarios" ("adjudicatario_id", "created_at", "importe", "updated_at", "licitacion_id") VALUES(1, '2010-05-12 18:23:08.741803', NULL, '2010-05-12 18:23:08.741803', 1) RETURNING "id"[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (3.6ms)[0m   [0mSELECT count(*) AS count_all FROM "adjudicatarios" INNER JOIN "licitacion_adjudicatarios" ON "adjudicatarios".id = "licitacion_adjudicatarios".adjudicatario_id WHERE (("licitacion_adjudicatarios".licitacion_id = 1)) [0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-12 18:23:53.171583', NULL, NULL, NULL, '2010-05-12 18:23:53.171583', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "licitacion_adjudicatarios" ("adjudicatario_id", "created_at", "importe", "updated_at", "licitacion_id") VALUES(2, '2010-05-12 18:23:53.174211', NULL, '2010-05-12 18:23:53.174211', 1) RETURNING "id"[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "adjudicatarios" INNER JOIN "licitacion_adjudicatarios" ON "adjudicatarios".id = "licitacion_adjudicatarios".adjudicatario_id WHERE (("licitacion_adjudicatarios".licitacion_id = 1)) [0m
+  [4;35;1mLicitacion Load (1.5ms)[0m   [0mSELECT "licitacions".* FROM "licitacions" INNER JOIN "licitacion_adjudicatarios" ON "licitacions".id = "licitacion_adjudicatarios".licitacion_id WHERE (("licitacion_adjudicatarios".adjudicatario_id = 1)) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "usuarios" [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mINSERT INTO "usuarios" ("created_at", "nombre", "token", "updated_at", "web", "email") VALUES('2010-05-12 18:25:56.212157', E'javi', NULL, '2010-05-12 18:25:56.212157', NULL, E'jatorre@gmail.com') RETURNING "id"[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mUsuario Load (0.7ms)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."email" = E'jatorre@gmail.com') LIMIT 1[0m
+  [4;35;1mUsuario Load (0.5ms)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."email" = E'jatorre@gmail.com') LIMIT 1[0m
+  [4;36;1mUsuario Load (0.8ms)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."email" = E'craig@gmail.com') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO "usuarios" ("created_at", "nombre", "token", "updated_at", "web", "email") VALUES('2010-05-12 18:28:23.403399', NULL, NULL, '2010-05-12 18:28:23.403399', NULL, E'craig@gmail.com') RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mUsuario Load (0.5ms)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."email" = E'simon@gmail.com') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Users/simon/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Users/simon/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Users/simon/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateAdjudicatarios (20100512134700)
+Migrating to CreateComentarios (20100512134744)
+Migrating to CreateComunidadAutonomas (20100512134805)
+Migrating to CreateEstados (20100512134819)
+Migrating to CreateFuenteDatos (20100512134843)
+Migrating to CreateLicitacions (20100512135028)
+Migrating to CreateLicitacionAdjudicatarios (20100512135113)
+Migrating to CreateOrganoConvocantes (20100512135214)
+Migrating to CreatePartidoPoliticos (20100512135331)
+Migrating to CreatePerfilContratantes (20100512135522)
+Migrating to CreateProgramaFinanciacions (20100512135537)
+Migrating to CreateProvincias (20100512135559)
+Migrating to CreateTipoLicitacions (20100512135609)
+Migrating to CreateTipoPerfilContratantes (20100512135621)
+Migrating to CreateTipoProcedimientos (20100512135628)
+Migrating to CreateUsuarios (20100512135842)
+Migrating to AddPointToLicitationAndComentario (20100512163007)
+Migrating to CreateOrganisations (20100512183603)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (6.4ms)[0m   [0;1mCREATE TABLE organisations ("id" serial primary key, "name" character varying(255), "parent_id" integer, "lft" integer, "rgt" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512183603')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Users/simon/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT max("organisations".rgt) AS max_rgt FROM "organisations" [0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO "organisations" ("name", "created_at", "updated_at", "lft", "parent_id", "rgt") VALUES(E'Govt', '2010-05-12 18:37:05.872978', '2010-05-12 18:37:05.872978', 1, NULL, 2) RETURNING "id"[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mOrganisation Load (0.8ms)[0m   [0;1mSELECT * FROM "organisations" WHERE ("organisations".parent_id = 1) ORDER BY "lft"[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT max("organisations".rgt) AS max_rgt FROM "organisations" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "organisations" ("name", "created_at", "updated_at", "lft", "parent_id", "rgt") VALUES(E'Ruths dept', '2010-05-12 18:39:18.791345', '2010-05-12 18:39:18.791345', 3, NULL, 4) RETURNING "id"[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOrganisation Update (0.3ms)[0m   [0;1mUPDATE "organisations" SET "updated_at" = '2010-05-12 18:39:18.794139', "parent_id" = 1 WHERE "id" = 2[0m
+  [4;35;1mOrganisation Load (0.2ms)[0m   [0mSELECT * FROM "organisations" WHERE ("organisations"."id" = 1) ORDER BY "lft"[0m
+  [4;36;1mOrganisation Load (0.2ms)[0m   [0;1mSELECT "lft", "rgt", "parent_id" FROM "organisations" WHERE ("organisations"."id" = 2) [0m
+  [4;35;1mOrganisation Update (0.4ms)[0m   [0mUPDATE "organisations" SET "lft" = CASE WHEN "lft" BETWEEN 2 AND 2 THEN "lft" + 4 - 2 WHEN "lft" BETWEEN 3 AND 4 THEN "lft" + 2 - 3 ELSE "lft" END, "rgt" = CASE WHEN "rgt" BETWEEN 2 AND 2 THEN "rgt" + 4 - 2 WHEN "rgt" BETWEEN 3 AND 4 THEN "rgt" + 2 - 3 ELSE "rgt" END, "parent_id" = CASE WHEN id = 2 THEN 1 ELSE "parent_id" END [0m
+  [4;36;1mOrganisation Load (0.1ms)[0m   [0;1mSELECT "lft", "rgt", "parent_id" FROM "organisations" WHERE ("organisations"."id" = 1) [0m
+  [4;35;1mOrganisation Load (0.1ms)[0m   [0mSELECT "lft", "rgt", "parent_id" FROM "organisations" WHERE ("organisations"."id" = 2) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT max("organisations".rgt) AS max_rgt FROM "organisations" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "organisations" ("name", "created_at", "updated_at", "lft", "parent_id", "rgt") VALUES(E'Ruths team', '2010-05-12 18:39:51.316317', '2010-05-12 18:39:51.316317', 5, NULL, 6) RETURNING "id"[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOrganisation Update (0.2ms)[0m   [0;1mUPDATE "organisations" SET "updated_at" = '2010-05-12 18:39:51.319158', "parent_id" = 2 WHERE "id" = 3[0m
+  [4;35;1mOrganisation Load (0.2ms)[0m   [0mSELECT * FROM "organisations" WHERE ("organisations"."id" = 2) ORDER BY "lft"[0m
+  [4;36;1mOrganisation Load (0.1ms)[0m   [0;1mSELECT "lft", "rgt", "parent_id" FROM "organisations" WHERE ("organisations"."id" = 3) [0m
+  [4;35;1mOrganisation Update (0.3ms)[0m   [0mUPDATE "organisations" SET "lft" = CASE WHEN "lft" BETWEEN 3 AND 4 THEN "lft" + 6 - 4 WHEN "lft" BETWEEN 5 AND 6 THEN "lft" + 3 - 5 ELSE "lft" END, "rgt" = CASE WHEN "rgt" BETWEEN 3 AND 4 THEN "rgt" + 6 - 4 WHEN "rgt" BETWEEN 5 AND 6 THEN "rgt" + 3 - 5 ELSE "rgt" END, "parent_id" = CASE WHEN id = 3 THEN 2 ELSE "parent_id" END [0m
+  [4;36;1mOrganisation Load (0.2ms)[0m   [0;1mSELECT "lft", "rgt", "parent_id" FROM "organisations" WHERE ("organisations"."id" = 2) [0m
+  [4;35;1mOrganisation Load (0.1ms)[0m   [0mSELECT "lft", "rgt", "parent_id" FROM "organisations" WHERE ("organisations"."id" = 3) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mOrganisation Load (0.2ms)[0m   [0mSELECT * FROM "organisations" WHERE ("organisations".parent_id = 2) ORDER BY "lft"[0m
+  [4;36;1mOrganisation Load (0.7ms)[0m   [0;1mSELECT * FROM "organisations" WHERE ("organisations"."id" = 1) [0m
+  [4;35;1mSQL (3.2ms)[0m   [0mSELECT count(*) AS count_all FROM "organisations" WHERE ("organisations".parent_id = 1) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM "organisations" WHERE (("organisations".id != 1) AND ("organisations"."lft" >= 1 AND "organisations"."rgt" <= 6)) [0m
+  [4;35;1mOrganisation Load (0.4ms)[0m   [0mSELECT * FROM "organisations" WHERE ("organisations".parent_id = 1) ORDER BY "lft"[0m
+  [4;36;1mOrganisation Load (0.5ms)[0m   [0;1mSELECT * FROM "organisations" WHERE (("organisations".id != 1) AND ("organisations"."lft" >= 1 AND "organisations"."rgt" <= 6)) ORDER BY "lft"[0m
+  [4;35;1mOrganisation Load (0.5ms)[0m   [0mSELECT * FROM "organisations" WHERE ("organisations"."lft" >= 1 AND "organisations"."rgt" <= 6) ORDER BY "lft"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "organisations" WHERE (("organisations".id != 2) AND ("organisations"."lft" <= 2 AND "organisations"."rgt" >= 5)) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "organisations" WHERE (("organisations".id != 3) AND ("organisations"."lft" <= 3 AND "organisations"."rgt" >= 4)) [0m
+  [4;36;1mOrganisation Load (0.5ms)[0m   [0;1mSELECT * FROM "organisations" WHERE ("organisations"."lft" >= 1 AND "organisations"."rgt" <= 6) ORDER BY "lft"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "organisations" WHERE (("organisations".id != 2) AND ("organisations"."lft" <= 2 AND "organisations"."rgt" >= 5)) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "organisations" WHERE (("organisations".id != 3) AND ("organisations"."lft" <= 3 AND "organisations"."rgt" >= 4)) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT max("organisations".rgt) AS max_rgt FROM "organisations" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "organisations" ("name", "created_at", "updated_at", "lft", "parent_id", "rgt") VALUES(E'universe', '2010-05-12 18:41:30.588256', '2010-05-12 18:41:30.588256', 7, NULL, 8) RETURNING "id"[0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT max("organisations".rgt) AS max_rgt FROM "organisations" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "organisations" ("name", "created_at", "updated_at", "lft", "parent_id", "rgt") VALUES(E'world', '2010-05-12 18:41:43.691629', '2010-05-12 18:41:43.691629', 9, NULL, 10) RETURNING "id"[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mOrganisation Update (0.3ms)[0m   [0;1mUPDATE "organisations" SET "updated_at" = '2010-05-12 18:41:43.693927', "parent_id" = 4 WHERE "id" = 5[0m
+  [4;35;1mOrganisation Load (0.2ms)[0m   [0mSELECT * FROM "organisations" WHERE ("organisations"."id" = 4) ORDER BY "lft"[0m
+  [4;36;1mOrganisation Load (0.2ms)[0m   [0;1mSELECT "lft", "rgt", "parent_id" FROM "organisations" WHERE ("organisations"."id" = 5) [0m
+  [4;35;1mOrganisation Update (0.2ms)[0m   [0mUPDATE "organisations" SET "lft" = CASE WHEN "lft" BETWEEN 8 AND 8 THEN "lft" + 10 - 8 WHEN "lft" BETWEEN 9 AND 10 THEN "lft" + 8 - 9 ELSE "lft" END, "rgt" = CASE WHEN "rgt" BETWEEN 8 AND 8 THEN "rgt" + 10 - 8 WHEN "rgt" BETWEEN 9 AND 10 THEN "rgt" + 8 - 9 ELSE "rgt" END, "parent_id" = CASE WHEN id = 5 THEN 4 ELSE "parent_id" END [0m
+  [4;36;1mOrganisation Load (0.2ms)[0m   [0;1mSELECT "lft", "rgt", "parent_id" FROM "organisations" WHERE ("organisations"."id" = 4) [0m
+  [4;35;1mOrganisation Load (0.1ms)[0m   [0mSELECT "lft", "rgt", "parent_id" FROM "organisations" WHERE ("organisations"."id" = 5) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mOrganisation Load (0.2ms)[0m   [0mSELECT * FROM "organisations" WHERE ("organisations".parent_id = 4) ORDER BY "lft"[0m
+  [4;36;1mOrganisation Load (0.9ms)[0m   [0;1mSELECT * FROM "organisations" WHERE ("organisations"."lft" >= 7 AND "organisations"."rgt" <= 8) ORDER BY "lft"[0m
+  [4;35;1mOrganisation Load (0.5ms)[0m   [0mSELECT * FROM "organisations" WHERE ("organisations"."id" = 4) [0m
+  [4;36;1mOrganisation Load (0.4ms)[0m   [0;1mSELECT * FROM "organisations" WHERE ("organisations"."lft" >= 7 AND "organisations"."rgt" <= 10) ORDER BY "lft"[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "organisations" WHERE (("organisations".id != 5) AND ("organisations"."lft" <= 8 AND "organisations"."rgt" >= 9)) [0m
+>>>>>>> 81b3dab2870717c313ea93753dee56e3d40de929

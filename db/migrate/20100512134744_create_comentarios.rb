@@ -1,7 +1,7 @@
 class CreateComentarios < ActiveRecord::Migration
   def self.up
     create_table :comentarios do |t|
-      t.references :usario
+      t.references :usuario
       t.references :licitacion
       t.references :tipo_licitacion
       t.text :comentario
@@ -10,7 +10,7 @@ class CreateComentarios < ActiveRecord::Migration
       t.timestamps
     end
     
-    add_index :comentarios, :usario_id
+    add_index :comentarios, :usuario_id
     add_index :comentarios, :licitacion_id
     add_index :comentarios, :tipo_licitacion_id
   end

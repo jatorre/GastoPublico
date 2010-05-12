@@ -1,0 +1,248 @@
+Simple SQL
+----------
+
+>> u = Usuario.new
+=> #<Usuario id: nil, token: nil, nombre: nil, email: nil, web: nil, created_at: nil, updated_at: nil>
+
+>> u = Usuario.new
+=> #<Usuario id: nil, token: nil, nombre: nil, email: nil, web: nil, created_at: nil, updated_at: nil>
+
+>> u.nombre = "simon"
+=> "simon"
+
+>> u.email = "si@tinypla.net"
+=> "si@tinypla.net"
+
+>> u.save
+=> true
+
+>> u
+=> #<Usuario id: 3, token: nil, nombre: "simon", email: "si@tinypla.net", web: nil, created_at: "2010-05-12 18:13:36", updated_at: "2010-05-12 18:13:36">
+
+>> Usuario.all
+=> [#<Usuario id: 1, token: nil, nombre: nil, email: nil, web: nil, created_at: "2010-05-12 17:46:37", updated_at: "2010-05-12 17:46:37">, #<Usuario id: 2, token: nil, nombre: nil, email: nil, web: nil, created_at: "2010-05-12 17:54:38", updated_at: "2010-05-12 17:54:38">, #<Usuario id: 3, token: nil, nombre: "simon", email: "si@tinypla.net", web: nil, created_at: "2010-05-12 18:13:36", updated_at: "2010-05-12 18:13:36">]
+
+(after installing the ap gem)
+>> require 'ap'
+=> []
+>> ap Usuario.all
+[
+    [0] #<Usuario:0x1031ea498> {
+                :id => 1,
+             :token => nil,
+            :nombre => nil,
+             :email => nil,
+               :web => nil,
+        :created_at => Wed, 12 May 2010 17:46:37 UTC +00:00,
+        :updated_at => Wed, 12 May 2010 17:46:37 UTC +00:00
+    },
+    [1] #<Usuario:0x1031ea3f8> {
+                :id => 2,
+             :token => nil,
+            :nombre => nil,
+             :email => nil,
+               :web => nil,
+        :created_at => Wed, 12 May 2010 17:54:38 UTC +00:00,
+        :updated_at => Wed, 12 May 2010 17:54:38 UTC +00:00
+    },
+    [2] #<Usuario:0x1031ea358> {
+                :id => 3,
+             :token => nil,
+            :nombre => "simon",
+             :email => "si@tinypla.net",
+               :web => nil,
+        :created_at => Wed, 12 May 2010 18:13:36 UTC +00:00,
+        :updated_at => Wed, 12 May 2010 18:13:36 UTC +00:00
+    }
+]
+=> nil
+
+>> Usuario.count
+=> 3
+
+>> Usuario.delete_all
+=> 3
+
+>> Usuario.create :nombre => "javi", :email => "jatorre@gmail.com"
+=> #<Usuario id: 1, token: nil, nombre: "javi", email: "jatorre@gmail.com", web: nil, created_at: "2010-05-12 18:25:56", updated_at: "2010-05-12 18:25:56">
+
+>> Usuario.count
+=> 1
+
+>> Usuario.find_by_email "jatorre@gmail.com"
+=> #<Usuario id: 1, token: nil, nombre: "javi", email: "jatorre@gmail.com", web: nil, created_at: "2010-05-12 18:25:56", updated_at: "2010-05-12 18:25:56">
+
+>> Usuario.find_or_create_by_email "jatorre@gmail.com"
+=> #<Usuario id: 1, token: nil, nombre: "javi", email: "jatorre@gmail.com", web: nil, created_at: "2010-05-12 18:25:56", updated_at: "2010-05-12 18:25:56">
+
+>> Usuario.find_or_create_by_email "craig@gmail.com"
+=> #<Usuario id: 2, token: nil, nombre: nil, email: "craig@gmail.com", web: nil, created_at: "2010-05-12 18:28:23", updated_at: "2010-05-12 18:28:23">
+
+>> Usuario.find_or_initialize_by_email "simon@gmail.com"
+=> #<Usuario id: nil, token: nil, nombre: nil, email: "simon@gmail.com", web: nil, created_at: nil, updated_at: nil>
+
+
+
+Example relations
+------------------
+
+Has Many/Belongs to
+-------------------
+
+>> u = Usuario.new
+=> #<Usuario id: nil, token: nil, nombre: nil, email: nil, web: nil, created_at: nil, updated_at: nil>
+
+>> c = Comentario.new
+=> #<Comentario id: nil, usuario_id: nil, licitacion_id: nil, tipo_licitacion_id: nil, comentario: nil, is_vote: nil, created_at: nil, updated_at: nil, the_geom: nil>
+
+>> u.comentarios 
+=> []
+
+>> u.comentarios << c
+=> [#<Comentario id: nil, usuario_id: nil, licitacion_id: nil, tipo_licitacion_id: nil, comentario: nil, is_vote: nil, created_at: nil, updated_at: nil, the_geom: nil>]
+
+>> u.save
+=> true
+
+>> u
+=> #<Usuario id: 2, token: nil, nombre: nil, email: nil, web: nil, created_at: "2010-05-12 17:54:38", updated_at: "2010-05-12 17:54:38">
+
+>> u.comentarios
+=> [#<Comentario id: 1, usuario_id: 2, licitacion_id: nil, tipo_licitacion_id: nil, comentario: nil, is_vote: nil, created_at: "2010-05-12 17:54:38", updated_at: "2010-05-12 17:54:38", the_geom: nil>]
+
+>> u.comentarios.first
+=> #<Comentario id: 1, usuario_id: 2, licitacion_id: nil, tipo_licitacion_id: nil, comentario: nil, is_vote: nil, created_at: "2010-05-12 17:54:38", updated_at: "2010-05-12 17:54:38", the_geom: nil>
+
+>> Comentario.count
+=> 1
+
+>> Comentario.first
+=> #<Comentario id: 1, usuario_id: 1, licitacion_id: nil, tipo_licitacion_id: nil, comentario: nil, is_vote: nil, created_at: "2010-05-12 17:46:37", updated_at: "2010-05-12 17:46:37", the_geom: nil>
+
+>> Comentario.first.usuario
+=> #<Usuario id: 1, token: nil, nombre: nil, email: nil, web: nil, created_at: "2010-05-12 17:46:37", updated_at: "2010-05-12 17:46:37">
+
+
+Has many through (many to many)
+-------------------------------
+>> l = Licitacion.new
+=> #<Licitacion id: nil, organo_convocante_id: nil, expediente: nil, tipo_procedimiento_id: nil, tipo_licitacion_id: nil, importe: nil, fecha_publicacion: nil, fecha_adjudicacion: nil, titulo: nil, descripcion: nil, codigo_cpv_ppal: nil, estado_id: nil, url_licitacion: nil, votes_up: nil, votes_down: nil, num_comentarios: nil, ref_publicacion: nil, fuente_datos_id: nil, programa_financion_id: nil, fecha_ultima_actualizacion: nil, created_at: nil, updated_at: nil, the_geom: nil>
+
+>> a = Adjudicatario.new
+=> #<Adjudicatario id: nil, cif: nil, nombre: nil, direction: nil, poblacion: nil, cp: nil, tlf: nil, fax: nil, email: nil, web: nil, created_at: nil, updated_at: nil, the_geom: nil>
+
+>> l.adjudicatarios
+=> []
+
+>> l.adjudicatarios << a
+=> [#<Adjudicatario id: nil, cif: nil, nombre: nil, direction: nil, poblacion: nil, cp: nil, tlf: nil, fax: nil, email: nil, web: nil, created_at: nil, updated_at: nil, the_geom: nil>]
+
+>> l.save
+=> true
+
+>> l.adjudicatarios
+=> [#<Adjudicatario id: 1, cif: nil, nombre: nil, direction: nil, poblacion: nil, cp: nil, tlf: nil, fax: nil, email: nil, web: nil, created_at: "2010-05-12 18:19:27", updated_at: "2010-05-12 18:19:27", the_geom: nil>]
+
+>> l.adjudicatarios.count
+=> 1
+
+>> l.adjudicatarios.create
+=> #<Adjudicatario id: 2, cif: nil, nombre: nil, direction: nil, poblacion: nil, cp: nil, tlf: nil, fax: nil, email: nil, web: nil, created_at: "2010-05-12 18:23:53", updated_at: "2010-05-12 18:23:53", the_geom: nil>
+
+>> l.adjudicatarios.count
+=> 2
+
+>> l.adjudicatarios
+=> [#<Adjudicatario id: 1, cif: nil, nombre: nil, direction: nil, poblacion: nil, cp: nil, tlf: nil, fax: nil, email: nil, web: nil, created_at: "2010-05-12 18:23:08", updated_at: "2010-05-12 18:23:08", the_geom: nil>, #<Adjudicatario id: 2, cif: nil, nombre: nil, direction: nil, poblacion: nil, cp: nil, tlf: nil, fax: nil, email: nil, web: nil, created_at: "2010-05-12 18:23:53", updated_at: "2010-05-12 18:23:53", the_geom: nil>]
+
+>> a
+=> #<Adjudicatario id: 1, cif: nil, nombre: nil, direction: nil, poblacion: nil, cp: nil, tlf: nil, fax: nil, email: nil, web: nil, created_at: "2010-05-12 18:19:27", updated_at: "2010-05-12 18:19:27", the_geom: nil>
+
+>> a.licitacions
+=> [#<Licitacion id: 2, organo_convocante_id: nil, expediente: nil, tipo_procedimiento_id: nil, tipo_licitacion_id: nil, importe: nil, fecha_publicacion: nil, fecha_adjudicacion: nil, titulo: nil, descripcion: nil, codigo_cpv_ppal: nil, estado_id: nil, url_licitacion: nil, votes_up: nil, votes_down: nil, num_comentarios: nil, ref_publicacion: nil, fuente_datos_id: nil, programa_financion_id: nil, fecha_ultima_actualizacion: nil, created_at: "2010-05-12 18:19:27", updated_at: "2010-05-12 18:19:27", the_geom: nil>]
+
+
+Some simple GIS assignment
+--------------------------
+>> u.comentarios.first.the_geom = Point.from_x_y 10,20
+=> #<GeoRuby::SimpleFeatures::Point:0x1032da538 @y=20, @srid=4326, @x=10, @m=0.0, @with_m=false, @z=0.0, @with_z=false>
+
+>> u.comentarios.first
+=> #<Comentario id: 2, usuario_id: 2, licitacion_id: nil, tipo_licitacion_id: nil, comentario: nil, is_vote: nil, created_at: "2010-05-12 17:54:38", updated_at: "2010-05-12 17:54:38", the_geom: #<GeoRuby::SimpleFeatures::Point:0x1032da538 @y=20, @srid=4326, @x=10, @m=0.0, @with_m=false, @z=0.0, @with_z=false>>
+
+>> u.comentarios.first.the_geom.as_ewkt
+=> "SRID=4326;POINT(10 20)"
+
+>> u.comentarios.first.the_geom.as_hex_ewkb
+=> "0101000020E610000000000000000024400000000000003440"
+
+>> u.comentarios.first.the_geom.as_kml
+=> "<Point>\n<coordinates>10,20</coordinates>\n</Point>\n"
+
+>> u.comentarios.first.the_geom.ellipsoidal_distance(Point.from_x_y(30,20))
+=> 2091685.37891131
+
+
+Nested set
+----------
+
+>> o = Organisation.create :name => "Govt"
+=> #<Organisation id: 1, name: "Govt", parent_id: nil, lft: 1, rgt: 2, created_at: "2010-05-12 18:37:05", updated_at: "2010-05-12 18:37:05">
+
+>> o.children
+=> []
+
+>> o.root?
+=> true
+
+>> o.children << Organisation.create(:name => "Ruths dept")
+=> [#<Organisation id: 2, name: "Ruths dept", parent_id: 1, lft: 2, rgt: 3, created_at: "2010-05-12 18:39:18", updated_at: "2010-05-12 18:39:18">]
+
+>> o.children.first
+=> #<Organisation id: 2, name: "Ruths dept", parent_id: 1, lft: 2, rgt: 3, created_at: "2010-05-12 18:39:18", updated_at: "2010-05-12 18:39:18">
+
+>> o.children.first.children << Organisation.create(:name => "Ruths team")
+=> [#<Organisation id: 3, name: "Ruths team", parent_id: 2, lft: 3, rgt: 4, created_at: "2010-05-12 18:39:51", updated_at: "2010-05-12 18:39:51">]
+
+>> o.reload
+=> #<Organisation id: 1, name: "Govt", parent_id: nil, lft: 1, rgt: 6, created_at: "2010-05-12 18:37:05", updated_at: "2010-05-12 18:37:05">
+
+>> o.leaf?
+=> false
+
+>> o.children.count
+=> 1
+
+>> o.descendants.count
+=> 2
+
+>> o.children
+=> [#<Organisation id: 2, name: "Ruths dept", parent_id: 1, lft: 2, rgt: 5, created_at: "2010-05-12 18:39:18", updated_at: "2010-05-12 18:39:18">]
+
+>> o.descendants
+=> [#<Organisation id: 2, name: "Ruths dept", parent_id: 1, lft: 2, rgt: 5, created_at: "2010-05-12 18:39:18", updated_at: "2010-05-12 18:39:18">, #<Organisation id: 3, name: "Ruths team", parent_id: 2, lft: 3, rgt: 4, created_at: "2010-05-12 18:39:51", updated_at: "2010-05-12 18:39:51">]
+
+>> puts o.to_text
+* 1 #<Organisation:0x1031bda38> (, 1, 6)
+** 2 #<Organisation:0x1031bd998> (1, 2, 5)
+*** 3 #<Organisation:0x1031bd8f8> (2, 3, 4)
+=> nil
+
+>> o = Organisation.create :name => "universe"
+=> #<Organisation id: 4, name: "universe", parent_id: nil, lft: 7, rgt: 8, created_at: "2010-05-12 18:41:30", updated_at: "2010-05-12 18:41:30">
+
+>> o.children << Organisation.create(:name => "world")
+=> [#<Organisation id: 5, name: "world", parent_id: 4, lft: 8, rgt: 9, created_at: "2010-05-12 18:41:43", updated_at: "2010-05-12 18:41:43">]
+
+>> o.reload
+=> #<Organisation id: 4, name: "universe", parent_id: nil, lft: 7, rgt: 10, created_at: "2010-05-12 18:41:30", updated_at: "2010-05-12 18:41:30">
+
+>> puts o.to_text
+* 4 #<Organisation:0x103135098> (, 7, 10)
+** 5 #<Organisation:0x103134ff8> (4, 8, 9)
+=> nil
+
+
+
+
+Run "rake doc:app" to generate API documentation for your models, controllers, helpers, and libraries.

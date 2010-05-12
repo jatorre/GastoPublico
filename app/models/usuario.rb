@@ -1,3 +1,3 @@
 class Usuario < ActiveRecord::Base
-  has_many :commentarios
+  has_many :comentarios
 end
