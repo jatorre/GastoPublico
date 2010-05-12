@@ -1420,3 +1420,6 @@ DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in
   [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO "usuarios" ("created_at", "nombre", "token", "updated_at", "web", "email") VALUES('2010-05-12 18:28:23.403399', NULL, NULL, '2010-05-12 18:28:23.403399', NULL, E'craig@gmail.com') RETURNING "id"[0m
   [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
   [4;36;1mUsuario Load (0.5ms)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."email" = E'simon@gmail.com') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Users/simon/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
