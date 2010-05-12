@@ -266,3 +266,178 @@ Migrating to CreateUsuarios (20100512135842)
   [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
   [4;35;1mSQL (47.8ms)[0m   [0mINSERT INTO "licitacions" ("expediente", "programa_financion_id", "fecha_ultima_actualizacion", "created_at", "importe", "fecha_adjudicacion", "estado_id", "votes_down", "titulo", "updated_at", "descripcion", "tipo_procedimiento_id", "tipo_licitacion_id", "fecha_publicacion", "url_licitacion", "ref_publicacion", "codigo_cpv_ppal", "num_comentarios", "organo_convocante_id", "votes_up", "fuente_datos_id") VALUES(1, NULL, NULL, '2010-05-12 16:15:17.927210', NULL, NULL, NULL, NULL, NULL, '2010-05-12 16:15:17.927210', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
   [4;36;1mSQL (31.8ms)[0m   [0;1mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateAdjudicatarios (20100512134700)
+Migrating to CreateComentarios (20100512134744)
+Migrating to CreateComunidadAutonomas (20100512134805)
+Migrating to CreateEstados (20100512134819)
+Migrating to CreateFuenteDatos (20100512134843)
+Migrating to CreateLicitacions (20100512135028)
+Migrating to CreateLicitacionAdjudicatarios (20100512135113)
+Migrating to CreateOrganoConvocantes (20100512135214)
+Migrating to CreatePartidoPoliticos (20100512135331)
+Migrating to CreatePerfilContratantes (20100512135522)
+Migrating to CreateProgramaFinanciacions (20100512135537)
+Migrating to CreateProvincias (20100512135559)
+Migrating to CreateTipoLicitacions (20100512135609)
+Migrating to CreateTipoPerfilContratantes (20100512135621)
+Migrating to CreateTipoProcedimientos (20100512135628)
+Migrating to CreateUsuarios (20100512135842)
+Migrating to AddPointToLicitationAndComentario (20100512163007)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPGError: ERROR: type "srid4326with_zfalse" does not exist
+LINE 1: ALTER TABLE "licitacions" ADD COLUMN "the_geom" srid4326with...
+ ^
+: ALTER TABLE "licitacions" ADD COLUMN "the_geom" srid4326with_zfalse[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Users/simon/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Users/simon/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (3.3ms)[0m   [0;1mCREATE TABLE schema_migrations ("version" character varying(255) NOT NULL) [0m
+  [4;35;1mSQL (1.5ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateAdjudicatarios (20100512134700)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (5.1ms)[0m   [0;1mCREATE TABLE adjudicatarios ("id" serial primary key, "cif" character varying(255), "nombre" character varying(255), "direction" text, "poblacion" character varying(255), "cp" character varying(255), "tlf" character varying(255), "fax" character varying(255), "email" character varying(255), "web" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCREATE INDEX "index_adjudicatarios_on_cif" ON "adjudicatarios" ("cif")[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100512134700')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+Migrating to CreateComentarios (20100512134744)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (3.5ms)[0m   [0mCREATE TABLE comentarios ("id" serial primary key, "usario_id" integer, "licitacion_id" integer, "tipo_licitacion_id" integer, "comentario" text, "is_vote" boolean, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCREATE INDEX "index_comentarios_on_usario_id" ON "comentarios" ("usario_id")[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCREATE INDEX "index_comentarios_on_licitacion_id" ON "comentarios" ("licitacion_id")[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCREATE INDEX "index_comentarios_on_tipo_licitacion_id" ON "comentarios" ("tipo_licitacion_id")[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512134744')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateComunidadAutonomas (20100512134805)
+  [4;35;1mSQL (0.6ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mCREATE TABLE comunidad_autonomas ("id" serial primary key, "nombre" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512134805')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateEstados (20100512134819)
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (8.6ms)[0m   [0;1mCREATE TABLE estados ("id" serial primary key, "nombre" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512134819')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateFuenteDatos (20100512134843)
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (3.9ms)[0m   [0;1mCREATE TABLE fuente_datos ("id" serial primary key, "nombre" character varying(255), "ultima_importacion" timestamp, "web" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.9ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512134843')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateLicitacions (20100512135028)
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (4.5ms)[0m   [0;1mCREATE TABLE licitacions ("id" serial primary key, "organo_convocante_id" integer, "expediente" character varying(255), "tipo_procedimiento_id" integer, "tipo_licitacion_id" integer, "importe" float, "fecha_publicacion" timestamp, "fecha_adjudicacion" timestamp, "titulo" character varying(255), "descripcion" text, "codigo_cpv_ppal" character varying(255), "estado_id" integer, "url_licitacion" text, "votes_up" integer, "votes_down" integer, "num_comentarios" integer, "ref_publicacion" text, "fuente_datos_id" integer, "programa_financion_id" integer, "fecha_ultima_actualizacion" timestamp, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (1.9ms)[0m   [0mCREATE INDEX "index_licitacions_on_expediente" ON "licitacions" ("expediente")[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCREATE INDEX "index_licitacions_on_importe" ON "licitacions" ("importe")[0m
+  [4;35;1mSQL (12.1ms)[0m   [0mCREATE INDEX "index_licitacions_on_titulo" ON "licitacions" ("titulo")[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mCREATE INDEX "index_licitacions_on_codigo_cpv_ppal" ON "licitacions" ("codigo_cpv_ppal")[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCREATE INDEX "index_licitacions_on_tipo_procedimiento_id" ON "licitacions" ("tipo_procedimiento_id")[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCREATE INDEX "index_licitacions_on_organo_convocante_id" ON "licitacions" ("organo_convocante_id")[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCREATE INDEX "index_licitacions_on_tipo_licitacion_id" ON "licitacions" ("tipo_licitacion_id")[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mCREATE INDEX "index_licitacions_on_estado_id" ON "licitacions" ("estado_id")[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCREATE INDEX "index_licitacions_on_fuente_datos_id" ON "licitacions" ("fuente_datos_id")[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mCREATE INDEX "index_licitacions_on_programa_financion_id" ON "licitacions" ("programa_financion_id")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512135028')[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateLicitacionAdjudicatarios (20100512135113)
+  [4;35;1mSQL (0.8ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mCREATE TABLE licitacion_adjudicatarios ("id" serial primary key, "licitacion_id" integer, "adjudicatario_id" integer, "importe" float, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCREATE INDEX "index_licitacion_adjudicatarios_on_licitacion_id" ON "licitacion_adjudicatarios" ("licitacion_id")[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCREATE INDEX "index_licitacion_adjudicatarios_on_adjudicatario_id" ON "licitacion_adjudicatarios" ("adjudicatario_id")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512135113')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateOrganoConvocantes (20100512135214)
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (4.3ms)[0m   [0;1mCREATE TABLE organo_convocantes ("id" serial primary key, "perfil_contratante_id" integer, "nombre" text, "direccion" character varying(255), "poblacion" character varying(255), "cp" character varying(255), "tlf" character varying(255), "fax" character varying(255), "email" character varying(255), "web" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (1.3ms)[0m   [0mCREATE INDEX "index_organo_convocantes_on_perfil_contratante_id" ON "organo_convocantes" ("perfil_contratante_id")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100512135214')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+Migrating to CreatePartidoPoliticos (20100512135331)
+  [4;36;1mSQL (3.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (10.4ms)[0m   [0mCREATE TABLE partido_politicos ("id" serial primary key, "nombre" character varying(255), "siglas" character varying(255), "web" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100512135331')[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mCOMMIT[0m
+Migrating to CreatePerfilContratantes (20100512135522)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (4.5ms)[0m   [0mCREATE TABLE perfil_contratantes ("id" serial primary key, "tipo_perfil_contratante_id" integer, "nombre" character varying(255), "cif" character varying(255), "wikipedia_url" text, "partido_politico_id" integer, "foto" text, "escudo" text, "habitantes" integer, "alcalde_voota_link" text, "provincia_id" integer, "comunidad_autonoma_id" integer, "direccion" text, "poblacion" text, "cp" character varying(255), "tlf" character varying(255), "fax" character varying(255), "web" text, "email" character varying(255), "presupuesto_total" float, "presupuesto_url" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mCREATE INDEX "index_perfil_contratantes_on_cif" ON "perfil_contratantes" ("cif")[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCREATE INDEX "index_perfil_contratantes_on_tipo_perfil_contratante_id" ON "perfil_contratantes" ("tipo_perfil_contratante_id")[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mCREATE INDEX "index_perfil_contratantes_on_partido_politico_id" ON "perfil_contratantes" ("partido_politico_id")[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCREATE INDEX "index_perfil_contratantes_on_provincia_id" ON "perfil_contratantes" ("provincia_id")[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCREATE INDEX "index_perfil_contratantes_on_comunidad_autonoma_id" ON "perfil_contratantes" ("comunidad_autonoma_id")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512135522')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateProgramaFinanciacions (20100512135537)
+  [4;35;1mSQL (0.6ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (3.8ms)[0m   [0;1mCREATE TABLE programa_financiacions ("id" serial primary key, "nombre" character varying(255), "nivel" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512135537')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateProvincias (20100512135559)
+  [4;35;1mSQL (0.6ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (2.8ms)[0m   [0;1mCREATE TABLE provincias ("id" serial primary key, "nombre" character varying(255), "comunidad_autonoma_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512135559')[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateTipoLicitacions (20100512135609)
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mCREATE TABLE tipo_licitacions ("id" serial primary key, "nombre" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (5.9ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512135609')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateTipoPerfilContratantes (20100512135621)
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mCREATE TABLE tipo_perfil_contratantes ("id" serial primary key, "nombre" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512135621')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateTipoProcedimientos (20100512135628)
+  [4;35;1mSQL (3.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mCREATE TABLE tipo_procedimientos ("id" serial primary key, "nombre" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512135628')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateUsuarios (20100512135842)
+  [4;35;1mSQL (3.5ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (4.5ms)[0m   [0;1mCREATE TABLE usuarios ("id" serial primary key, "token" character varying(255), "nombre" character varying(255), "email" character varying(255), "web" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCREATE INDEX "index_usuarios_on_token" ON "usuarios" ("token")[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCREATE INDEX "index_usuarios_on_email" ON "usuarios" ("email")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512135842')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCOMMIT[0m
+Migrating to AddPointToLicitationAndComentario (20100512163007)
+  [4;35;1mSQL (0.5ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPGError: ERROR: type "srid4326with_zfalse" does not exist
+LINE 1: ALTER TABLE "licitacions" ADD COLUMN "the_geom" srid4326with...
+ ^
+: ALTER TABLE "licitacions" ADD COLUMN "the_geom" srid4326with_zfalse[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Users/simon/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateAdjudicatarios (20100512134700)
+Migrating to CreateComentarios (20100512134744)
+Migrating to CreateComunidadAutonomas (20100512134805)
+Migrating to CreateEstados (20100512134819)
+Migrating to CreateFuenteDatos (20100512134843)
+Migrating to CreateLicitacions (20100512135028)
+Migrating to CreateLicitacionAdjudicatarios (20100512135113)
+Migrating to CreateOrganoConvocantes (20100512135214)
+Migrating to CreatePartidoPoliticos (20100512135331)
+Migrating to CreatePerfilContratantes (20100512135522)
+Migrating to CreateProgramaFinanciacions (20100512135537)
+Migrating to CreateProvincias (20100512135559)
+Migrating to CreateTipoLicitacions (20100512135609)
+Migrating to CreateTipoPerfilContratantes (20100512135621)
+Migrating to CreateTipoProcedimientos (20100512135628)
+Migrating to CreateUsuarios (20100512135842)
+Migrating to AddPointToLicitationAndComentario (20100512163007)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (16.7ms)[0m   [0;1mSELECT AddGeometryColumn('licitacions','the_geom',4326,'POINT',2)[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mSELECT AddGeometryColumn('comentarios','the_geom',4326,'POINT',2)[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mSELECT AddGeometryColumn('perfil_contratantes','the_geom',4326,'POINT',2)[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mSELECT AddGeometryColumn('adjudicatarios','the_geom',4326,'POINT',2)[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100512163007')[0m
+  [4;35;1mSQL (9.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
