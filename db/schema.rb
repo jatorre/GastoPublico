@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100512163007) do
+ActiveRecord::Schema.define(:version => 20100512183603) do
 
   create_table "adjudicatarios", :force => true do |t|
     t.column "cif", :string
@@ -112,6 +112,15 @@ ActiveRecord::Schema.define(:version => 20100512163007) do
   add_index "licitacions", ["tipo_licitacion_id"], :name => "index_licitacions_on_tipo_licitacion_id"
   add_index "licitacions", ["tipo_procedimiento_id"], :name => "index_licitacions_on_tipo_procedimiento_id"
   add_index "licitacions", ["titulo"], :name => "index_licitacions_on_titulo"
+
+  create_table "organisations", :force => true do |t|
+    t.column "name", :string
+    t.column "parent_id", :integer
+    t.column "lft", :integer
+    t.column "rgt", :integer
+    t.column "created_at", :datetime
+    t.column "updated_at", :datetime
+  end
 
   create_table "organo_convocantes", :force => true do |t|
     t.column "perfil_contratante_id", :integer

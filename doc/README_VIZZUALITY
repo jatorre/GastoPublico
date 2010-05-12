@@ -183,6 +183,65 @@ Some simple GIS assignment
 => 2091685.37891131
 
 
+Nested set
+----------
+
+>> o = Organisation.create :name => "Govt"
+=> #<Organisation id: 1, name: "Govt", parent_id: nil, lft: 1, rgt: 2, created_at: "2010-05-12 18:37:05", updated_at: "2010-05-12 18:37:05">
+
+>> o.children
+=> []
+
+>> o.root?
+=> true
+
+>> o.children << Organisation.create(:name => "Ruths dept")
+=> [#<Organisation id: 2, name: "Ruths dept", parent_id: 1, lft: 2, rgt: 3, created_at: "2010-05-12 18:39:18", updated_at: "2010-05-12 18:39:18">]
+
+>> o.children.first
+=> #<Organisation id: 2, name: "Ruths dept", parent_id: 1, lft: 2, rgt: 3, created_at: "2010-05-12 18:39:18", updated_at: "2010-05-12 18:39:18">
+
+>> o.children.first.children << Organisation.create(:name => "Ruths team")
+=> [#<Organisation id: 3, name: "Ruths team", parent_id: 2, lft: 3, rgt: 4, created_at: "2010-05-12 18:39:51", updated_at: "2010-05-12 18:39:51">]
+
+>> o.reload
+=> #<Organisation id: 1, name: "Govt", parent_id: nil, lft: 1, rgt: 6, created_at: "2010-05-12 18:37:05", updated_at: "2010-05-12 18:37:05">
+
+>> o.leaf?
+=> false
+
+>> o.children.count
+=> 1
+
+>> o.descendants.count
+=> 2
+
+>> o.children
+=> [#<Organisation id: 2, name: "Ruths dept", parent_id: 1, lft: 2, rgt: 5, created_at: "2010-05-12 18:39:18", updated_at: "2010-05-12 18:39:18">]
+
+>> o.descendants
+=> [#<Organisation id: 2, name: "Ruths dept", parent_id: 1, lft: 2, rgt: 5, created_at: "2010-05-12 18:39:18", updated_at: "2010-05-12 18:39:18">, #<Organisation id: 3, name: "Ruths team", parent_id: 2, lft: 3, rgt: 4, created_at: "2010-05-12 18:39:51", updated_at: "2010-05-12 18:39:51">]
+
+>> puts o.to_text
+* 1 #<Organisation:0x1031bda38> (, 1, 6)
+** 2 #<Organisation:0x1031bd998> (1, 2, 5)
+*** 3 #<Organisation:0x1031bd8f8> (2, 3, 4)
+=> nil
+
+>> o = Organisation.create :name => "universe"
+=> #<Organisation id: 4, name: "universe", parent_id: nil, lft: 7, rgt: 8, created_at: "2010-05-12 18:41:30", updated_at: "2010-05-12 18:41:30">
+
+>> o.children << Organisation.create(:name => "world")
+=> [#<Organisation id: 5, name: "world", parent_id: 4, lft: 8, rgt: 9, created_at: "2010-05-12 18:41:43", updated_at: "2010-05-12 18:41:43">]
+
+>> o.reload
+=> #<Organisation id: 4, name: "universe", parent_id: nil, lft: 7, rgt: 10, created_at: "2010-05-12 18:41:30", updated_at: "2010-05-12 18:41:30">
+
+>> puts o.to_text
+* 4 #<Organisation:0x103135098> (, 7, 10)
+** 5 #<Organisation:0x103134ff8> (4, 8, 9)
+=> nil
+
 
 
 
