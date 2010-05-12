@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(:version => 20100512163007) do
   add_index "adjudicatarios", ["cif"], :name => "index_adjudicatarios_on_cif"
 
   create_table "comentarios", :force => true do |t|
-    t.column "usario_id", :integer
+    t.column "usuario_id", :integer
     t.column "licitacion_id", :integer
     t.column "tipo_licitacion_id", :integer
     t.column "comentario", :text
@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(:version => 20100512163007) do
 
   add_index "comentarios", ["licitacion_id"], :name => "index_comentarios_on_licitacion_id"
   add_index "comentarios", ["tipo_licitacion_id"], :name => "index_comentarios_on_tipo_licitacion_id"
-  add_index "comentarios", ["usario_id"], :name => "index_comentarios_on_usario_id"
+  add_index "comentarios", ["usuario_id"], :name => "index_comentarios_on_usuario_id"
 
   create_table "comunidad_autonomas", :force => true do |t|
     t.column "nombre", :string
