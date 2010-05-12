@@ -8,6 +8,4 @@ class Licitacion < ActiveRecord::Base
   has_many :commentarios
   has_many :licitacion_adjudicatarios
   has_many :adjudicatarios, :through => :licitacion_adjudicatarios
-  
-  acts_as_geom :the_geom => :point
 end
