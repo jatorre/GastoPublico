@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100512183603) do
+ActiveRecord::Schema.define(:version => 20100512221114) do
 
   create_table "adjudicatarios", :force => true do |t|
     t.column "cif", :string
@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(:version => 20100512183603) do
 
   add_index "comentarios", ["licitacion_id"], :name => "index_comentarios_on_licitacion_id"
   add_index "comentarios", ["tipo_licitacion_id"], :name => "index_comentarios_on_tipo_licitacion_id"
-  add_index "comentarios", ["usuario_id"], :name => "index_comentarios_on_usuario_id"
+  add_index "comentarios", ["usuario_id"], :name => "index_comentarios_on_usario_id"
 
   create_table "comunidad_autonomas", :force => true do |t|
     t.column "nombre", :string

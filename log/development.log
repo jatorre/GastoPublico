@@ -1653,3 +1653,264 @@ DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in
   [4;36;1mOrganisation Load (0.4ms)[0m   [0;1mSELECT * FROM "organisations" WHERE ("organisations"."lft" >= 7 AND "organisations"."rgt" <= 10) ORDER BY "lft"[0m
   [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "organisations" WHERE (("organisations".id != 5) AND ("organisations"."lft" <= 8 AND "organisations"."rgt" >= 9)) [0m
 >>>>>>> 81b3dab2870717c313ea93753dee56e3d40de929
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mUsuario Load (23.1ms)[0m   [0;1mSELECT * FROM "usuarios" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (21.5ms)[0m   [0;1mINSERT INTO "usuarios" ("created_at", "nombre", "token", "updated_at", "web", "email") VALUES('2010-05-12 21:59:33.294597', E'simon', NULL, '2010-05-12 21:59:33.294597', NULL, E'si@tinypla.net') RETURNING "id"[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mUsuario Load (0.7ms)[0m   [0;1mSELECT * FROM "usuarios" [0m
+  [4;35;1mUsuario Load (1.5ms)[0m   [0mSELECT * FROM "usuarios" [0m
+  [4;36;1mSQL (58.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM "usuarios" [0m
+  [4;35;1mUsuario Delete all (1.7ms)[0m   [0mDELETE FROM "usuarios" [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mINSERT INTO "usuarios" ("created_at", "nombre", "token", "updated_at", "web", "email") VALUES('2010-05-12 22:00:16.302835', E'javi', NULL, '2010-05-12 22:00:16.302835', NULL, E'jatorre@gmail.com') RETURNING "id"[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mUsuario Load (0.9ms)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."email" = E'jatorre@gmail.com') LIMIT 1[0m
+  [4;36;1mUsuario Load (1.0ms)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."email" = E'jatorre@gmail.com') LIMIT 1[0m
+  [4;35;1mUsuario Load (7.0ms)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."email" = E'craig@gmail.com') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO "usuarios" ("created_at", "nombre", "token", "updated_at", "web", "email") VALUES('2010-05-12 22:00:36.468695', NULL, NULL, '2010-05-12 22:00:36.468695', NULL, E'craig@gmail.com') RETURNING "id"[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mComentario Load (0.0ms)[0m   [0mPGError: ERROR: column comentarios.usuario_id does not exist
+LINE 1: SELECT * FROM "comentarios" WHERE ("comentarios".usuario_id ...
+ ^
+: SELECT * FROM "comentarios" WHERE ("comentarios".usuario_id = 1) [0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (16.8ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateAdjudicatarios (20100512134700)
+Migrating to CreateComentarios (20100512134744)
+Migrating to CreateComunidadAutonomas (20100512134805)
+Migrating to CreateEstados (20100512134819)
+Migrating to CreateFuenteDatos (20100512134843)
+Migrating to CreateLicitacions (20100512135028)
+Migrating to CreateLicitacionAdjudicatarios (20100512135113)
+Migrating to CreateOrganoConvocantes (20100512135214)
+Migrating to CreatePartidoPoliticos (20100512135331)
+Migrating to CreatePerfilContratantes (20100512135522)
+Migrating to CreateProgramaFinanciacions (20100512135537)
+Migrating to CreateProvincias (20100512135559)
+Migrating to CreateTipoLicitacions (20100512135609)
+Migrating to CreateTipoPerfilContratantes (20100512135621)
+Migrating to CreateTipoProcedimientos (20100512135628)
+Migrating to CreateUsuarios (20100512135842)
+Migrating to AddPointToLicitationAndComentario (20100512163007)
+Migrating to CreateOrganisations (20100512183603)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (53.1ms)[0m   [0;1mCREATE TABLE organisations ("id" serial primary key, "name" character varying(255), "parent_id" integer, "lft" integer, "rgt" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (23.9ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512183603')[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mINSERT INTO "usuarios" ("created_at", "nombre", "token", "updated_at", "web", "email") VALUES('2010-05-12 22:06:02.814200', NULL, NULL, '2010-05-12 22:06:02.814200', NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (134.7ms)[0m   [0;1mINSERT INTO "comentarios" ("is_vote", "comentario", "created_at", "updated_at", "the_geom", "licitacion_id", "tipo_licitacion_id", "usario_id") VALUES(NULL, NULL, '2010-05-12 22:06:02.824093', '2010-05-12 22:06:02.824093', NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSELECT count(*) AS count_all FROM "usuarios" [0m
+  [4;35;1mUsuario Load (1.9ms)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."email" = E'craig@gmail.com') LIMIT 1[0m
+  [4;36;1mUsuario Load (1.6ms)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."email" = E'craig@gmail.com') LIMIT 1[0m
+  [4;35;1mComentario Load (0.0ms)[0m   [0mPGError: ERROR: column comentarios.usuario_id does not exist
+LINE 1: SELECT * FROM "comentarios" WHERE ("comentarios".usuario_id ...
+ ^
+: SELECT * FROM "comentarios" WHERE ("comentarios".usuario_id = 3) [0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateAdjudicatarios (20100512134700)
+Migrating to CreateComentarios (20100512134744)
+Migrating to CreateComunidadAutonomas (20100512134805)
+Migrating to CreateEstados (20100512134819)
+Migrating to CreateFuenteDatos (20100512134843)
+Migrating to CreateLicitacions (20100512135028)
+Migrating to CreateLicitacionAdjudicatarios (20100512135113)
+Migrating to CreateOrganoConvocantes (20100512135214)
+Migrating to CreatePartidoPoliticos (20100512135331)
+Migrating to CreatePerfilContratantes (20100512135522)
+Migrating to CreateProgramaFinanciacions (20100512135537)
+Migrating to CreateProvincias (20100512135559)
+Migrating to CreateTipoLicitacions (20100512135609)
+Migrating to CreateTipoPerfilContratantes (20100512135621)
+Migrating to CreateTipoProcedimientos (20100512135628)
+Migrating to CreateUsuarios (20100512135842)
+Migrating to AddPointToLicitationAndComentario (20100512163007)
+Migrating to CreateOrganisations (20100512183603)
+Migrating to ChangeComentarioColumn (20100512221114)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mALTER TABLE "comentarios" RENAME COLUMN "usario_id" TO "usuario_id"[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512221114')[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mUsuario Load (0.9ms)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."email" = E'craig@gmail.com') LIMIT 1[0m
+  [4;35;1mComentario Load (1.2ms)[0m   [0mSELECT * FROM "comentarios" WHERE ("comentarios".usuario_id = 3) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (50.3ms)[0m   [0mSELECT max("organisations".rgt) AS max_rgt FROM "organisations" [0m
+  [4;36;1mSQL (46.1ms)[0m   [0;1mINSERT INTO "organisations" ("name", "created_at", "updated_at", "lft", "parent_id", "rgt") VALUES(E'Govt', '2010-05-12 22:30:38.439666', '2010-05-12 22:30:38.439666', 1, NULL, 2) RETURNING "id"[0m
+  [4;35;1mSQL (18.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mOrganisation Load (1.3ms)[0m   [0;1mSELECT * FROM "organisations" WHERE ("organisations".parent_id = 1) ORDER BY "lft"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT max("organisations".rgt) AS max_rgt FROM "organisations" [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO "organisations" ("name", "created_at", "updated_at", "lft", "parent_id", "rgt") VALUES(E'Ruths dept', '2010-05-12 22:31:04.975801', '2010-05-12 22:31:04.975801', 3, NULL, 4) RETURNING "id"[0m
+  [4;36;1mSQL (95.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOrganisation Update (0.4ms)[0m   [0;1mUPDATE "organisations" SET "updated_at" = '2010-05-12 22:31:05.074816', "parent_id" = 1 WHERE "id" = 2[0m
+  [4;35;1mOrganisation Load (0.2ms)[0m   [0mSELECT * FROM "organisations" WHERE ("organisations"."id" = 1) ORDER BY "lft"[0m
+  [4;36;1mOrganisation Load (0.2ms)[0m   [0;1mSELECT "lft", "rgt", "parent_id" FROM "organisations" WHERE ("organisations"."id" = 2) [0m
+  [4;35;1mOrganisation Update (28.9ms)[0m   [0mUPDATE "organisations" SET "lft" = CASE WHEN "lft" BETWEEN 2 AND 2 THEN "lft" + 4 - 2 WHEN "lft" BETWEEN 3 AND 4 THEN "lft" + 2 - 3 ELSE "lft" END, "rgt" = CASE WHEN "rgt" BETWEEN 2 AND 2 THEN "rgt" + 4 - 2 WHEN "rgt" BETWEEN 3 AND 4 THEN "rgt" + 2 - 3 ELSE "rgt" END, "parent_id" = CASE WHEN id = 2 THEN 1 ELSE "parent_id" END [0m
+  [4;36;1mOrganisation Load (0.3ms)[0m   [0;1mSELECT "lft", "rgt", "parent_id" FROM "organisations" WHERE ("organisations"."id" = 1) [0m
+  [4;35;1mOrganisation Load (0.2ms)[0m   [0mSELECT "lft", "rgt", "parent_id" FROM "organisations" WHERE ("organisations"."id" = 2) [0m
+  [4;36;1mSQL (20.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT max("organisations".rgt) AS max_rgt FROM "organisations" [0m
+  [4;35;1mSQL (0.8ms)[0m   [0mINSERT INTO "organisations" ("name", "created_at", "updated_at", "lft", "parent_id", "rgt") VALUES(E'Ruths team', '2010-05-12 22:31:25.119600', '2010-05-12 22:31:25.119600', 5, NULL, 6) RETURNING "id"[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOrganisation Update (0.3ms)[0m   [0;1mUPDATE "organisations" SET "updated_at" = '2010-05-12 22:31:25.123881', "parent_id" = 2 WHERE "id" = 3[0m
+  [4;35;1mOrganisation Load (0.5ms)[0m   [0mSELECT * FROM "organisations" WHERE ("organisations"."id" = 2) ORDER BY "lft"[0m
+  [4;36;1mOrganisation Load (0.2ms)[0m   [0;1mSELECT "lft", "rgt", "parent_id" FROM "organisations" WHERE ("organisations"."id" = 3) [0m
+  [4;35;1mOrganisation Update (0.3ms)[0m   [0mUPDATE "organisations" SET "lft" = CASE WHEN "lft" BETWEEN 3 AND 4 THEN "lft" + 6 - 4 WHEN "lft" BETWEEN 5 AND 6 THEN "lft" + 3 - 5 ELSE "lft" END, "rgt" = CASE WHEN "rgt" BETWEEN 3 AND 4 THEN "rgt" + 6 - 4 WHEN "rgt" BETWEEN 5 AND 6 THEN "rgt" + 3 - 5 ELSE "rgt" END, "parent_id" = CASE WHEN id = 3 THEN 2 ELSE "parent_id" END [0m
+  [4;36;1mOrganisation Load (0.2ms)[0m   [0;1mSELECT "lft", "rgt", "parent_id" FROM "organisations" WHERE ("organisations"."id" = 2) [0m
+  [4;35;1mOrganisation Load (0.2ms)[0m   [0mSELECT "lft", "rgt", "parent_id" FROM "organisations" WHERE ("organisations"."id" = 3) [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mOrganisation Load (0.3ms)[0m   [0mSELECT * FROM "organisations" WHERE ("organisations".parent_id = 2) ORDER BY "lft"[0m
+  [4;36;1mOrganisation Load (0.5ms)[0m   [0;1mSELECT * FROM "organisations" WHERE ("organisations"."id" = 1) [0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (37.9ms)[0m   [0mINSERT INTO "fuente_datos" ("created_at", "nombre", "updated_at", "ultima_importacion", "web") VALUES('2010-05-13 00:41:41.978645', E'Plataforma contratacion del Gobierno Vasco', '2010-05-13 00:41:41.978645', '2010-05-13 00:41:16.562975', E'http:/euskadi.net') RETURNING "id"[0m
+  [4;36;1mSQL (36.9ms)[0m   [0;1mCOMMIT[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mLicitacion Load (16.6ms)[0m   [0;1mSELECT * FROM "licitacions" WHERE ("licitacions"."expediente" = E'C02/006/2010' AND "licitacions"."fuente_datos_id" = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (118.3ms)[0m   [0;1mINSERT INTO "licitacions" ("expediente", "programa_financion_id", "fecha_ultima_actualizacion", "created_at", "importe", "fecha_adjudicacion", "estado_id", "votes_down", "titulo", "updated_at", "the_geom", "descripcion", "tipo_procedimiento_id", "tipo_licitacion_id", "fecha_publicacion", "url_licitacion", "ref_publicacion", "codigo_cpv_ppal", "num_comentarios", "organo_convocante_id", "votes_up", "fuente_datos_id") VALUES(E'C02/006/2010', NULL, NULL, '2010-05-13 00:46:39.227157', NULL, NULL, NULL, NULL, NULL, '2010-05-13 00:46:39.227157', NULL, E'Servicio de vigilancia y seguridad en inmuebles con riesgo de atentado y sedes de partidos políticos y organizaciones sindicales.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1) RETURNING "id"[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mLicitacion Load (0.7ms)[0m   [0;1mSELECT * FROM "licitacions" WHERE ("licitacions"."expediente" = E'A-010/DEAS-2010.' AND "licitacions"."fuente_datos_id" = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO "licitacions" ("expediente", "programa_financion_id", "fecha_ultima_actualizacion", "created_at", "importe", "fecha_adjudicacion", "estado_id", "votes_down", "titulo", "updated_at", "the_geom", "descripcion", "tipo_procedimiento_id", "tipo_licitacion_id", "fecha_publicacion", "url_licitacion", "ref_publicacion", "codigo_cpv_ppal", "num_comentarios", "organo_convocante_id", "votes_up", "fuente_datos_id") VALUES(E'A-010/DEAS-2010.', NULL, NULL, '2010-05-13 00:46:39.692735', NULL, NULL, NULL, NULL, NULL, '2010-05-13 00:46:39.692735', NULL, E'El que figura en el encabezamiento de este anuncio.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1) RETURNING "id"[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mLicitacion Load (3.0ms)[0m   [0;1mSELECT * FROM "licitacions" WHERE ("licitacions"."expediente" = E'C03/001/2010' AND "licitacions"."fuente_datos_id" = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO "licitacions" ("expediente", "programa_financion_id", "fecha_ultima_actualizacion", "created_at", "importe", "fecha_adjudicacion", "estado_id", "votes_down", "titulo", "updated_at", "the_geom", "descripcion", "tipo_procedimiento_id", "tipo_licitacion_id", "fecha_publicacion", "url_licitacion", "ref_publicacion", "codigo_cpv_ppal", "num_comentarios", "organo_convocante_id", "votes_up", "fuente_datos_id") VALUES(E'C03/001/2010', NULL, NULL, '2010-05-13 00:46:40.003321', NULL, NULL, NULL, NULL, NULL, '2010-05-13 00:46:40.003321', NULL, E'Adquisición de 71.000 dosis de vacuna conjugada frente al Meningococo del serogrupo C y 130.000 dosis de vacuna Antitetáno-Difterica adulto (Td adulto).', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1) RETURNING "id"[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mLicitacion Load (0.8ms)[0m   [0;1mSELECT * FROM "licitacions" WHERE ("licitacions"."expediente" = E'A-09-DJAP-2010' AND "licitacions"."fuente_datos_id" = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO "licitacions" ("expediente", "programa_financion_id", "fecha_ultima_actualizacion", "created_at", "importe", "fecha_adjudicacion", "estado_id", "votes_down", "titulo", "updated_at", "the_geom", "descripcion", "tipo_procedimiento_id", "tipo_licitacion_id", "fecha_publicacion", "url_licitacion", "ref_publicacion", "codigo_cpv_ppal", "num_comentarios", "organo_convocante_id", "votes_up", "fuente_datos_id") VALUES(E'A-09-DJAP-2010', NULL, NULL, '2010-05-13 00:46:40.498636', NULL, NULL, NULL, NULL, NULL, '2010-05-13 00:46:40.498636', NULL, E'Mejora de la usabilidad de euskadi.net', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1) RETURNING "id"[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mLicitacion Load (0.7ms)[0m   [0;1mSELECT * FROM "licitacions" WHERE ("licitacions"."expediente" = E'A-008/DJAP/2010' AND "licitacions"."fuente_datos_id" = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO "licitacions" ("expediente", "programa_financion_id", "fecha_ultima_actualizacion", "created_at", "importe", "fecha_adjudicacion", "estado_id", "votes_down", "titulo", "updated_at", "the_geom", "descripcion", "tipo_procedimiento_id", "tipo_licitacion_id", "fecha_publicacion", "url_licitacion", "ref_publicacion", "codigo_cpv_ppal", "num_comentarios", "organo_convocante_id", "votes_up", "fuente_datos_id") VALUES(E'A-008/DJAP/2010', NULL, NULL, '2010-05-13 00:46:40.860672', NULL, NULL, NULL, NULL, NULL, '2010-05-13 00:46:40.860672', NULL, E'Oficina técnica de apoyo al software libre', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1) RETURNING "id"[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mLicitacion Load (0.7ms)[0m   [0;1mSELECT * FROM "licitacions" WHERE ("licitacions"."expediente" = E'004A/2010' AND "licitacions"."fuente_datos_id" = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO "licitacions" ("expediente", "programa_financion_id", "fecha_ultima_actualizacion", "created_at", "importe", "fecha_adjudicacion", "estado_id", "votes_down", "titulo", "updated_at", "the_geom", "descripcion", "tipo_procedimiento_id", "tipo_licitacion_id", "fecha_publicacion", "url_licitacion", "ref_publicacion", "codigo_cpv_ppal", "num_comentarios", "organo_convocante_id", "votes_up", "fuente_datos_id") VALUES(E'004A/2010', NULL, NULL, '2010-05-13 00:46:41.099679', NULL, NULL, NULL, NULL, NULL, '2010-05-13 00:46:41.099679', NULL, E'Contratación de servicios para realizar Vuelos Fotogramétricos Digitales 2010-2011 de Euskadi: Vuelo Fotogramétrico 22 Cm (2010) Y Vuelo Fotogramétrico 22 Cm (2011)  ', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1) RETURNING "id"[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mLicitacion Load (0.5ms)[0m   [0;1mSELECT * FROM "licitacions" WHERE ("licitacions"."expediente" = E'C02/075/2008' AND "licitacions"."fuente_datos_id" = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO "licitacions" ("expediente", "programa_financion_id", "fecha_ultima_actualizacion", "created_at", "importe", "fecha_adjudicacion", "estado_id", "votes_down", "titulo", "updated_at", "the_geom", "descripcion", "tipo_procedimiento_id", "tipo_licitacion_id", "fecha_publicacion", "url_licitacion", "ref_publicacion", "codigo_cpv_ppal", "num_comentarios", "organo_convocante_id", "votes_up", "fuente_datos_id") VALUES(E'C02/075/2008', NULL, NULL, '2010-05-13 00:46:41.254398', NULL, NULL, NULL, NULL, NULL, '2010-05-13 00:46:41.254398', NULL, E'Inspección de los edificios próximos al trazado del tramo Santurtzi-Kabiezes de la línea 2 del ferrocarril metropolitano de Bilbao.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1) RETURNING "id"[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mLicitacion Load (1.1ms)[0m   [0;1mSELECT * FROM "licitacions" WHERE ("licitacions"."expediente" = E'A-036/DEAS-2009.' AND "licitacions"."fuente_datos_id" = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO "licitacions" ("expediente", "programa_financion_id", "fecha_ultima_actualizacion", "created_at", "importe", "fecha_adjudicacion", "estado_id", "votes_down", "titulo", "updated_at", "the_geom", "descripcion", "tipo_procedimiento_id", "tipo_licitacion_id", "fecha_publicacion", "url_licitacion", "ref_publicacion", "codigo_cpv_ppal", "num_comentarios", "organo_convocante_id", "votes_up", "fuente_datos_id") VALUES(E'A-036/DEAS-2009.', NULL, NULL, '2010-05-13 00:46:41.476833', NULL, NULL, NULL, NULL, NULL, '2010-05-13 00:46:41.476833', NULL, E'El que figura en el encabezamiento de este anuncio.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1) RETURNING "id"[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mLicitacion Load (0.7ms)[0m   [0;1mSELECT * FROM "licitacions" WHERE ("licitacions"."expediente" = E'co_47_10' AND "licitacions"."fuente_datos_id" = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO "licitacions" ("expediente", "programa_financion_id", "fecha_ultima_actualizacion", "created_at", "importe", "fecha_adjudicacion", "estado_id", "votes_down", "titulo", "updated_at", "the_geom", "descripcion", "tipo_procedimiento_id", "tipo_licitacion_id", "fecha_publicacion", "url_licitacion", "ref_publicacion", "codigo_cpv_ppal", "num_comentarios", "organo_convocante_id", "votes_up", "fuente_datos_id") VALUES(E'co_47_10', NULL, NULL, '2010-05-13 00:46:41.725223', NULL, NULL, NULL, NULL, NULL, '2010-05-13 00:46:41.725223', NULL, E'Reforma de cocina y comedor en CEP Learreta Markina LHI de MALLABIA', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1) RETURNING "id"[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mLicitacion Load (0.6ms)[0m   [0;1mSELECT * FROM "licitacions" WHERE ("licitacions"."expediente" = E'co_44_10' AND "licitacions"."fuente_datos_id" = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO "licitacions" ("expediente", "programa_financion_id", "fecha_ultima_actualizacion", "created_at", "importe", "fecha_adjudicacion", "estado_id", "votes_down", "titulo", "updated_at", "the_geom", "descripcion", "tipo_procedimiento_id", "tipo_licitacion_id", "fecha_publicacion", "url_licitacion", "ref_publicacion", "codigo_cpv_ppal", "num_comentarios", "organo_convocante_id", "votes_up", "fuente_datos_id") VALUES(E'co_44_10', NULL, NULL, '2010-05-13 00:46:41.903224', NULL, NULL, NULL, NULL, NULL, '2010-05-13 00:46:41.903224', NULL, E' Construcción de porche cubierto en CEP Gandasegi LHI de GALDAKAO', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1) RETURNING "id"[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mLicitacion Load (22.8ms)[0m   [0;1mSELECT * FROM "licitacions" WHERE ("licitacions"."expediente" = E'C02/006/2010' AND "licitacions"."fuente_datos_id" = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mLicitacion Load (0.6ms)[0m   [0mSELECT * FROM "licitacions" WHERE ("licitacions"."expediente" = E'A-010/DEAS-2010.' AND "licitacions"."fuente_datos_id" = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mLicitacion Load (0.7ms)[0m   [0;1mSELECT * FROM "licitacions" WHERE ("licitacions"."expediente" = E'C03/001/2010' AND "licitacions"."fuente_datos_id" = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mLicitacion Load (0.7ms)[0m   [0mSELECT * FROM "licitacions" WHERE ("licitacions"."expediente" = E'A-09-DJAP-2010' AND "licitacions"."fuente_datos_id" = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mLicitacion Load (0.6ms)[0m   [0;1mSELECT * FROM "licitacions" WHERE ("licitacions"."expediente" = E'A-008/DJAP/2010' AND "licitacions"."fuente_datos_id" = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mLicitacion Load (0.6ms)[0m   [0mSELECT * FROM "licitacions" WHERE ("licitacions"."expediente" = E'004A/2010' AND "licitacions"."fuente_datos_id" = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mLicitacion Load (0.7ms)[0m   [0;1mSELECT * FROM "licitacions" WHERE ("licitacions"."expediente" = E'C02/075/2008' AND "licitacions"."fuente_datos_id" = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mLicitacion Load (0.7ms)[0m   [0mSELECT * FROM "licitacions" WHERE ("licitacions"."expediente" = E'A-036/DEAS-2009.' AND "licitacions"."fuente_datos_id" = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mLicitacion Load (0.6ms)[0m   [0;1mSELECT * FROM "licitacions" WHERE ("licitacions"."expediente" = E'co_47_10' AND "licitacions"."fuente_datos_id" = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mLicitacion Load (0.7ms)[0m   [0mSELECT * FROM "licitacions" WHERE ("licitacions"."expediente" = E'co_44_10' AND "licitacions"."fuente_datos_id" = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
