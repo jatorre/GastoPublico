@@ -9,6 +9,7 @@ class CreateComentarios < ActiveRecord::Migration
 
       t.timestamps
     end
+    add_column :comentarios, :the_geom, :point,:srid => 4326, :with_z => false
     
     add_index :comentarios, :usuario_id
     add_index :comentarios, :licitacion_id

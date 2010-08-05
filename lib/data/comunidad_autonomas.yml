@@ -1,0 +1,20 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+extremadura:
+  nombre: extremadura
+
+canarias:
+  nombre: canarias
+  
+
+
+# == Schema Information
+#
+# Table name: comunidad_autonomas
+#
+#  id         :integer         not null, primary key
+#  nombre     :string(255)
+#  created_at :datetime
+#  updated_at :datetime
+#
+

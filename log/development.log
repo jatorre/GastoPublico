@@ -1914,3 +1914,1650 @@ DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in
   [4;35;1mLicitacion Load (0.7ms)[0m   [0mSELECT * FROM "licitacions" WHERE ("licitacions"."expediente" = E'co_44_10' AND "licitacions"."fuente_datos_id" = 1) LIMIT 1[0m
   [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
   [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mLicitacion Load (37.8ms)[0m   [0;1mSELECT * FROM "licitacions" WHERE ("licitacions"."fuente_datos_id" = 1 AND "licitacions"."expediente" = E'OV-075/10') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (372.4ms)[0m   [0;1mINSERT INTO "licitacions" ("expediente", "programa_financion_id", "fecha_ultima_actualizacion", "created_at", "importe", "fecha_adjudicacion", "estado_id", "votes_down", "titulo", "updated_at", "the_geom", "descripcion", "tipo_procedimiento_id", "tipo_licitacion_id", "fecha_publicacion", "url_licitacion", "ref_publicacion", "codigo_cpv_ppal", "num_comentarios", "organo_convocante_id", "votes_up", "fuente_datos_id") VALUES(E'OV-075/10', NULL, NULL, '2010-05-14 07:33:13.827492', NULL, NULL, NULL, NULL, NULL, '2010-05-14 07:33:13.827492', NULL, E'Elaboración del II Informe de víctimas de vulneraciones de derechos humanos derivados de la violencia de motivación política.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1) RETURNING "id"[0m
+  [4;35;1mSQL (45.6ms)[0m   [0mCOMMIT[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mLicitacion Load (52.7ms)[0m   [0;1mSELECT * FROM "licitacions" WHERE ("licitacions"."expediente" = E'OV-075/10' AND "licitacions"."fuente_datos_id" = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mBEGIN[0m
+  [4;36;1mLicitacion Update (1.7ms)[0m   [0;1mUPDATE "licitacions" SET "updated_at" = '2010-05-14 07:35:19.960217', "fecha_adjudicacion" = '2010-12-05 00:00:00.000000' WHERE "id" = 13[0m
+  [4;35;1mSQL (12.4ms)[0m   [0mCOMMIT[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mLicitacion Load (77.1ms)[0m   [0;1mSELECT * FROM "licitacions" WHERE ("licitacions"."expediente" = E'OV-075/10' AND "licitacions"."fuente_datos_id" = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mLicitacion Update (1.6ms)[0m   [0;1mUPDATE "licitacions" SET "updated_at" = '2010-05-14 07:38:32.268772', "fecha_adjudicacion" = '2010-05-11 22:00:00.000000' WHERE "id" = 13[0m
+  [4;35;1mSQL (16.1ms)[0m   [0mCOMMIT[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mLicitacion Load (3.7ms)[0m   [0;1mSELECT * FROM "licitacions" WHERE ("licitacions"."expediente" = E'OV-075/10' AND "licitacions"."fuente_datos_id" = 1) LIMIT 1[0m
+WARNING: geokit-rails requires the Geokit gem. You either don't have the gem installed,
+or you haven't told Rails to require it. If you're using a recent version of Rails: 
+  config.gem "geokit" # in config/environment.rb
+and of course install the gem: sudo gem install geokit
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mLicitacion Load (18.0ms)[0m   [0;1mSELECT * FROM "licitacions" WHERE ("licitacions"."expediente" = E'OV-075/10' AND "licitacions"."fuente_datos_id" = 1) LIMIT 1[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mLicitacion Load (3.5ms)[0m   [0;1mSELECT * FROM "licitacions" WHERE ("licitacions"."expediente" = E'OV-075/10' AND "licitacions"."fuente_datos_id" = 1) LIMIT 1[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mLicitacion Load (3.4ms)[0m   [0;1mSELECT * FROM "licitacions" WHERE ("licitacions"."expediente" = E'OV-075/10' AND "licitacions"."fuente_datos_id" = 1) LIMIT 1[0m
+Google geocoding. Address: 100 Spear st, San Francisco, CA. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>100 Spear st, San Francisco, CA</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>100 Spear St, San Francisco, CA 94105, USA</address>
+    <AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>San Francisco</SubAdministrativeAreaName><Locality><LocalityName>San Francisco</LocalityName><Thoroughfare><ThoroughfareName>100 Spear St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>94105</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="37.7952985" south="37.7890033" east="-122.3908524" west="-122.3971476" />
+    </ExtendedData>
+    <Point><coordinates>-122.3940000,37.7921509,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+Google geocoding. Address: Gobierno Vasco,Departamento de Interior,Direccin de Gestin Econmica y Contratacion,C/ Donostia-San Sebastin, 1 entreplanta E 01010 Vitoria-Gasteiz,spain. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>Gobierno Vasco,Departamento de Interior,Direccin de Gestin Econmica y Contratacion,C/ Donostia-San Sebastin, 1 entreplanta E 01010 Vitoria-Gasteiz,spain</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>01010 Vitoria, Spain</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>ES</CountryNameCode><CountryName>Espainia</CountryName><AdministrativeArea><AdministrativeAreaName>PV</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Araba</SubAdministrativeAreaName><Locality><LocalityName>Vitoria-Gasteiz</LocalityName><PostalCode><PostalCodeNumber>01010</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="42.8775628" south="42.8464628" east="-2.6749866" west="-2.7228614" />
+    </ExtendedData>
+    <Point><coordinates>-2.7033575,42.8563356,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+Google geocoding. Address: Gobierno Vasco,Departamento de Interior,Direccin de Gestin Econmica y Contratacion,C/ Donostia-San Sebastin, 1 entreplanta E 01010 Vitoria-Gasteiz,spain. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>Gobierno Vasco,Departamento de Interior,Direccin de Gestin Econmica y Contratacion,C/ Donostia-San Sebastin, 1 entreplanta E 01010 Vitoria-Gasteiz,spain</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>01010 Vitoria, Spain</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>ES</CountryNameCode><CountryName>Espainia</CountryName><AdministrativeArea><AdministrativeAreaName>PV</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Araba</SubAdministrativeAreaName><Locality><LocalityName>Vitoria-Gasteiz</LocalityName><PostalCode><PostalCodeNumber>01010</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="42.8775628" south="42.8464628" east="-2.6749866" west="-2.7228614" />
+    </ExtendedData>
+    <Point><coordinates>-2.7033575,42.8563356,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+Google geocoding. Address: Gobierno Vasco,Departamento de Interior,Direccin de Gestin Econmica y Contratacion,C/ Donostia-San Sebastin, 1 entreplanta E 01010 Vitoria-Gasteiz,spain. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>Gobierno Vasco,Departamento de Interior,Direccin de Gestin Econmica y Contratacion,C/ Donostia-San Sebastin, 1 entreplanta E 01010 Vitoria-Gasteiz,spain</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>01010 Vitoria-Gasteiz, España</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>ES</CountryNameCode><CountryName>España</CountryName><AdministrativeArea><AdministrativeAreaName>PV</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Álava</SubAdministrativeAreaName><Locality><LocalityName>Vitoria-Gasteiz</LocalityName><PostalCode><PostalCodeNumber>01010</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="42.8775628" south="42.8464628" east="-2.6749866" west="-2.7228614" />
+    </ExtendedData>
+    <Point><coordinates>-2.7033575,42.8563356,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;35;1mSQL (1.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mLicitacion Update (78.9ms)[0m   [0;1mUPDATE "licitacions" SET "updated_at" = '2010-05-14 08:09:36.724411', "the_geom" = '0101000020E6100000AA2B9FE579A005C04533AA679C6D4540' WHERE "id" = 13[0m
+  [4;35;1mSQL (28.9ms)[0m   [0mCOMMIT[0m
+Google geocoding. Address: adasd as asdasd. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>adasd as asdasd</name>
+  <Status>
+    <code>602</code>
+    <request>geocode</request>
+  </Status>
+</Response></kml>
+Google was unable to geocode address: adasd as asdasd
+  [4;36;1mTipoProcedimiento Load (22.4ms)[0m   [0;1mSELECT * FROM "tipo_procedimientos" WHERE ("tipo_procedimientos"."nombre" = E'Negociado') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (74.2ms)[0m   [0;1mINSERT INTO "tipo_procedimientos" ("created_at", "nombre", "updated_at") VALUES('2010-05-14 08:21:33.990405', E'Negociado', '2010-05-14 08:21:33.990405') RETURNING "id"[0m
+  [4;35;1mLicitacion Update (32.9ms)[0m   [0mUPDATE "licitacions" SET "updated_at" = '2010-05-14 08:21:34.074917', "tipo_procedimiento_id" = 1 WHERE "id" = 13[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mTipoProcedimiento Load (1.3ms)[0m   [0mSELECT * FROM "tipo_procedimientos" WHERE ("tipo_procedimientos"."nombre" = E'negociado') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mINSERT INTO "tipo_procedimientos" ("created_at", "nombre", "updated_at") VALUES('2010-05-14 08:23:11.260091', E'negociado', '2010-05-14 08:23:11.260091') RETURNING "id"[0m
+  [4;36;1mLicitacion Update (1.3ms)[0m   [0;1mUPDATE "licitacions" SET "updated_at" = '2010-05-14 08:23:11.263123', "tipo_procedimiento_id" = 2 WHERE "id" = 13[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mCOMMIT[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mLicitacion Load (7.2ms)[0m   [0;1mSELECT * FROM "licitacions" WHERE ("licitacions"."expediente" = E'OV-075/10' AND "licitacions"."fuente_datos_id" = 1) LIMIT 1[0m
+  [4;35;1mTipoProcedimiento Load (0.9ms)[0m   [0mSELECT * FROM "tipo_procedimientos" WHERE ("tipo_procedimientos"."nombre" = E'negociado') LIMIT 1[0m
+Google geocoding. Address: Gobierno Vasco - Departamento de Interior - Dirección de Gestión Económica y Contratación C/ Donostia-San Sebastián, 1 entreplanta E 01010 Vitoria-Gasteiz,spain. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>Gobierno Vasco - Departamento de Interior - Dirección de Gestión Económica y Contratación C/ Donostia-San Sebastián, 1 entreplanta E 01010 Vitoria-Gasteiz,spain</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>01010 Vitoria-Gasteiz, España</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>ES</CountryNameCode><CountryName>España</CountryName><AdministrativeArea><AdministrativeAreaName>PV</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Álava</SubAdministrativeAreaName><Locality><LocalityName>Vitoria-Gasteiz</LocalityName><PostalCode><PostalCodeNumber>01010</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="42.8775628" south="42.8464628" east="-2.6749866" west="-2.7228614" />
+    </ExtendedData>
+    <Point><coordinates>-2.7033575,42.8563356,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mLicitacion Update (2.0ms)[0m   [0mUPDATE "licitacions" SET "updated_at" = '2010-05-14 08:27:52.760746', "codigo_cpv_ppal" = E'741311007' WHERE "id" = 13[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCOMMIT[0m
+  [4;36;1mTipoLicitacion Load (1.6ms)[0m   [0;1mSELECT * FROM "tipo_licitacions" WHERE ("tipo_licitacions"."nombre" = E'Servicios') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (680.7ms)[0m   [0;1mINSERT INTO "tipo_licitacions" ("created_at", "nombre", "updated_at") VALUES('2010-05-14 12:58:21.341441', E'Servicios', '2010-05-14 12:58:21.341441') RETURNING "id"[0m
+  [4;35;1mLicitacion Update (1.0ms)[0m   [0mUPDATE "licitacions" SET "updated_at" = '2010-05-14 12:58:22.030465', "tipo_licitacion_id" = 1 WHERE "id" = 13[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mLicitacion Load (3.4ms)[0m   [0;1mSELECT * FROM "licitacions" WHERE ("licitacions"."expediente" = E'OV-075/10' AND "licitacions"."fuente_datos_id" = 1) LIMIT 1[0m
+  [4;35;1mTipoProcedimiento Load (0.4ms)[0m   [0mSELECT * FROM "tipo_procedimientos" WHERE ("tipo_procedimientos"."nombre" = E'negociado') LIMIT 1[0m
+  [4;36;1mTipoLicitacion Load (0.4ms)[0m   [0;1mSELECT * FROM "tipo_licitacions" WHERE ("tipo_licitacions"."nombre" = E'servicios') LIMIT 1[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mLicitacion Load (3.2ms)[0m   [0;1mSELECT * FROM "licitacions" WHERE ("licitacions"."expediente" = E'OV-075/10' AND "licitacions"."fuente_datos_id" = 1) LIMIT 1[0m
+  [4;35;1mTipoProcedimiento Load (0.4ms)[0m   [0mSELECT * FROM "tipo_procedimientos" WHERE ("tipo_procedimientos"."nombre" = E'negociado') LIMIT 1[0m
+  [4;36;1mTipoLicitacion Load (0.4ms)[0m   [0;1mSELECT * FROM "tipo_licitacions" WHERE ("tipo_licitacions"."nombre" = E'servicios') LIMIT 1[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mLicitacion Load (3.0ms)[0m   [0;1mSELECT * FROM "licitacions" WHERE ("licitacions"."expediente" = E'OV-075/10' AND "licitacions"."fuente_datos_id" = 1) LIMIT 1[0m
+  [4;35;1mTipoProcedimiento Load (0.4ms)[0m   [0mSELECT * FROM "tipo_procedimientos" WHERE ("tipo_procedimientos"."nombre" = E'negociado') LIMIT 1[0m
+  [4;36;1mTipoLicitacion Load (0.4ms)[0m   [0;1mSELECT * FROM "tipo_licitacions" WHERE ("tipo_licitacions"."nombre" = E'servicios') LIMIT 1[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mLicitacion Load (3.1ms)[0m   [0;1mSELECT * FROM "licitacions" WHERE ("licitacions"."fuente_datos_id" = 1 AND "licitacions"."expediente" = E'OV-075/10') LIMIT 1[0m
+  [4;35;1mTipoProcedimiento Load (0.5ms)[0m   [0mSELECT * FROM "tipo_procedimientos" WHERE ("tipo_procedimientos"."nombre" = E'negociado') LIMIT 1[0m
+  [4;36;1mTipoLicitacion Load (0.4ms)[0m   [0;1mSELECT * FROM "tipo_licitacions" WHERE ("tipo_licitacions"."nombre" = E'servicios') LIMIT 1[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mLicitacion Load (3.3ms)[0m   [0;1mSELECT * FROM "licitacions" WHERE ("licitacions"."expediente" = E'OV-075/10' AND "licitacions"."fuente_datos_id" = 1) LIMIT 1[0m
+  [4;35;1mTipoProcedimiento Load (0.4ms)[0m   [0mSELECT * FROM "tipo_procedimientos" WHERE ("tipo_procedimientos"."nombre" = E'negociado') LIMIT 1[0m
+  [4;36;1mTipoLicitacion Load (0.4ms)[0m   [0;1mSELECT * FROM "tipo_licitacions" WHERE ("tipo_licitacions"."nombre" = E'servicios') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO "tipo_licitacions" ("created_at", "nombre", "updated_at") VALUES('2010-05-14 13:01:48.902490', E'servicios', '2010-05-14 13:01:48.902490') RETURNING "id"[0m
+  [4;35;1mLicitacion Update (1.3ms)[0m   [0mUPDATE "licitacions" SET "updated_at" = '2010-05-14 13:01:48.909459', "tipo_licitacion_id" = 2 WHERE "id" = 13[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mFuenteDatos Load (0.6ms)[0m   [0;1mSELECT * FROM "fuente_datos" WHERE ("fuente_datos"."nombre" = E'Plataforma contratacion del Gobierno Vasco') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mLicitacion Load (3.2ms)[0m   [0mSELECT * FROM "licitacions" WHERE ("licitacions"."expediente" = E'OV-075/10' AND "licitacions"."fuente_datos_id" = 1) LIMIT 1[0m
+  [4;36;1mTipoProcedimiento Load (0.4ms)[0m   [0;1mSELECT * FROM "tipo_procedimientos" WHERE ("tipo_procedimientos"."nombre" = E'negociado') LIMIT 1[0m
+  [4;35;1mTipoLicitacion Load (0.4ms)[0m   [0mSELECT * FROM "tipo_licitacions" WHERE ("tipo_licitacions"."nombre" = E'servicios') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mFuenteDatos Load (0.8ms)[0m   [0;1mSELECT * FROM "fuente_datos" WHERE ("fuente_datos"."nombre" = E'Plataforma contratacion del Gobierno Vasco') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mLicitacion Load (3.2ms)[0m   [0mSELECT * FROM "licitacions" WHERE ("licitacions"."expediente" = E'OV-075/10' AND "licitacions"."fuente_datos_id" = 1) LIMIT 1[0m
+  [4;36;1mTipoProcedimiento Load (0.4ms)[0m   [0;1mSELECT * FROM "tipo_procedimientos" WHERE ("tipo_procedimientos"."nombre" = E'negociado') LIMIT 1[0m
+  [4;35;1mTipoLicitacion Load (0.4ms)[0m   [0mSELECT * FROM "tipo_licitacions" WHERE ("tipo_licitacions"."nombre" = E'servicios') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mLicitacion Update (1.4ms)[0m   [0mUPDATE "licitacions" SET "updated_at" = '2010-05-14 13:05:30.757370', "titulo" = E'Elaboración del II Informe de víctimas de vulneraciones de derechos humanos derivados de la violencia de motivación política.' WHERE "id" = 13[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mFuenteDatos Load (0.6ms)[0m   [0;1mSELECT * FROM "fuente_datos" WHERE ("fuente_datos"."nombre" = E'Plataforma contratacion del Gobierno Vasco') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mLicitacion Load (3.2ms)[0m   [0mSELECT * FROM "licitacions" WHERE ("licitacions"."expediente" = E'OV-075/10' AND "licitacions"."fuente_datos_id" = 1) LIMIT 1[0m
+  [4;36;1mTipoProcedimiento Load (0.4ms)[0m   [0;1mSELECT * FROM "tipo_procedimientos" WHERE ("tipo_procedimientos"."nombre" = E'negociado') LIMIT 1[0m
+  [4;35;1mTipoLicitacion Load (0.4ms)[0m   [0mSELECT * FROM "tipo_licitacions" WHERE ("tipo_licitacions"."nombre" = E'servicios') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mLicitacion Update (1.5ms)[0m   [0mUPDATE "licitacions" SET "updated_at" = '2010-05-14 13:06:24.944456', "fecha_publicacion" = '2010-05-11 22:00:00.000000' WHERE "id" = 13[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mFuenteDatos Load (0.7ms)[0m   [0;1mSELECT * FROM "fuente_datos" WHERE ("fuente_datos"."nombre" = E'Plataforma contratacion del Gobierno Vasco') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mLicitacion Load (3.2ms)[0m   [0mSELECT * FROM "licitacions" WHERE ("licitacions"."expediente" = E'OV-075/10' AND "licitacions"."fuente_datos_id" = 1) LIMIT 1[0m
+  [4;36;1mTipoProcedimiento Load (0.4ms)[0m   [0;1mSELECT * FROM "tipo_procedimientos" WHERE ("tipo_procedimientos"."nombre" = E'negociado') LIMIT 1[0m
+  [4;35;1mTipoLicitacion Load (0.4ms)[0m   [0mSELECT * FROM "tipo_licitacions" WHERE ("tipo_licitacions"."nombre" = E'servicios') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mLicitacion Update (0.8ms)[0m   [0mUPDATE "licitacions" SET "updated_at" = '2010-05-14 13:08:55.712120', "url_licitacion" = E'http://localhost/licitacion.html' WHERE "id" = 13[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (25.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateAdjudicatarios (20100512134700)
+Migrating to CreateComentarios (20100512134744)
+Migrating to CreateComunidadAutonomas (20100512134805)
+Migrating to CreateEstados (20100512134819)
+Migrating to CreateFuenteDatos (20100512134843)
+Migrating to CreateLicitacions (20100512135028)
+Migrating to CreateLicitacionAdjudicatarios (20100512135113)
+Migrating to CreateOrganoConvocantes (20100512135214)
+Migrating to CreatePartidoPoliticos (20100512135331)
+Migrating to CreatePerfilContratantes (20100512135522)
+Migrating to CreateProgramaFinanciacions (20100512135537)
+Migrating to CreateProvincias (20100512135559)
+Migrating to CreateTipoLicitacions (20100512135609)
+Migrating to CreateTipoPerfilContratantes (20100512135621)
+Migrating to CreateTipoProcedimientos (20100512135628)
+Migrating to CreateUsuarios (20100512135842)
+Migrating to AddPointToLicitationAndComentario (20100512163007)
+Migrating to CreateOrganisations (20100512183603)
+Migrating to ChangeComentarioColumn (20100512221114)
+Migrating to RemoveFechaActualizacion (20100514131835)
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (41.8ms)[0m   [0;1mALTER TABLE "licitacions" DROP "fecha_ultima_actualizacion"[0m
+  [4;35;1mSQL (15.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100514131835')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (66.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateAdjudicatarios (20100512134700)
+Migrating to CreateComentarios (20100512134744)
+Migrating to CreateComunidadAutonomas (20100512134805)
+Migrating to CreateEstados (20100512134819)
+Migrating to CreateFuenteDatos (20100512134843)
+Migrating to CreateLicitacions (20100512135028)
+Migrating to CreateLicitacionAdjudicatarios (20100512135113)
+Migrating to CreateOrganoConvocantes (20100512135214)
+Migrating to CreatePartidoPoliticos (20100512135331)
+Migrating to CreatePerfilContratantes (20100512135522)
+Migrating to CreateProgramaFinanciacions (20100512135537)
+Migrating to CreateProvincias (20100512135559)
+Migrating to CreateTipoLicitacions (20100512135609)
+Migrating to CreateTipoPerfilContratantes (20100512135621)
+Migrating to CreateTipoProcedimientos (20100512135628)
+Migrating to CreateUsuarios (20100512135842)
+Migrating to AddPointToLicitationAndComentario (20100512163007)
+Migrating to CreateOrganisations (20100512183603)
+Migrating to ChangeComentarioColumn (20100512221114)
+Migrating to RemoveFechaActualizacion (20100514131835)
+Migrating to AddLicitacionesDefaults (20100514132333)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (38.5ms)[0m   [0;1mALTER TABLE licitacions ALTER COLUMN votes_up SET DEFAULT 0;[0m
+  [4;35;1mSQL (82.0ms)[0m   [0mALTER TABLE licitacions ALTER COLUMN votes_down SET DEFAULT 0;[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mALTER TABLE licitacions ALTER COLUMN num_comentarios SET DEFAULT 0;[0m
+  [4;35;1mSQL (30.2ms)[0m   [0mUPDATE licitacions set votes_up=0, votes_down=0,num_comentarios=0 where num_comentarios is null[0m
+  [4;36;1mSQL (14.8ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100514132333')[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mFuenteDatos Load (0.7ms)[0m   [0;1mSELECT * FROM "fuente_datos" WHERE ("fuente_datos"."nombre" = E'Plataforma contratacion del Gobierno Vasco') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mLicitacion Load (2.1ms)[0m   [0mSELECT * FROM "licitacions" WHERE ("licitacions"."expediente" = E'A-017-DJAP2010' AND "licitacions"."fuente_datos_id" = 1) LIMIT 1[0m
+  [4;36;1mTipoProcedimiento Load (0.5ms)[0m   [0;1mSELECT * FROM "tipo_procedimientos" WHERE ("tipo_procedimientos"."nombre" = E'abierto') LIMIT 1[0m
+  [4;35;1mTipoLicitacion Load (0.4ms)[0m   [0mSELECT * FROM "tipo_licitacions" WHERE ("tipo_licitacions"."nombre" = E'servicios') LIMIT 1[0m
+Google geocoding. Address:   Sede Central del Gobierno Vasco. Mesa de Contratación. Dirección de Seervicios del Departamento de Justicia y Administración Pública C/ Donostia-San Sebastián, 1 01010 Vitoria-Gasteiz      ,spain. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>  Sede Central del Gobierno Vasco. Mesa de Contratación. Dirección de Seervicios del Departamento de Justicia y Administración Pública C/ Donostia-San Sebastián, 1 01010 Vitoria-Gasteiz      ,spain</name>
+  <Status>
+    <code>602</code>
+    <request>geocode</request>
+  </Status>
+</Response></kml>
+Google was unable to geocode address:   Sede Central del Gobierno Vasco. Mesa de Contratación. Dirección de Seervicios del Departamento de Justicia y Administración Pública C/ Donostia-San Sebastián, 1 01010 Vitoria-Gasteiz      ,spain
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO "tipo_procedimientos" ("created_at", "nombre", "updated_at") VALUES('2010-05-14 14:41:07.056828', E'abierto', '2010-05-14 14:41:07.056828') RETURNING "id"[0m
+  [4;36;1mSQL (2.9ms)[0m   [0;1mINSERT INTO "licitacions" ("expediente", "programa_financion_id", "created_at", "importe", "fecha_adjudicacion", "estado_id", "votes_down", "titulo", "updated_at", "the_geom", "descripcion", "tipo_procedimiento_id", "tipo_licitacion_id", "fecha_publicacion", "url_licitacion", "ref_publicacion", "codigo_cpv_ppal", "num_comentarios", "organo_convocante_id", "votes_up", "fuente_datos_id") VALUES(E'A-017-DJAP2010', NULL, '2010-05-14 14:41:07.064299', NULL, '2010-05-13 22:00:00.000000', NULL, 0, E'Contratación Servicio para organización IV Congreso Internacional de Derechos Humanos', '2010-05-14 14:41:07.064299', NULL, E'Contratación Servicio para organización IV Congreso Internacional de Derechos Humanos', 3, 2, '2010-02-11 23:00:00.000000', E'http://www.euskadi.net/r33-2288/es/contenidos/contratacion/a_017_djap_2010/es_def/a_017_djap_2010.html', NULL, NULL, 0, NULL, 0, 1) RETURNING "id"[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mLicitacion Load (0.6ms)[0m   [0;1mSELECT * FROM "licitacions" WHERE ("licitacions"."expediente" = E'05EMK/05S/2010' AND "licitacions"."fuente_datos_id" = 1) LIMIT 1[0m
+  [4;35;1mTipoProcedimiento Load (0.3ms)[0m   [0mSELECT * FROM "tipo_procedimientos" WHERE ("tipo_procedimientos"."nombre" = E'negociado') LIMIT 1[0m
+  [4;36;1mTipoLicitacion Load (0.4ms)[0m   [0;1mSELECT * FROM "tipo_licitacions" WHERE ("tipo_licitacions"."nombre" = E'servicios') LIMIT 1[0m
+Google geocoding. Address: EMAKUNDE. Tfno. 945016727.,spain. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>EMAKUNDE. Tfno. 945016727.,spain</name>
+  <Status>
+    <code>602</code>
+    <request>geocode</request>
+  </Status>
+</Response></kml>
+Google was unable to geocode address: EMAKUNDE. Tfno. 945016727.,spain
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO "licitacions" ("expediente", "programa_financion_id", "created_at", "importe", "fecha_adjudicacion", "estado_id", "votes_down", "titulo", "updated_at", "the_geom", "descripcion", "tipo_procedimiento_id", "tipo_licitacion_id", "fecha_publicacion", "url_licitacion", "ref_publicacion", "codigo_cpv_ppal", "num_comentarios", "organo_convocante_id", "votes_up", "fuente_datos_id") VALUES(E'05EMK/05S/2010', NULL, '2010-05-14 14:41:07.947067', NULL, '2010-05-12 22:00:00.000000', NULL, 0, E'Contratación de la coordinación técnica para la elaboración de la revista EMAKUNDE.', '2010-05-14 14:41:07.947067', NULL, E'Contratación de la coordinación técnica para la elaboración de la revista EMAKUNDE.', 2, 2, '2010-03-16 23:00:00.000000', E'http://www.euskadi.net/r33-2288/es/contenidos/contratacion/05emk_05s_2010/es_rev_10/rev_2010.html', NULL, NULL, 0, NULL, 0, 1) RETURNING "id"[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mLicitacion Load (0.8ms)[0m   [0;1mSELECT * FROM "licitacions" WHERE ("licitacions"."expediente" = E'OV-075/10' AND "licitacions"."fuente_datos_id" = 1) LIMIT 1[0m
+  [4;35;1mTipoProcedimiento Load (0.3ms)[0m   [0mSELECT * FROM "tipo_procedimientos" WHERE ("tipo_procedimientos"."nombre" = E'negociado') LIMIT 1[0m
+  [4;36;1mTipoLicitacion Load (0.2ms)[0m   [0;1mSELECT * FROM "tipo_licitacions" WHERE ("tipo_licitacions"."nombre" = E'servicios') LIMIT 1[0m
+Google geocoding. Address: Gobierno Vasco - Departamento de Interior - Dirección de Gestión Económica y Contratación C/ Donostia-San Sebastián, 1 entreplanta E 01010 Vitoria-Gasteiz,spain. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>Gobierno Vasco - Departamento de Interior - Dirección de Gestión Económica y Contratación C/ Donostia-San Sebastián, 1 entreplanta E 01010 Vitoria-Gasteiz,spain</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>01010 Vitoria-Gasteiz, España</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>ES</CountryNameCode><CountryName>España</CountryName><AdministrativeArea><AdministrativeAreaName>PV</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Álava</SubAdministrativeAreaName><Locality><LocalityName>Vitoria-Gasteiz</LocalityName><PostalCode><PostalCodeNumber>01010</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="42.8775628" south="42.8464628" east="-2.6749866" west="-2.7228614" />
+    </ExtendedData>
+    <Point><coordinates>-2.7033575,42.8563356,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mLicitacion Update (0.6ms)[0m   [0;1mUPDATE "licitacions" SET "updated_at" = '2010-05-14 14:41:08.788830', "url_licitacion" = E'http://www.euskadi.net/r33-2288/es/contenidos/contratacion/ov_075_10/es_ov_75_10/ov_075_10.html' WHERE "id" = 13[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mLicitacion Load (0.7ms)[0m   [0;1mSELECT * FROM "licitacions" WHERE ("licitacions"."expediente" = E'C02/006/2010' AND "licitacions"."fuente_datos_id" = 1) LIMIT 1[0m
+  [4;35;1mTipoProcedimiento Load (0.3ms)[0m   [0mSELECT * FROM "tipo_procedimientos" WHERE ("tipo_procedimientos"."nombre" = E'abierto') LIMIT 1[0m
+  [4;36;1mTipoLicitacion Load (0.2ms)[0m   [0;1mSELECT * FROM "tipo_licitacions" WHERE ("tipo_licitacions"."nombre" = E'servicios') LIMIT 1[0m
+Google geocoding. Address: Comisión Central de Contratación. Dirección de Patrimonio y Contratación Planta baja del Edificio Sede del Gobierno Vasco. c/ Donostia-San Sebastián, nº 1. Lakua II 01010 Vitoria-Gasteiz Teléfono: 945 01 89 31 Fax: 945 01 90 18 Fecha límite de obtención de documentos e información: 22 de febrero de 2010,spain. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>Comisión Central de Contratación. Dirección de Patrimonio y Contratación Planta baja del Edificio Sede del Gobierno Vasco. c/ Donostia-San Sebastián, nº 1. Lakua II 01010 Vitoria-Gasteiz Teléfono: 945 01 89 31 Fax: 945 01 90 18 Fecha límite de obtención de documentos e información: 22 de febrero de 2010,spain</name>
+  <Status>
+    <code>602</code>
+    <request>geocode</request>
+  </Status>
+</Response></kml>
+Google was unable to geocode address: Comisión Central de Contratación. Dirección de Patrimonio y Contratación Planta baja del Edificio Sede del Gobierno Vasco. c/ Donostia-San Sebastián, nº 1. Lakua II 01010 Vitoria-Gasteiz Teléfono: 945 01 89 31 Fax: 945 01 90 18 Fecha límite de obtención de documentos e información: 22 de febrero de 2010,spain
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mLicitacion Update (0.7ms)[0m   [0;1mUPDATE "licitacions" SET "updated_at" = '2010-05-14 14:41:09.644377', "tipo_procedimiento_id" = 3, "url_licitacion" = E'http://www.euskadi.net/r33-2288/es/contenidos/contratacion/c02_006_2010/es_c02_006_/c02_006_2010.html', "titulo" = E'Servicio de vigilancia y seguridad en inmuebles con riesgo de atentado y sedes de partidos políticos y organizaciones sindicales.', "tipo_licitacion_id" = 2, "codigo_cpv_ppal" = E'797100004', "fecha_publicacion" = '2010-02-09 23:00:00.000000', "fecha_adjudicacion" = '2010-05-10 22:00:00.000000' WHERE "id" = 3[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mLicitacion Load (0.6ms)[0m   [0;1mSELECT * FROM "licitacions" WHERE ("licitacions"."expediente" = E'A-010/DEAS-2010.' AND "licitacions"."fuente_datos_id" = 1) LIMIT 1[0m
+  [4;35;1mTipoProcedimiento Load (0.3ms)[0m   [0mSELECT * FROM "tipo_procedimientos" WHERE ("tipo_procedimientos"."nombre" = E'abierto') LIMIT 1[0m
+  [4;36;1mTipoLicitacion Load (0.2ms)[0m   [0;1mSELECT * FROM "tipo_licitacions" WHERE ("tipo_licitacions"."nombre" = E'servicios') LIMIT 1[0m
+Google geocoding. Address: Mesa de Contratación de la Dirección de Servicios y Régimen Jurídico del Departamento de Empleo y Asuntos Sociales del Gobierno Vasco. C/ Donostia-San Sebastián, 1, Edificio Lakua I, 1ª planta, zona B Vitoria-Gasteiz   01010 Teléfono: 945 01 94 06  Telefax: 945 01 94 51      E-mail: b-simancas@ej-gv.es,spain. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>Mesa de Contratación de la Dirección de Servicios y Régimen Jurídico del Departamento de Empleo y Asuntos Sociales del Gobierno Vasco. C/ Donostia-San Sebastián, 1, Edificio Lakua I, 1ª planta, zona B Vitoria-Gasteiz   01010 Teléfono: 945 01 94 06  Telefax: 945 01 94 51      E-mail: b-simancas@ej-gv.es,spain</name>
+  <Status>
+    <code>602</code>
+    <request>geocode</request>
+  </Status>
+</Response></kml>
+Google was unable to geocode address: Mesa de Contratación de la Dirección de Servicios y Régimen Jurídico del Departamento de Empleo y Asuntos Sociales del Gobierno Vasco. C/ Donostia-San Sebastián, 1, Edificio Lakua I, 1ª planta, zona B Vitoria-Gasteiz   01010 Teléfono: 945 01 94 06  Telefax: 945 01 94 51      E-mail: b-simancas@ej-gv.es,spain
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mLicitacion Update (0.7ms)[0m   [0;1mUPDATE "licitacions" SET "updated_at" = '2010-05-14 14:41:10.449389', "tipo_procedimiento_id" = 3, "url_licitacion" = E'http://www.euskadi.net/r33-2288/es/contenidos/contratacion/a_010_deas_2010/es_def/a_010_deas_2010.html', "titulo" = E'El que figura en el encabezamiento de este anuncio.', "tipo_licitacion_id" = 2, "fecha_publicacion" = '2010-03-08 23:00:00.000000', "fecha_adjudicacion" = '2010-05-11 22:00:00.000000' WHERE "id" = 4[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mLicitacion Load (0.8ms)[0m   [0;1mSELECT * FROM "licitacions" WHERE ("licitacions"."expediente" = E'C03/001/2010' AND "licitacions"."fuente_datos_id" = 1) LIMIT 1[0m
+  [4;35;1mTipoProcedimiento Load (0.3ms)[0m   [0mSELECT * FROM "tipo_procedimientos" WHERE ("tipo_procedimientos"."nombre" = E'abierto') LIMIT 1[0m
+  [4;36;1mTipoLicitacion Load (0.2ms)[0m   [0;1mSELECT * FROM "tipo_licitacions" WHERE ("tipo_licitacions"."nombre" = E'suministros') LIMIT 1[0m
+Google geocoding. Address: Comisión Central de Contratación. c/ Donostia-San Sebastián, 1 (Planta Baja de Edificio Sede del Gobierno Vasco, Lakua II) Vitoria-Gasteiz 01010. Teléfono: 945 01 89 31. Fax: 945 01 89 50. f) Fecha límite de obtención de documentos e información: 8 de marzo de 2010.,spain. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>Comisión Central de Contratación. c/ Donostia-San Sebastián, 1 (Planta Baja de Edificio Sede del Gobierno Vasco, Lakua II) Vitoria-Gasteiz 01010. Teléfono: 945 01 89 31. Fax: 945 01 89 50. f) Fecha límite de obtención de documentos e información: 8 de marzo de 2010.,spain</name>
+  <Status>
+    <code>602</code>
+    <request>geocode</request>
+  </Status>
+</Response></kml>
+Google was unable to geocode address: Comisión Central de Contratación. c/ Donostia-San Sebastián, 1 (Planta Baja de Edificio Sede del Gobierno Vasco, Lakua II) Vitoria-Gasteiz 01010. Teléfono: 945 01 89 31. Fax: 945 01 89 50. f) Fecha límite de obtención de documentos e información: 8 de marzo de 2010.,spain
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO "tipo_licitacions" ("created_at", "nombre", "updated_at") VALUES('2010-05-14 14:41:11.122849', E'suministros', '2010-05-14 14:41:11.122849') RETURNING "id"[0m
+  [4;35;1mLicitacion Update (0.5ms)[0m   [0mUPDATE "licitacions" SET "updated_at" = '2010-05-14 14:41:11.127899', "tipo_procedimiento_id" = 3, "url_licitacion" = E'http://www.euskadi.net/r33-2288/es/contenidos/contratacion/c03_001_2010/es_jaz/c03_001_2010.html', "titulo" = E'Adquisición de 71.000 dosis de vacuna conjugada frente al Meningococo del serogrupo C y 130.000 dosis de vacuna Antitetáno-Difterica adulto (Td adulto).', "tipo_licitacion_id" = 3, "fecha_publicacion" = '2010-01-28 23:00:00.000000', "fecha_adjudicacion" = '2010-05-10 22:00:00.000000' WHERE "id" = 5[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mLicitacion Load (0.7ms)[0m   [0mSELECT * FROM "licitacions" WHERE ("licitacions"."expediente" = E'A-09-DJAP-2010' AND "licitacions"."fuente_datos_id" = 1) LIMIT 1[0m
+  [4;36;1mTipoProcedimiento Load (0.3ms)[0m   [0;1mSELECT * FROM "tipo_procedimientos" WHERE ("tipo_procedimientos"."nombre" = E'negociado') LIMIT 1[0m
+  [4;35;1mTipoLicitacion Load (0.2ms)[0m   [0mSELECT * FROM "tipo_licitacions" WHERE ("tipo_licitacions"."nombre" = E'servicios') LIMIT 1[0m
+Google geocoding. Address: Departamento de Justicia y Administración Pública Servicio de Contratación Dirección de Servicios Departamento de Justicia y Administración Pública Edificio Sede Central del Gobierno VascoDomicilio: c/ Donostia-S. Sebastián, 1, Edificio Central M (2ª planta)Localidad y código postal: 01010 Vitoria-Gasteiz (Álava)  ,spain. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>Departamento de Justicia y Administración Pública Servicio de Contratación Dirección de Servicios Departamento de Justicia y Administración Pública Edificio Sede Central del Gobierno VascoDomicilio: c/ Donostia-S. Sebastián, 1, Edificio Central M (2ª planta)Localidad y código postal: 01010 Vitoria-Gasteiz (Álava)  ,spain</name>
+  <Status>
+    <code>602</code>
+    <request>geocode</request>
+  </Status>
+</Response></kml>
+Google was unable to geocode address: Departamento de Justicia y Administración Pública Servicio de Contratación Dirección de Servicios Departamento de Justicia y Administración Pública Edificio Sede Central del Gobierno VascoDomicilio: c/ Donostia-S. Sebastián, 1, Edificio Central M (2ª planta)Localidad y código postal: 01010 Vitoria-Gasteiz (Álava)  ,spain
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mLicitacion Update (0.9ms)[0m   [0mUPDATE "licitacions" SET "updated_at" = '2010-05-14 14:41:11.908802', "tipo_procedimiento_id" = 2, "url_licitacion" = E'http://www.euskadi.net/r33-2288/es/contenidos/contratacion/a_09_djap_2010/es_def/a_09_djap_2010.html', "titulo" = E'Mejora de la usabilidad de euskadi.net', "tipo_licitacion_id" = 2, "fecha_publicacion" = '2010-01-24 23:00:00.000000', "fecha_adjudicacion" = '2010-05-10 22:00:00.000000' WHERE "id" = 6[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mLicitacion Load (0.7ms)[0m   [0mSELECT * FROM "licitacions" WHERE ("licitacions"."expediente" = E'A-008/DJAP/2010' AND "licitacions"."fuente_datos_id" = 1) LIMIT 1[0m
+  [4;36;1mTipoProcedimiento Load (0.3ms)[0m   [0;1mSELECT * FROM "tipo_procedimientos" WHERE ("tipo_procedimientos"."nombre" = E'abierto') LIMIT 1[0m
+  [4;35;1mTipoLicitacion Load (0.2ms)[0m   [0mSELECT * FROM "tipo_licitacions" WHERE ("tipo_licitacions"."nombre" = E'servicios') LIMIT 1[0m
+Google geocoding. Address: www.contratacion.euskadi.net,spain. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>www.contratacion.euskadi.net,spain</name>
+  <Status>
+    <code>602</code>
+    <request>geocode</request>
+  </Status>
+</Response></kml>
+Google was unable to geocode address: www.contratacion.euskadi.net,spain
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mLicitacion Update (0.6ms)[0m   [0mUPDATE "licitacions" SET "updated_at" = '2010-05-14 14:41:12.574983', "tipo_procedimiento_id" = 3, "url_licitacion" = E'http://www.euskadi.net/r33-2288/es/contenidos/contratacion/a_008_djap_2010/es_def/a_008_djap_2010.html', "titulo" = E'Oficina técnica de apoyo al software libre', "tipo_licitacion_id" = 2, "fecha_publicacion" = '2010-01-28 23:00:00.000000', "fecha_adjudicacion" = '2010-05-10 22:00:00.000000' WHERE "id" = 7[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mLicitacion Load (0.7ms)[0m   [0mSELECT * FROM "licitacions" WHERE ("licitacions"."expediente" = E'004A/2010' AND "licitacions"."fuente_datos_id" = 1) LIMIT 1[0m
+  [4;36;1mTipoProcedimiento Load (0.3ms)[0m   [0;1mSELECT * FROM "tipo_procedimientos" WHERE ("tipo_procedimientos"."nombre" = E'abierto') LIMIT 1[0m
+  [4;35;1mTipoLicitacion Load (0.3ms)[0m   [0mSELECT * FROM "tipo_licitacions" WHERE ("tipo_licitacions"."nombre" = E'servicios') LIMIT 1[0m
+Google geocoding. Address: Servicio de Contratación de la Dirección de Servicios del Departamento de Medio Ambiente, Planificación Territorial, Agricultura y Pesca Domicilio: C/ Donostia-San Sebastián, 1 - Localidad y código postal: 01010 VITORIA-GASTEIZ Teléfono: 945019826 Telefax: 945019856 Correo electrónico: estibalitz@ej-gv.es,spain. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>Servicio de Contratación de la Dirección de Servicios del Departamento de Medio Ambiente, Planificación Territorial, Agricultura y Pesca Domicilio: C/ Donostia-San Sebastián, 1 - Localidad y código postal: 01010 VITORIA-GASTEIZ Teléfono: 945019826 Telefax: 945019856 Correo electrónico: estibalitz@ej-gv.es,spain</name>
+  <Status>
+    <code>602</code>
+    <request>geocode</request>
+  </Status>
+</Response></kml>
+Google was unable to geocode address: Servicio de Contratación de la Dirección de Servicios del Departamento de Medio Ambiente, Planificación Territorial, Agricultura y Pesca Domicilio: C/ Donostia-San Sebastián, 1 - Localidad y código postal: 01010 VITORIA-GASTEIZ Teléfono: 945019826 Telefax: 945019856 Correo electrónico: estibalitz@ej-gv.es,spain
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mLicitacion Update (0.6ms)[0m   [0mUPDATE "licitacions" SET "updated_at" = '2010-05-14 14:41:13.472030', "tipo_procedimiento_id" = 3, "url_licitacion" = E'http://www.euskadi.net/r33-2288/es/contenidos/contratacion/4a_2010_vuelos/es_4a_2010/4a_2010.html', "titulo" = E'Contratación de servicios para realizar Vuelos Fotogramétricos Digitales 2010-2011 de Euskadi: Vuelo Fotogramétrico 22 Cm (2010) Y Vuelo Fotogramétrico 22 Cm (2011)  ', "tipo_licitacion_id" = 2, "fecha_publicacion" = '2010-05-09 22:00:00.000000', "fecha_adjudicacion" = '2010-05-09 22:00:00.000000' WHERE "id" = 8[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mLicitacion Load (0.6ms)[0m   [0mSELECT * FROM "licitacions" WHERE ("licitacions"."expediente" = E'C02/075/2008' AND "licitacions"."fuente_datos_id" = 1) LIMIT 1[0m
+  [4;36;1mTipoProcedimiento Load (0.3ms)[0m   [0;1mSELECT * FROM "tipo_procedimientos" WHERE ("tipo_procedimientos"."nombre" = E'abierto') LIMIT 1[0m
+  [4;35;1mTipoLicitacion Load (0.2ms)[0m   [0mSELECT * FROM "tipo_licitacions" WHERE ("tipo_licitacions"."nombre" = E'servicios') LIMIT 1[0m
+Google geocoding. Address: Comisión Central de Contratación. Dirección de Patrimonio y Contratación Planta baja del Edificio Sede del Gobierno Vasco. c/ Donostia-San Sebastián, nº 1. Lakua 01010 Vitoria-Gasteiz Teléfono: 945 018927 Fax: 945 019018 Correo electrónico: a-jimenez@ej-gv.es Fecha límite de obtención de documentos e información: 12 de mayo de 2009.,spain. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>Comisión Central de Contratación. Dirección de Patrimonio y Contratación Planta baja del Edificio Sede del Gobierno Vasco. c/ Donostia-San Sebastián, nº 1. Lakua 01010 Vitoria-Gasteiz Teléfono: 945 018927 Fax: 945 019018 Correo electrónico: a-jimenez@ej-gv.es Fecha límite de obtención de documentos e información: 12 de mayo de 2009.,spain</name>
+  <Status>
+    <code>602</code>
+    <request>geocode</request>
+  </Status>
+</Response></kml>
+Google was unable to geocode address: Comisión Central de Contratación. Dirección de Patrimonio y Contratación Planta baja del Edificio Sede del Gobierno Vasco. c/ Donostia-San Sebastián, nº 1. Lakua 01010 Vitoria-Gasteiz Teléfono: 945 018927 Fax: 945 019018 Correo electrónico: a-jimenez@ej-gv.es Fecha límite de obtención de documentos e información: 12 de mayo de 2009.,spain
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mLicitacion Update (0.6ms)[0m   [0mUPDATE "licitacions" SET "updated_at" = '2010-05-14 14:41:14.386515', "tipo_procedimiento_id" = 3, "url_licitacion" = E'http://www.euskadi.net/r33-2288/es/contenidos/contratacion/c02_075_2008/es_nmp/c02_075_2008.html', "titulo" = E'Inspección de los edificios próximos al trazado del tramo Santurtzi-Kabiezes de la línea 2 del ferrocarril metropolitano de Bilbao.', "tipo_licitacion_id" = 2, "fecha_publicacion" = '2009-04-01 22:00:00.000000', "fecha_adjudicacion" = '2009-10-26 23:00:00.000000' WHERE "id" = 9[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mAdjudicatario Load (1.0ms)[0m   [0mSELECT * FROM "adjudicatarios" WHERE ("adjudicatarios"."nombre" = E'ARISTA INTERACTIVA, S.L.') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (27.1ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-14 16:50:06.302075', E'ARISTA INTERACTIVA, S.L.', NULL, NULL, '2010-05-14 16:50:06.302075', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (31.5ms)[0m   [0;1mINSERT INTO "licitacion_adjudicatarios" ("adjudicatario_id", "created_at", "importe", "updated_at", "licitacion_id") VALUES(1, '2010-05-14 16:50:06.338392', NULL, '2010-05-14 16:50:06.338392', 13) RETURNING "id"[0m
+  [4;35;1mSQL (13.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mAdjudicatario Load (1.3ms)[0m   [0;1mSELECT "adjudicatarios".* FROM "adjudicatarios" INNER JOIN "licitacion_adjudicatarios" ON "adjudicatarios".id = "licitacion_adjudicatarios".adjudicatario_id WHERE (("licitacion_adjudicatarios".licitacion_id = 13)) [0m
+  [4;35;1mLicitacionAdjudicatario Load (1.4ms)[0m   [0mSELECT * FROM "licitacion_adjudicatarios" WHERE ("licitacion_adjudicatarios".licitacion_id = 13) LIMIT 1[0m
+  [4;36;1mLicitacionAdjudicatario Load (0.7ms)[0m   [0;1mSELECT * FROM "licitacion_adjudicatarios" WHERE ("licitacion_adjudicatarios".licitacion_id = 13) LIMIT 1[0m
+  [4;35;1mLicitacionAdjudicatario Load (6.6ms)[0m   [0mSELECT * FROM "licitacion_adjudicatarios" WHERE ("licitacion_adjudicatarios".licitacion_id = 13) LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mLicitacionAdjudicatario Load (0.9ms)[0m   [0;1mSELECT * FROM "licitacion_adjudicatarios" WHERE ("licitacion_adjudicatarios".licitacion_id = 13) LIMIT 1[0m
+  [4;35;1mLicitacionAdjudicatario Load (0.8ms)[0m   [0mSELECT * FROM "licitacion_adjudicatarios" WHERE ("licitacion_adjudicatarios".licitacion_id = 13) LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (45.5ms)[0m   [0mINSERT INTO "licitacion_adjudicatarios" ("adjudicatario_id", "created_at", "importe", "updated_at", "licitacion_id") VALUES(NULL, '2010-05-14 16:54:57.499459', 1.0, '2010-05-14 16:54:57.499459', 13) RETURNING "id"[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mLicitacionAdjudicatario Load (0.3ms)[0m   [0mSELECT * FROM "licitacion_adjudicatarios" WHERE ("licitacion_adjudicatarios".licitacion_id = 13) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mINSERT INTO "adjudicatarios" ("cif", "created_at", "nombre", "cp", "tlf", "updated_at", "the_geom", "fax", "direction", "poblacion", "web", "email") VALUES(NULL, '2010-05-14 16:57:10.790545', NULL, NULL, NULL, '2010-05-14 16:57:10.790545', NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO "licitacion_adjudicatarios" ("adjudicatario_id", "created_at", "importe", "updated_at", "licitacion_id") VALUES(2, '2010-05-14 16:57:10.794541', NULL, '2010-05-14 16:57:10.794541', 13) RETURNING "id"[0m
+  [4;35;1mSQL (39.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "adjudicatarios" INNER JOIN "licitacion_adjudicatarios" ON "adjudicatarios".id = "licitacion_adjudicatarios".adjudicatario_id WHERE (("licitacion_adjudicatarios".licitacion_id = 13)) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mLicitacionAdjudicatario Update (0.9ms)[0m   [0;1mUPDATE "licitacion_adjudicatarios" SET "updated_at" = '2010-05-14 16:58:39.406022', "adjudicatario_id" = 1, "importe" = 100.0 WHERE "id" = 2[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mCOMMIT[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mFuenteDatos Load (25.2ms)[0m   [0;1mSELECT * FROM "fuente_datos" WHERE ("fuente_datos"."nombre" = E'Plataforma contratacion del Gobierno Vasco') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mFuenteDatos Load (0.5ms)[0m   [0;1mSELECT * FROM "fuente_datos" WHERE ("fuente_datos"."nombre" = E'Plataforma contratacion del Gobierno Vasco') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mFuenteDatos Load (1.3ms)[0m   [0;1mSELECT * FROM "fuente_datos" WHERE ("fuente_datos"."nombre" = E'Plataforma contratacion del Gobierno Vasco') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mFuenteDatos Load (0.6ms)[0m   [0;1mSELECT * FROM "fuente_datos" WHERE ("fuente_datos"."nombre" = E'Plataforma contratacion del Gobierno Vasco') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mFuenteDatos Load (0.6ms)[0m   [0;1mSELECT * FROM "fuente_datos" WHERE ("fuente_datos"."nombre" = E'Plataforma contratacion del Gobierno Vasco') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mFuenteDatos Load (0.6ms)[0m   [0;1mSELECT * FROM "fuente_datos" WHERE ("fuente_datos"."nombre" = E'Plataforma contratacion del Gobierno Vasco') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mFuenteDatos Load (0.7ms)[0m   [0;1mSELECT * FROM "fuente_datos" WHERE ("fuente_datos"."nombre" = E'Plataforma contratacion del Gobierno Vasco') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (28.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (40.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateAdjudicatarios (20100512134700)
+Migrating to CreateComentarios (20100512134744)
+Migrating to CreateComunidadAutonomas (20100512134805)
+Migrating to CreateEstados (20100512134819)
+Migrating to CreateFuenteDatos (20100512134843)
+Migrating to CreateLicitacions (20100512135028)
+Migrating to CreateLicitacionAdjudicatarios (20100512135113)
+Migrating to CreateOrganoConvocantes (20100512135214)
+Migrating to CreatePartidoPoliticos (20100512135331)
+Migrating to CreatePerfilContratantes (20100512135522)
+Migrating to CreateProgramaFinanciacions (20100512135537)
+Migrating to CreateProvincias (20100512135559)
+Migrating to CreateTipoLicitacions (20100512135609)
+Migrating to CreateTipoPerfilContratantes (20100512135621)
+Migrating to CreateTipoProcedimientos (20100512135628)
+Migrating to CreateUsuarios (20100512135842)
+Migrating to AddPointToLicitationAndComentario (20100512163007)
+Migrating to CreateOrganisations (20100512183603)
+Migrating to ChangeComentarioColumn (20100512221114)
+Migrating to RemoveFechaActualizacion (20100514131835)
+Migrating to AddLicitacionesDefaults (20100514132333)
+Migrating to BigChanges (20100517092906)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (122.6ms)[0m   [0;1mALTER TABLE "organo_convocantes" DROP "direccion"[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mALTER TABLE "organo_convocantes" DROP "poblacion"[0m
+  [4;36;1mSQL (11.1ms)[0m   [0;1mALTER TABLE "organo_convocantes" DROP "cp"[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mALTER TABLE "organo_convocantes" DROP "tlf"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mALTER TABLE "organo_convocantes" DROP "fax"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mALTER TABLE "organo_convocantes" DROP "email"[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mALTER TABLE "organo_convocantes" DROP "web"[0m
+  [4;35;1mSQL (32.1ms)[0m   [0mALTER TABLE "perfil_contratantes" DROP "direccion"[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mALTER TABLE "perfil_contratantes" DROP "poblacion"[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mALTER TABLE "perfil_contratantes" DROP "cp"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mALTER TABLE "perfil_contratantes" DROP "tlf"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mALTER TABLE "perfil_contratantes" DROP "fax"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mALTER TABLE "perfil_contratantes" DROP "email"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mALTER TABLE "perfil_contratantes" DROP "web"[0m
+  [4;36;1mSQL (25.6ms)[0m   [0;1mALTER TABLE "adjudicatarios" DROP "poblacion"[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mALTER TABLE "adjudicatarios" DROP "cp"[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mALTER TABLE "adjudicatarios" DROP "tlf"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mALTER TABLE "adjudicatarios" DROP "fax"[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mALTER TABLE "adjudicatarios" DROP "email"[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mALTER TABLE "adjudicatarios" DROP "web"[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mALTER TABLE "organo_convocantes" RENAME TO "organo_contratacions"[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mALTER TABLE "perfil_contratantes" RENAME TO "administracions"[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mALTER TABLE "tipo_perfil_contratantes" RENAME TO "tipo_administracions"[0m
+  [4;35;1mSQL (23.6ms)[0m   [0mALTER TABLE "licitacions" ADD COLUMN "mesa_contratacion" character varying(255)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPGError: ERROR: column "mesa_contratacion" of relation "licitacions" already exists
+: ALTER TABLE "licitacions" ADD COLUMN "mesa_contratacion" character varying(255)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mROLLBACK[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateAdjudicatarios (20100512134700)
+Migrating to CreateComentarios (20100512134744)
+Migrating to CreateComunidadAutonomas (20100512134805)
+Migrating to CreateEstados (20100512134819)
+Migrating to CreateFuenteDatos (20100512134843)
+Migrating to CreateLicitacions (20100512135028)
+Migrating to CreateLicitacionAdjudicatarios (20100512135113)
+Migrating to CreateOrganoConvocantes (20100512135214)
+Migrating to CreatePartidoPoliticos (20100512135331)
+Migrating to CreatePerfilContratantes (20100512135522)
+Migrating to CreateProgramaFinanciacions (20100512135537)
+Migrating to CreateProvincias (20100512135559)
+Migrating to CreateTipoLicitacions (20100512135609)
+Migrating to CreateTipoPerfilContratantes (20100512135621)
+Migrating to CreateTipoProcedimientos (20100512135628)
+Migrating to CreateUsuarios (20100512135842)
+Migrating to AddPointToLicitationAndComentario (20100512163007)
+Migrating to CreateOrganisations (20100512183603)
+Migrating to ChangeComentarioColumn (20100512221114)
+Migrating to RemoveFechaActualizacion (20100514131835)
+Migrating to AddLicitacionesDefaults (20100514132333)
+Migrating to BigChanges (20100517092906)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mALTER TABLE "organo_convocantes" DROP "direccion"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mALTER TABLE "organo_convocantes" DROP "poblacion"[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mALTER TABLE "organo_convocantes" DROP "cp"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mALTER TABLE "organo_convocantes" DROP "tlf"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mALTER TABLE "organo_convocantes" DROP "fax"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mALTER TABLE "organo_convocantes" DROP "email"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mALTER TABLE "organo_convocantes" DROP "web"[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mALTER TABLE "perfil_contratantes" DROP "direccion"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mALTER TABLE "perfil_contratantes" DROP "poblacion"[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mALTER TABLE "perfil_contratantes" DROP "cp"[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mALTER TABLE "perfil_contratantes" DROP "tlf"[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mALTER TABLE "perfil_contratantes" DROP "fax"[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mALTER TABLE "perfil_contratantes" DROP "email"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mALTER TABLE "perfil_contratantes" DROP "web"[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mALTER TABLE "adjudicatarios" DROP "poblacion"[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mALTER TABLE "adjudicatarios" DROP "cp"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mALTER TABLE "adjudicatarios" DROP "tlf"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mALTER TABLE "adjudicatarios" DROP "fax"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mALTER TABLE "adjudicatarios" DROP "email"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mALTER TABLE "adjudicatarios" DROP "web"[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mALTER TABLE "organo_convocantes" RENAME TO "organo_contratacions"[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mALTER TABLE "perfil_contratantes" RENAME TO "administracions"[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mALTER TABLE "tipo_perfil_contratantes" RENAME TO "tipo_administracions"[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mALTER TABLE "licitacions" ADD COLUMN "mesa_contratacion" character varying(255)[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mALTER TABLE "licitacions" RENAME COLUMN "importe" TO "importe_estimado"[0m
+  [4;35;1mSQL (65.6ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100517092906')[0m
+  [4;36;1mSQL (3.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateAdjudicatarios (20100512134700)
+Migrating to CreateComentarios (20100512134744)
+Migrating to CreateComunidadAutonomas (20100512134805)
+Migrating to CreateEstados (20100512134819)
+Migrating to CreateFuenteDatos (20100512134843)
+Migrating to CreateLicitacions (20100512135028)
+Migrating to CreateLicitacionAdjudicatarios (20100512135113)
+Migrating to CreateOrganoConvocantes (20100512135214)
+Migrating to CreatePartidoPoliticos (20100512135331)
+Migrating to CreatePerfilContratantes (20100512135522)
+Migrating to CreateProgramaFinanciacions (20100512135537)
+Migrating to CreateProvincias (20100512135559)
+Migrating to CreateTipoLicitacions (20100512135609)
+Migrating to CreateTipoPerfilContratantes (20100512135621)
+Migrating to CreateTipoProcedimientos (20100512135628)
+Migrating to CreateUsuarios (20100512135842)
+Migrating to AddPointToLicitationAndComentario (20100512163007)
+Migrating to CreateOrganisations (20100512183603)
+Migrating to ChangeComentarioColumn (20100512221114)
+Migrating to RemoveFechaActualizacion (20100514131835)
+Migrating to AddLicitacionesDefaults (20100514132333)
+Migrating to BigChanges (20100517092906)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateAdjudicatarios (20100512134700)
+Migrating to CreateComentarios (20100512134744)
+Migrating to CreateComunidadAutonomas (20100512134805)
+Migrating to CreateEstados (20100512134819)
+Migrating to CreateFuenteDatos (20100512134843)
+Migrating to CreateLicitacions (20100512135028)
+Migrating to CreateLicitacionAdjudicatarios (20100512135113)
+Migrating to CreateOrganoConvocantes (20100512135214)
+Migrating to CreatePartidoPoliticos (20100512135331)
+Migrating to CreatePerfilContratantes (20100512135522)
+Migrating to CreateProgramaFinanciacions (20100512135537)
+Migrating to CreateProvincias (20100512135559)
+Migrating to CreateTipoLicitacions (20100512135609)
+Migrating to CreateTipoPerfilContratantes (20100512135621)
+Migrating to CreateTipoProcedimientos (20100512135628)
+Migrating to CreateUsuarios (20100512135842)
+Migrating to AddPointToLicitationAndComentario (20100512163007)
+Migrating to CreateOrganisations (20100512183603)
+Migrating to ChangeComentarioColumn (20100512221114)
+Migrating to RemoveFechaActualizacion (20100514131835)
+Migrating to AddLicitacionesDefaults (20100514132333)
+Migrating to BigChanges (20100517092906)
+Migrating to CreateContacts (20100517101743)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (240.3ms)[0m   [0;1mCREATE TABLE contacts ("id" serial primary key, "direccion" character varying(255), "poblacion" character varying(255), "cp" character varying(255), "tlf" character varying(255), "fax" character varying(255), "email" character varying(255), "web" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100517101743')[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (4.1ms)[0m   [0;1mCREATE TABLE schema_migrations ("version" character varying(255) NOT NULL) [0m
+  [4;35;1mSQL (2.6ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateAdjudicatarios (20100512134700)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (6.4ms)[0m   [0;1mCREATE TABLE adjudicatarios ("id" serial primary key, "cif" character varying(255), "nombre" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (107.2ms)[0m   [0mSELECT AddGeometryColumn('adjudicatarios','the_geom',4326,'POINT',2)[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mCREATE INDEX "index_adjudicatarios_on_cif" ON "adjudicatarios" ("cif")[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512134700')[0m
+  [4;36;1mSQL (12.1ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateComentarios (20100512134744)
+  [4;35;1mSQL (1.5ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (5.3ms)[0m   [0;1mCREATE TABLE comentarios ("id" serial primary key, "usuario_id" integer, "licitacion_id" integer, "tipo_licitacion_id" integer, "comentario" text, "is_vote" boolean, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (6.5ms)[0m   [0mSELECT AddGeometryColumn('comentarios','the_geom',4326,'POINT',2)[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mCREATE INDEX "index_comentarios_on_usuario_id" ON "comentarios" ("usuario_id")[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mCREATE INDEX "index_comentarios_on_licitacion_id" ON "comentarios" ("licitacion_id")[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mCREATE INDEX "index_comentarios_on_tipo_licitacion_id" ON "comentarios" ("tipo_licitacion_id")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512134744')[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateComunidadAutonomas (20100512134805)
+  [4;35;1mSQL (0.6ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mCREATE TABLE comunidad_autonomas ("id" serial primary key, "nombre" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512134805')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateFuenteDatos (20100512134843)
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (6.7ms)[0m   [0;1mCREATE TABLE fuente_datos ("id" serial primary key, "nombre" character varying(255), "ultima_importacion" timestamp, "web" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512134843')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateLicitacions (20100512135028)
+  [4;35;1mSQL (0.5ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (5.9ms)[0m   [0;1mCREATE TABLE licitacions ("id" serial primary key, "organo_convocante_id" integer, "expediente" character varying(255), "tipo_procedimiento_id" integer, "tipo_licitacion_id" integer, "importe_estimado" float, "fecha_publicacion" timestamp, "fecha_adjudicacion" timestamp, "titulo" character varying(255), "descripcion" text, "codigo_cpv_ppal" character varying(255), "url_licitacion" text, "votes_up" integer DEFAULT 0, "votes_down" integer DEFAULT 0, "num_comentarios" integer DEFAULT 0, "ref_publicacion" text, "mesa_contratacion" text, "fuente_datos_id" integer, "programa_financion_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (2.4ms)[0m   [0mSELECT AddGeometryColumn('licitacions','the_geom',4326,'POINT',2)[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mCREATE INDEX "index_licitacions_on_expediente" ON "licitacions" ("expediente")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPGError: ERROR: column "importe" does not exist
+: CREATE INDEX "index_licitacions_on_importe" ON "licitacions" ("importe")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateAdjudicatarios (20100512134700)
+Migrating to CreateComentarios (20100512134744)
+Migrating to CreateComunidadAutonomas (20100512134805)
+Migrating to CreateFuenteDatos (20100512134843)
+Migrating to CreateLicitacions (20100512135028)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (8.3ms)[0m   [0;1mCREATE TABLE licitacions ("id" serial primary key, "organo_contratacion_id" integer, "expediente" character varying(255), "tipo_procedimiento_id" integer, "tipo_licitacion_id" integer, "importe_estimado" float, "fecha_publicacion" timestamp, "fecha_adjudicacion" timestamp, "titulo" character varying(255), "descripcion" text, "codigo_cpv_ppal" character varying(255), "url_licitacion" text, "votes_up" integer DEFAULT 0, "votes_down" integer DEFAULT 0, "num_comentarios" integer DEFAULT 0, "ref_publicacion" text, "mesa_contratacion" text, "fuente_datos_id" integer, "programa_financion_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (9.3ms)[0m   [0mSELECT AddGeometryColumn('licitacions','the_geom',4326,'POINT',2)[0m
+  [4;36;1mSQL (12.0ms)[0m   [0;1mCREATE INDEX "index_licitacions_on_expediente" ON "licitacions" ("expediente")[0m
+  [4;35;1mSQL (2.3ms)[0m   [0mCREATE INDEX "index_licitacions_on_importe_estimado" ON "licitacions" ("importe_estimado")[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mCREATE INDEX "index_licitacions_on_titulo" ON "licitacions" ("titulo")[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mCREATE INDEX "index_licitacions_on_codigo_cpv_ppal" ON "licitacions" ("codigo_cpv_ppal")[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mCREATE INDEX "index_licitacions_on_tipo_procedimiento_id" ON "licitacions" ("tipo_procedimiento_id")[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mCREATE INDEX "index_licitacions_on_organo_contratacion_id" ON "licitacions" ("organo_contratacion_id")[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mCREATE INDEX "index_licitacions_on_tipo_licitacion_id" ON "licitacions" ("tipo_licitacion_id")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPGError: ERROR: column "estado_id" does not exist
+: CREATE INDEX "index_licitacions_on_estado_id" ON "licitacions" ("estado_id")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateAdjudicatarios (20100512134700)
+Migrating to CreateComentarios (20100512134744)
+Migrating to CreateComunidadAutonomas (20100512134805)
+Migrating to CreateFuenteDatos (20100512134843)
+Migrating to CreateLicitacions (20100512135028)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (8.5ms)[0m   [0;1mCREATE TABLE licitacions ("id" serial primary key, "organo_contratacion_id" integer, "expediente" character varying(255), "tipo_procedimiento_id" integer, "tipo_licitacion_id" integer, "importe_estimado" float, "fecha_publicacion" timestamp, "fecha_adjudicacion" timestamp, "titulo" character varying(255), "descripcion" text, "codigo_cpv_ppal" character varying(255), "url_licitacion" text, "votes_up" integer DEFAULT 0, "votes_down" integer DEFAULT 0, "num_comentarios" integer DEFAULT 0, "ref_publicacion" text, "mesa_contratacion" text, "fuente_datos_id" integer, "programa_financion_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (10.8ms)[0m   [0mSELECT AddGeometryColumn('licitacions','the_geom',4326,'POINT',2)[0m
+  [4;36;1mSQL (8.0ms)[0m   [0;1mCREATE INDEX "index_licitacions_on_expediente" ON "licitacions" ("expediente")[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mCREATE INDEX "index_licitacions_on_importe_estimado" ON "licitacions" ("importe_estimado")[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mCREATE INDEX "index_licitacions_on_titulo" ON "licitacions" ("titulo")[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mCREATE INDEX "index_licitacions_on_codigo_cpv_ppal" ON "licitacions" ("codigo_cpv_ppal")[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mCREATE INDEX "index_licitacions_on_tipo_procedimiento_id" ON "licitacions" ("tipo_procedimiento_id")[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mCREATE INDEX "index_licitacions_on_organo_contratacion_id" ON "licitacions" ("organo_contratacion_id")[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mCREATE INDEX "index_licitacions_on_tipo_licitacion_id" ON "licitacions" ("tipo_licitacion_id")[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mCREATE INDEX "index_licitacions_on_fuente_datos_id" ON "licitacions" ("fuente_datos_id")[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mCREATE INDEX "index_licitacions_on_programa_financion_id" ON "licitacions" ("programa_financion_id")[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512135028')[0m
+  [4;36;1mSQL (8.0ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateLicitacionAdjudicatarios (20100512135113)
+  [4;35;1mSQL (1.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (4.4ms)[0m   [0;1mCREATE TABLE licitacion_adjudicatarios ("id" serial primary key, "licitacion_id" integer, "adjudicatario_id" integer, "importe" float, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (1.3ms)[0m   [0mCREATE INDEX "index_licitacion_adjudicatarios_on_licitacion_id" ON "licitacion_adjudicatarios" ("licitacion_id")[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mCREATE INDEX "index_licitacion_adjudicatarios_on_adjudicatario_id" ON "licitacion_adjudicatarios" ("adjudicatario_id")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512135113')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateOrganoContratacions (20100512135214)
+  [4;35;1mSQL (0.9ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mCREATE TABLE organo_contratacions ("id" serial primary key, "administracion_id" integer, "nombre" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (1.1ms)[0m   [0mCREATE INDEX "index_organo_contratacions_on_administracion_id" ON "organo_contratacions" ("administracion_id")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100512135214')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+Migrating to CreatePartidoPoliticos (20100512135331)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (6.4ms)[0m   [0mCREATE TABLE partido_politicos ("id" serial primary key, "nombre" character varying(255), "siglas" character varying(255), "web" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100512135331')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+Migrating to CreateAdministracions (20100512135522)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateAdjudicatarios (20100512134700)
+Migrating to CreateComentarios (20100512134744)
+Migrating to CreateComunidadAutonomas (20100512134805)
+Migrating to CreateFuenteDatos (20100512134843)
+Migrating to CreateLicitacions (20100512135028)
+Migrating to CreateLicitacionAdjudicatarios (20100512135113)
+Migrating to CreateOrganoContratacions (20100512135214)
+Migrating to CreatePartidoPoliticos (20100512135331)
+Migrating to CreateAdministracions (20100512135522)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (10.8ms)[0m   [0;1mCREATE TABLE administracions ("id" serial primary key, "nombre" character varying(255), "cif" character varying(255), "wikipedia_url" text, "foto" text, "escudo" text, "habitantes" integer, "alcalde_voota_link" text, "presupuesto_total" float, "presupuesto_url" text, "parent_id" integer, "lft" integer, "rgt" integer, "tipo_administracion_id" integer, "provincia_id" integer, "comunidad_autonoma_id" integer, "partido_politico_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPGError: ERROR: Table 'administracion' does not occur in the search_path
+CONTEXT: SQL statement "SELECT AddGeometryColumn('','', $1 , $2 , $3 , $4 , $5 )"
+PL/pgSQL function "addgeometrycolumn" line 5 at SQL statement
+: SELECT AddGeometryColumn('administracion','the_geom',4326,'POINT',2)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateAdjudicatarios (20100512134700)
+Migrating to CreateComentarios (20100512134744)
+Migrating to CreateComunidadAutonomas (20100512134805)
+Migrating to CreateFuenteDatos (20100512134843)
+Migrating to CreateLicitacions (20100512135028)
+Migrating to CreateLicitacionAdjudicatarios (20100512135113)
+Migrating to CreateOrganoContratacions (20100512135214)
+Migrating to CreatePartidoPoliticos (20100512135331)
+Migrating to CreateAdministracions (20100512135522)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (8.3ms)[0m   [0;1mCREATE TABLE administracions ("id" serial primary key, "nombre" character varying(255), "cif" character varying(255), "wikipedia_url" text, "foto" text, "escudo" text, "habitantes" integer, "alcalde_voota_link" text, "presupuesto_total" float, "presupuesto_url" text, "parent_id" integer, "lft" integer, "rgt" integer, "tipo_administracion_id" integer, "provincia_id" integer, "comunidad_autonoma_id" integer, "partido_politico_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (9.3ms)[0m   [0mSELECT AddGeometryColumn('administracions','the_geom',4326,'POINT',2)[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mCREATE INDEX "index_administracions_on_cif" ON "administracions" ("cif")[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mCREATE INDEX "index_administracions_on_tipo_administracion_id" ON "administracions" ("tipo_administracion_id")[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mCREATE INDEX "index_administracions_on_partido_politico_id" ON "administracions" ("partido_politico_id")[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE INDEX "index_administracions_on_provincia_id" ON "administracions" ("provincia_id")[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mCREATE INDEX "index_administracions_on_comunidad_autonoma_id" ON "administracions" ("comunidad_autonoma_id")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512135522')[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateProgramaFinanciacions (20100512135537)
+  [4;35;1mSQL (1.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (6.5ms)[0m   [0;1mCREATE TABLE programa_financiacions ("id" serial primary key, "nombre" character varying(255), "nivel" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512135537')[0m
+  [4;36;1mSQL (10.7ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateProvincias (20100512135559)
+  [4;35;1mSQL (0.8ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (4.3ms)[0m   [0;1mCREATE TABLE provincias ("id" serial primary key, "nombre" character varying(255), "comunidad_autonoma_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512135559')[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateTipoLicitacions (20100512135609)
+  [4;35;1mSQL (0.5ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (3.6ms)[0m   [0;1mCREATE TABLE tipo_licitacions ("id" serial primary key, "nombre" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512135609')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateTipoAdministracions (20100512135621)
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (3.3ms)[0m   [0;1mCREATE TABLE tipo_administracions ("id" serial primary key, "nombre" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512135621')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateTipoProcedimientos (20100512135628)
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (3.4ms)[0m   [0;1mCREATE TABLE tipo_procedimientos ("id" serial primary key, "nombre" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512135628')[0m
+  [4;36;1mSQL (8.7ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateUsuarios (20100512135842)
+  [4;35;1mSQL (0.5ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (5.4ms)[0m   [0;1mCREATE TABLE usuarios ("id" serial primary key, "token" character varying(255), "nombre" character varying(255), "email" character varying(255), "web" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (1.5ms)[0m   [0mCREATE INDEX "index_usuarios_on_token" ON "usuarios" ("token")[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mCREATE INDEX "index_usuarios_on_email" ON "usuarios" ("email")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512135842')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateContacts (20100517101743)
+  [4;35;1mSQL (0.5ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (5.2ms)[0m   [0;1mCREATE TABLE contacts ("id" serial primary key, "direccion" character varying(255), "poblacion" character varying(255), "cp" character varying(255), "tlf" character varying(255), "fax" character varying(255), "email" character varying(255), "web" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100517101743')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (572.6ms)[0m   [0;1mCREATE TABLE schema_migrations ("version" character varying(255) NOT NULL) [0m
+  [4;35;1mSQL (3.5ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateAdjudicatarios (20100512134700)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (7.1ms)[0m   [0;1mCREATE TABLE adjudicatarios ("id" serial primary key, "cif" character varying(255), "nombre" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (10.7ms)[0m   [0mSELECT AddGeometryColumn('adjudicatarios','the_geom',4326,'POINT',2)[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mCREATE INDEX "index_adjudicatarios_on_cif" ON "adjudicatarios" ("cif")[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512134700')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateComentarios (20100512134744)
+  [4;35;1mSQL (0.6ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (18.9ms)[0m   [0;1mCREATE TABLE comentarios ("id" serial primary key, "usuario_id" integer, "licitacion_id" integer, "tipo_licitacion_id" integer, "comentario" text, "is_vote" boolean, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (2.7ms)[0m   [0mSELECT AddGeometryColumn('comentarios','the_geom',4326,'POINT',2)[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mCREATE INDEX "index_comentarios_on_usuario_id" ON "comentarios" ("usuario_id")[0m
+  [4;35;1mSQL (12.7ms)[0m   [0mCREATE INDEX "index_comentarios_on_licitacion_id" ON "comentarios" ("licitacion_id")[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mCREATE INDEX "index_comentarios_on_tipo_licitacion_id" ON "comentarios" ("tipo_licitacion_id")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512134744')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateComunidadAutonomas (20100512134805)
+  [4;35;1mSQL (0.5ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (11.1ms)[0m   [0;1mCREATE TABLE comunidad_autonomas ("id" serial primary key, "nombre" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512134805')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateFuenteDatos (20100512134843)
+  [4;35;1mSQL (0.5ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (13.2ms)[0m   [0;1mCREATE TABLE fuente_datos ("id" serial primary key, "nombre" character varying(255), "ultima_importacion" timestamp, "web" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512134843')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateLicitacions (20100512135028)
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (6.1ms)[0m   [0;1mCREATE TABLE licitacions ("id" serial primary key, "organo_contratacion_id" integer, "expediente" character varying(255), "tipo_procedimiento_id" integer, "tipo_licitacion_id" integer, "importe_estimado" float, "fecha_publicacion" timestamp, "fecha_adjudicacion" timestamp, "titulo" character varying(255), "descripcion" text, "codigo_cpv_ppal" character varying(255), "url_licitacion" text, "votes_up" integer DEFAULT 0, "votes_down" integer DEFAULT 0, "num_comentarios" integer DEFAULT 0, "ref_publicacion" text, "mesa_contratacion" text, "fuente_datos_id" integer, "programa_financion_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (2.4ms)[0m   [0mSELECT AddGeometryColumn('licitacions','the_geom',4326,'POINT',2)[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mCREATE INDEX "index_licitacions_on_expediente" ON "licitacions" ("expediente")[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mCREATE INDEX "index_licitacions_on_importe_estimado" ON "licitacions" ("importe_estimado")[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mCREATE INDEX "index_licitacions_on_titulo" ON "licitacions" ("titulo")[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mCREATE INDEX "index_licitacions_on_codigo_cpv_ppal" ON "licitacions" ("codigo_cpv_ppal")[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mCREATE INDEX "index_licitacions_on_tipo_procedimiento_id" ON "licitacions" ("tipo_procedimiento_id")[0m
+  [4;35;1mSQL (8.7ms)[0m   [0mCREATE INDEX "index_licitacions_on_organo_contratacion_id" ON "licitacions" ("organo_contratacion_id")[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mCREATE INDEX "index_licitacions_on_tipo_licitacion_id" ON "licitacions" ("tipo_licitacion_id")[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mCREATE INDEX "index_licitacions_on_fuente_datos_id" ON "licitacions" ("fuente_datos_id")[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mCREATE INDEX "index_licitacions_on_programa_financion_id" ON "licitacions" ("programa_financion_id")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512135028')[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateLicitacionsAdjudicatarios (20100512135113)
+  [4;35;1mSQL (0.8ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (3.4ms)[0m   [0;1mCREATE TABLE licitacions_adjudicatarios ("id" serial primary key, "licitacion_id" integer, "adjudicatario_id" integer, "importe" float, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (1.2ms)[0m   [0mCREATE INDEX "index_licitacions_adjudicatarios_on_licitacion_id" ON "licitacions_adjudicatarios" ("licitacion_id")[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mCREATE INDEX "index_licitacions_adjudicatarios_on_adjudicatario_id" ON "licitacions_adjudicatarios" ("adjudicatario_id")[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512135113')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateOrganoContratacions (20100512135214)
+  [4;35;1mSQL (0.5ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mCREATE TABLE organo_contratacions ("id" serial primary key, "administracion_id" integer, "nombre" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (1.3ms)[0m   [0mCREATE INDEX "index_organo_contratacions_on_administracion_id" ON "organo_contratacions" ("administracion_id")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100512135214')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+Migrating to CreatePartidoPoliticos (20100512135331)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mCREATE TABLE partido_politicos ("id" serial primary key, "nombre" character varying(255), "siglas" character varying(255), "web" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100512135331')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+Migrating to CreateAdministracions (20100512135522)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (11.7ms)[0m   [0mCREATE TABLE administracions ("id" serial primary key, "nombre" character varying(255), "cif" character varying(255), "wikipedia_url" text, "foto" text, "escudo" text, "habitantes" integer, "alcalde_voota_link" text, "presupuesto_total" float, "presupuesto_url" text, "parent_id" integer, "lft" integer, "rgt" integer, "tipo_administracion_id" integer, "provincia_id" integer, "comunidad_autonoma_id" integer, "partido_politico_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mSELECT AddGeometryColumn('administracions','the_geom',4326,'POINT',2)[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mCREATE INDEX "index_administracions_on_cif" ON "administracions" ("cif")[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mCREATE INDEX "index_administracions_on_tipo_administracion_id" ON "administracions" ("tipo_administracion_id")[0m
+  [4;35;1mSQL (2.7ms)[0m   [0mCREATE INDEX "index_administracions_on_partido_politico_id" ON "administracions" ("partido_politico_id")[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mCREATE INDEX "index_administracions_on_provincia_id" ON "administracions" ("provincia_id")[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mCREATE INDEX "index_administracions_on_comunidad_autonoma_id" ON "administracions" ("comunidad_autonoma_id")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100512135522')[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mCOMMIT[0m
+Migrating to CreateProgramaFinanciacions (20100512135537)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (5.3ms)[0m   [0mCREATE TABLE programa_financiacions ("id" serial primary key, "nombre" character varying(255), "nivel" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100512135537')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+Migrating to CreateProvincias (20100512135559)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (4.1ms)[0m   [0mCREATE TABLE provincias ("id" serial primary key, "nombre" character varying(255), "comunidad_autonoma_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100512135559')[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mCOMMIT[0m
+Migrating to CreateTipoLicitacions (20100512135609)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (3.3ms)[0m   [0mCREATE TABLE tipo_licitacions ("id" serial primary key, "nombre" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100512135609')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+Migrating to CreateTipoAdministracions (20100512135621)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (3.6ms)[0m   [0mCREATE TABLE tipo_administracions ("id" serial primary key, "nombre" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100512135621')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+Migrating to CreateTipoProcedimientos (20100512135628)
+  [4;36;1mSQL (0.7ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (5.5ms)[0m   [0mCREATE TABLE tipo_procedimientos ("id" serial primary key, "nombre" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100512135628')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+Migrating to CreateUsuarios (20100512135842)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mCREATE TABLE usuarios ("id" serial primary key, "token" character varying(255), "nombre" character varying(255), "email" character varying(255), "web" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mCREATE INDEX "index_usuarios_on_token" ON "usuarios" ("token")[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mCREATE INDEX "index_usuarios_on_email" ON "usuarios" ("email")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100512135842')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+Migrating to CreateContacts (20100517101743)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (6.7ms)[0m   [0mCREATE TABLE contacts ("id" serial primary key, "direccion" character varying(255), "poblacion" character varying(255), "cp" character varying(255), "tlf" character varying(255), "fax" character varying(255), "email" character varying(255), "web" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100517101743')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (4.1ms)[0m   [0;1mCREATE TABLE schema_migrations ("version" character varying(255) NOT NULL) [0m
+  [4;35;1mSQL (2.6ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateAdjudicatarios (20100512134700)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (6.4ms)[0m   [0;1mCREATE TABLE adjudicatarios ("id" serial primary key, "cif" character varying(255), "nombre" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (10.8ms)[0m   [0mSELECT AddGeometryColumn('adjudicatarios','the_geom',4326,'POINT',2)[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mCREATE INDEX "index_adjudicatarios_on_cif" ON "adjudicatarios" ("cif")[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512134700')[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateComentarios (20100512134744)
+  [4;35;1mSQL (0.6ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (12.7ms)[0m   [0;1mCREATE TABLE comentarios ("id" serial primary key, "usuario_id" integer, "licitacion_id" integer, "tipo_licitacion_id" integer, "comentario" text, "is_vote" boolean, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (3.9ms)[0m   [0mSELECT AddGeometryColumn('comentarios','the_geom',4326,'POINT',2)[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mCREATE INDEX "index_comentarios_on_usuario_id" ON "comentarios" ("usuario_id")[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mCREATE INDEX "index_comentarios_on_licitacion_id" ON "comentarios" ("licitacion_id")[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mCREATE INDEX "index_comentarios_on_tipo_licitacion_id" ON "comentarios" ("tipo_licitacion_id")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512134744')[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateComunidadAutonomas (20100512134805)
+  [4;35;1mSQL (0.7ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mCREATE TABLE comunidad_autonomas ("id" serial primary key, "nombre" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512134805')[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateFuenteDatos (20100512134843)
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (5.2ms)[0m   [0;1mCREATE TABLE fuente_datos ("id" serial primary key, "nombre" character varying(255), "ultima_importacion" timestamp, "web" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512134843')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateLicitacions (20100512135028)
+  [4;35;1mSQL (0.6ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (7.8ms)[0m   [0;1mCREATE TABLE licitacions ("id" serial primary key, "organo_contratacion_id" integer, "expediente" character varying(255), "tipo_procedimiento_id" integer, "tipo_licitacion_id" integer, "importe_estimado" float, "fecha_publicacion" timestamp, "fecha_adjudicacion" timestamp, "titulo" character varying(255), "descripcion" text, "codigo_cpv_ppal" character varying(255), "url_licitacion" text, "votes_up" integer DEFAULT 0, "votes_down" integer DEFAULT 0, "num_comentarios" integer DEFAULT 0, "ref_publicacion" text, "mesa_contratacion" text, "fuente_datos_id" integer, "programa_financion_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (2.9ms)[0m   [0mSELECT AddGeometryColumn('licitacions','the_geom',4326,'POINT',2)[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mCREATE INDEX "index_licitacions_on_expediente" ON "licitacions" ("expediente")[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mCREATE INDEX "index_licitacions_on_importe_estimado" ON "licitacions" ("importe_estimado")[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mCREATE INDEX "index_licitacions_on_titulo" ON "licitacions" ("titulo")[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mCREATE INDEX "index_licitacions_on_codigo_cpv_ppal" ON "licitacions" ("codigo_cpv_ppal")[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mCREATE INDEX "index_licitacions_on_tipo_procedimiento_id" ON "licitacions" ("tipo_procedimiento_id")[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mCREATE INDEX "index_licitacions_on_organo_contratacion_id" ON "licitacions" ("organo_contratacion_id")[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mCREATE INDEX "index_licitacions_on_tipo_licitacion_id" ON "licitacions" ("tipo_licitacion_id")[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mCREATE INDEX "index_licitacions_on_fuente_datos_id" ON "licitacions" ("fuente_datos_id")[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mCREATE INDEX "index_licitacions_on_programa_financion_id" ON "licitacions" ("programa_financion_id")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512135028')[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateLicitacionsAdjudicatarios (20100512135113)
+  [4;35;1mSQL (0.9ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (4.3ms)[0m   [0;1mCREATE TABLE schema_migrations ("version" character varying(255) NOT NULL) [0m
+  [4;35;1mSQL (2.5ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateAdjudicatarios (20100512134700)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (8.4ms)[0m   [0;1mCREATE TABLE adjudicatarios ("id" serial primary key, "cif" character varying(255), "nombre" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (10.8ms)[0m   [0mSELECT AddGeometryColumn('adjudicatarios','the_geom',4326,'POINT',2)[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mCREATE INDEX "index_adjudicatarios_on_cif" ON "adjudicatarios" ("cif")[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512134700')[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateComentarios (20100512134744)
+  [4;35;1mSQL (0.6ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (13.3ms)[0m   [0;1mCREATE TABLE comentarios ("id" serial primary key, "usuario_id" integer, "licitacion_id" integer, "tipo_licitacion_id" integer, "comentario" text, "is_vote" boolean, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSELECT AddGeometryColumn('comentarios','the_geom',4326,'POINT',2)[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mCREATE INDEX "index_comentarios_on_usuario_id" ON "comentarios" ("usuario_id")[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mCREATE INDEX "index_comentarios_on_licitacion_id" ON "comentarios" ("licitacion_id")[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mCREATE INDEX "index_comentarios_on_tipo_licitacion_id" ON "comentarios" ("tipo_licitacion_id")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512134744')[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateComunidadAutonomas (20100512134805)
+  [4;35;1mSQL (0.7ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (14.0ms)[0m   [0;1mCREATE TABLE comunidad_autonomas ("id" serial primary key, "nombre" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512134805')[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateFuenteDatos (20100512134843)
+  [4;35;1mSQL (0.6ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (118.9ms)[0m   [0;1mCREATE TABLE fuente_datos ("id" serial primary key, "nombre" character varying(255), "ultima_importacion" timestamp, "web" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512134843')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateLicitacions (20100512135028)
+  [4;35;1mSQL (0.5ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (6.5ms)[0m   [0;1mCREATE TABLE licitacions ("id" serial primary key, "organo_contratacion_id" integer, "expediente" character varying(255), "tipo_procedimiento_id" integer, "tipo_licitacion_id" integer, "importe_estimado" float, "fecha_publicacion" timestamp, "fecha_adjudicacion" timestamp, "titulo" character varying(255), "descripcion" text, "codigo_cpv_ppal" character varying(255), "url_licitacion" text, "votes_up" integer DEFAULT 0, "votes_down" integer DEFAULT 0, "num_comentarios" integer DEFAULT 0, "ref_publicacion" text, "mesa_contratacion" text, "fuente_datos_id" integer, "programa_financion_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (3.3ms)[0m   [0mSELECT AddGeometryColumn('licitacions','the_geom',4326,'POINT',2)[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mCREATE INDEX "index_licitacions_on_expediente" ON "licitacions" ("expediente")[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mCREATE INDEX "index_licitacions_on_importe_estimado" ON "licitacions" ("importe_estimado")[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mCREATE INDEX "index_licitacions_on_titulo" ON "licitacions" ("titulo")[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mCREATE INDEX "index_licitacions_on_codigo_cpv_ppal" ON "licitacions" ("codigo_cpv_ppal")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE INDEX "index_licitacions_on_tipo_procedimiento_id" ON "licitacions" ("tipo_procedimiento_id")[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mCREATE INDEX "index_licitacions_on_organo_contratacion_id" ON "licitacions" ("organo_contratacion_id")[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mCREATE INDEX "index_licitacions_on_tipo_licitacion_id" ON "licitacions" ("tipo_licitacion_id")[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mCREATE INDEX "index_licitacions_on_fuente_datos_id" ON "licitacions" ("fuente_datos_id")[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mCREATE INDEX "index_licitacions_on_programa_financion_id" ON "licitacions" ("programa_financion_id")[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512135028')[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateAdjudicacions (20100512135113)
+  [4;35;1mSQL (0.8ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (3.4ms)[0m   [0;1mCREATE TABLE adjudicacions ("id" serial primary key, "licitacion_id" integer, "adjudicatario_id" integer, "importe" float, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (1.3ms)[0m   [0mCREATE INDEX "index_adjudicacions_on_licitacion_id" ON "adjudicacions" ("licitacion_id")[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mCREATE INDEX "index_adjudicacions_on_adjudicatario_id" ON "adjudicacions" ("adjudicatario_id")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512135113')[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateOrganoContratacions (20100512135214)
+  [4;35;1mSQL (0.8ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (5.9ms)[0m   [0;1mCREATE TABLE organo_contratacions ("id" serial primary key, "administracion_id" integer, "nombre" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (1.6ms)[0m   [0mCREATE INDEX "index_organo_contratacions_on_administracion_id" ON "organo_contratacions" ("administracion_id")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100512135214')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+Migrating to CreatePartidoPoliticos (20100512135331)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (4.9ms)[0m   [0mCREATE TABLE partido_politicos ("id" serial primary key, "nombre" character varying(255), "siglas" character varying(255), "web" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100512135331')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+Migrating to CreateAdministracions (20100512135522)
+  [4;36;1mSQL (2.7ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (6.5ms)[0m   [0mCREATE TABLE administracions ("id" serial primary key, "nombre" character varying(255), "cif" character varying(255), "wikipedia_url" text, "foto" text, "escudo" text, "habitantes" integer, "alcalde_voota_link" text, "presupuesto_total" float, "presupuesto_url" text, "parent_id" integer, "lft" integer, "rgt" integer, "tipo_administracion_id" integer, "provincia_id" integer, "comunidad_autonoma_id" integer, "partido_politico_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mSELECT AddGeometryColumn('administracions','the_geom',4326,'POINT',2)[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mCREATE INDEX "index_administracions_on_cif" ON "administracions" ("cif")[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mCREATE INDEX "index_administracions_on_tipo_administracion_id" ON "administracions" ("tipo_administracion_id")[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mCREATE INDEX "index_administracions_on_partido_politico_id" ON "administracions" ("partido_politico_id")[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mCREATE INDEX "index_administracions_on_provincia_id" ON "administracions" ("provincia_id")[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mCREATE INDEX "index_administracions_on_comunidad_autonoma_id" ON "administracions" ("comunidad_autonoma_id")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100512135522')[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mCOMMIT[0m
+Migrating to CreateProgramaFinanciacions (20100512135537)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (6.8ms)[0m   [0mCREATE TABLE programa_financiacions ("id" serial primary key, "nombre" character varying(255), "nivel" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100512135537')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+Migrating to CreateProvincias (20100512135559)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (3.4ms)[0m   [0mCREATE TABLE provincias ("id" serial primary key, "nombre" character varying(255), "comunidad_autonoma_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100512135559')[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mCOMMIT[0m
+Migrating to CreateTipoLicitacions (20100512135609)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (3.3ms)[0m   [0mCREATE TABLE tipo_licitacions ("id" serial primary key, "nombre" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100512135609')[0m
+  [4;35;1mSQL (4.5ms)[0m   [0mCOMMIT[0m
+Migrating to CreateTipoAdministracions (20100512135621)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (3.7ms)[0m   [0mCREATE TABLE tipo_administracions ("id" serial primary key, "nombre" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100512135621')[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mCOMMIT[0m
+Migrating to CreateTipoProcedimientos (20100512135628)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (3.5ms)[0m   [0mCREATE TABLE tipo_procedimientos ("id" serial primary key, "nombre" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100512135628')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+Migrating to CreateUsuarios (20100512135842)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (5.4ms)[0m   [0mCREATE TABLE usuarios ("id" serial primary key, "token" character varying(255), "nombre" character varying(255), "email" character varying(255), "web" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mCREATE INDEX "index_usuarios_on_token" ON "usuarios" ("token")[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE INDEX "index_usuarios_on_email" ON "usuarios" ("email")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100512135842')[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mCOMMIT[0m
+Migrating to CreateContacts (20100517101743)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (5.4ms)[0m   [0mCREATE TABLE contacts ("id" serial primary key, "direccion" character varying(255), "poblacion" character varying(255), "cp" character varying(255), "tlf" character varying(255), "fax" character varying(255), "email" character varying(255), "web" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100517101743')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (5.2ms)[0m   [0;1mCREATE TABLE schema_migrations ("version" character varying(255) NOT NULL) [0m
+  [4;35;1mSQL (2.5ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateAdjudicatarios (20100512134700)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (6.6ms)[0m   [0;1mCREATE TABLE adjudicatarios ("id" serial primary key, "cif" character varying(255), "nombre" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (10.6ms)[0m   [0mSELECT AddGeometryColumn('adjudicatarios','the_geom',4326,'POINT',2)[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mCREATE INDEX "index_adjudicatarios_on_cif" ON "adjudicatarios" ("cif")[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512134700')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateComentarios (20100512134744)
+  [4;35;1mSQL (0.6ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (6.9ms)[0m   [0;1mCREATE TABLE comentarios ("id" serial primary key, "usuario_id" integer, "licitacion_id" integer, "tipo_licitacion_id" integer, "comentario" text, "is_vote" boolean, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSELECT AddGeometryColumn('comentarios','the_geom',4326,'POINT',2)[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mCREATE INDEX "index_comentarios_on_usuario_id" ON "comentarios" ("usuario_id")[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mCREATE INDEX "index_comentarios_on_licitacion_id" ON "comentarios" ("licitacion_id")[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mCREATE INDEX "index_comentarios_on_tipo_licitacion_id" ON "comentarios" ("tipo_licitacion_id")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512134744')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateComunidadAutonomas (20100512134805)
+  [4;35;1mSQL (0.6ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (3.3ms)[0m   [0;1mCREATE TABLE comunidad_autonomas ("id" serial primary key, "nombre" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512134805')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateFuenteDatos (20100512134843)
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (6.2ms)[0m   [0;1mCREATE TABLE fuente_datos ("id" serial primary key, "nombre" character varying(255), "ultima_importacion" timestamp, "web" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512134843')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateLicitacions (20100512135028)
+  [4;35;1mSQL (0.5ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (6.1ms)[0m   [0;1mCREATE TABLE licitacions ("id" serial primary key, "organo_contratacion_id" integer, "expediente" character varying(255), "tipo_procedimiento_id" integer, "tipo_licitacion_id" integer, "importe_estimado" float, "fecha_publicacion" timestamp, "fecha_adjudicacion" timestamp, "titulo" character varying(255), "descripcion" text, "codigo_cpv_ppal" character varying(255), "url_licitacion" text, "votes_up" integer DEFAULT 0, "votes_down" integer DEFAULT 0, "num_comentarios" integer DEFAULT 0, "ref_publicacion" text, "mesa_contratacion" text, "fuente_datos_id" integer, "programa_financion_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (2.8ms)[0m   [0mSELECT AddGeometryColumn('licitacions','the_geom',4326,'POINT',2)[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mCREATE INDEX "index_licitacions_on_expediente" ON "licitacions" ("expediente")[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mCREATE INDEX "index_licitacions_on_importe_estimado" ON "licitacions" ("importe_estimado")[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mCREATE INDEX "index_licitacions_on_titulo" ON "licitacions" ("titulo")[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mCREATE INDEX "index_licitacions_on_codigo_cpv_ppal" ON "licitacions" ("codigo_cpv_ppal")[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mCREATE INDEX "index_licitacions_on_tipo_procedimiento_id" ON "licitacions" ("tipo_procedimiento_id")[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mCREATE INDEX "index_licitacions_on_organo_contratacion_id" ON "licitacions" ("organo_contratacion_id")[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mCREATE INDEX "index_licitacions_on_tipo_licitacion_id" ON "licitacions" ("tipo_licitacion_id")[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mCREATE INDEX "index_licitacions_on_fuente_datos_id" ON "licitacions" ("fuente_datos_id")[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mCREATE INDEX "index_licitacions_on_programa_financion_id" ON "licitacions" ("programa_financion_id")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512135028')[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateAdjudicacions (20100512135113)
+  [4;35;1mSQL (0.8ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (3.5ms)[0m   [0;1mCREATE TABLE adjudicacions ("id" serial primary key, "licitacion_id" integer, "adjudicatario_id" integer, "importe" float, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (2.4ms)[0m   [0mCREATE INDEX "index_adjudicacions_on_licitacion_id" ON "adjudicacions" ("licitacion_id")[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mCREATE INDEX "index_adjudicacions_on_adjudicatario_id" ON "adjudicacions" ("adjudicatario_id")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512135113')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateOrganoContratacions (20100512135214)
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (5.2ms)[0m   [0;1mCREATE TABLE organo_contratacions ("id" serial primary key, "administracion_id" integer, "nombre" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (1.3ms)[0m   [0mCREATE INDEX "index_organo_contratacions_on_administracion_id" ON "organo_contratacions" ("administracion_id")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100512135214')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+Migrating to CreatePartidoPoliticos (20100512135331)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (5.2ms)[0m   [0mCREATE TABLE partido_politicos ("id" serial primary key, "nombre" character varying(255), "siglas" character varying(255), "web" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100512135331')[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mCOMMIT[0m
+Migrating to CreateAdministracions (20100512135522)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mCREATE TABLE administracions ("id" serial primary key, "nombre" character varying(255), "cif" character varying(255), "wikipedia_url" text, "foto" text, "escudo" text, "habitantes" integer, "alcalde_voota_link" text, "presupuesto_total" float, "presupuesto_url" text, "parent_id" integer, "lft" integer, "rgt" integer, "tipo_administracion_id" integer, "provincia_id" integer, "comunidad_autonoma_id" integer, "partido_politico_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (3.6ms)[0m   [0;1mSELECT AddGeometryColumn('administracions','the_geom',4326,'POINT',2)[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mCREATE INDEX "index_administracions_on_cif" ON "administracions" ("cif")[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mCREATE INDEX "index_administracions_on_tipo_administracion_id" ON "administracions" ("tipo_administracion_id")[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mCREATE INDEX "index_administracions_on_partido_politico_id" ON "administracions" ("partido_politico_id")[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mCREATE INDEX "index_administracions_on_provincia_id" ON "administracions" ("provincia_id")[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mCREATE INDEX "index_administracions_on_comunidad_autonoma_id" ON "administracions" ("comunidad_autonoma_id")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100512135522')[0m
+  [4;35;1mSQL (4.3ms)[0m   [0mCOMMIT[0m
+Migrating to CreateProgramaFinanciacions (20100512135537)
+  [4;36;1mSQL (1.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (5.9ms)[0m   [0mCREATE TABLE programa_financiacions ("id" serial primary key, "nombre" character varying(255), "nivel" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100512135537')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+Migrating to CreateProvincias (20100512135559)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (3.5ms)[0m   [0mCREATE TABLE provincias ("id" serial primary key, "nombre" character varying(255), "comunidad_autonoma_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100512135559')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+Migrating to CreateTipoLicitacions (20100512135609)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (3.3ms)[0m   [0mCREATE TABLE tipo_licitacions ("id" serial primary key, "nombre" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (2.8ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100512135609')[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mCOMMIT[0m
+Migrating to CreateTipoAdministracions (20100512135621)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (3.7ms)[0m   [0mCREATE TABLE tipo_administracions ("id" serial primary key, "nombre" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100512135621')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+Migrating to CreateTipoProcedimientos (20100512135628)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (3.4ms)[0m   [0mCREATE TABLE tipo_procedimientos ("id" serial primary key, "nombre" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100512135628')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+Migrating to CreateUsuarios (20100512135842)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (5.5ms)[0m   [0mCREATE TABLE usuarios ("id" serial primary key, "token" character varying(255), "nombre" character varying(255), "email" character varying(255), "web" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (3.1ms)[0m   [0;1mCREATE INDEX "index_usuarios_on_token" ON "usuarios" ("token")[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mCREATE INDEX "index_usuarios_on_email" ON "usuarios" ("email")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100512135842')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+Migrating to CreateContacts (20100517101743)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mCREATE TABLE contacts ("id" serial primary key, "direccion" character varying(255), "poblacion" character varying(255), "cp" character varying(255), "tlf" character varying(255), "fax" character varying(255), "email" character varying(255), "web" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100517101743')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (4.2ms)[0m   [0;1mCREATE TABLE schema_migrations ("version" character varying(255) NOT NULL) [0m
+  [4;35;1mSQL (2.5ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateAdjudicatarios (20100512134700)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (6.9ms)[0m   [0;1mCREATE TABLE adjudicatarios ("id" serial primary key, "cif" character varying(255), "nombre" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (18.0ms)[0m   [0mSELECT AddGeometryColumn('adjudicatarios','the_geom',4326,'POINT',2)[0m
+  [4;36;1mSQL (15.8ms)[0m   [0;1mCREATE INDEX "index_adjudicatarios_on_cif" ON "adjudicatarios" ("cif")[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512134700')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateComentarios (20100512134744)
+  [4;35;1mSQL (6.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (7.9ms)[0m   [0;1mCREATE TABLE comentarios ("id" serial primary key, "usuario_id" integer, "licitacion_id" integer, "tipo_licitacion_id" integer, "comentario" text, "is_vote" boolean, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (6.3ms)[0m   [0mSELECT AddGeometryColumn('comentarios','the_geom',4326,'POINT',2)[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mCREATE INDEX "index_comentarios_on_usuario_id" ON "comentarios" ("usuario_id")[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mCREATE INDEX "index_comentarios_on_licitacion_id" ON "comentarios" ("licitacion_id")[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mCREATE INDEX "index_comentarios_on_tipo_licitacion_id" ON "comentarios" ("tipo_licitacion_id")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512134744')[0m
+  [4;36;1mSQL (4.2ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateComunidadAutonomas (20100512134805)
+  [4;35;1mSQL (0.9ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (5.1ms)[0m   [0;1mCREATE TABLE comunidad_autonomas ("id" serial primary key, "nombre" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512134805')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateFuenteDatos (20100512134843)
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (5.6ms)[0m   [0;1mCREATE TABLE fuente_datos ("id" serial primary key, "nombre" character varying(255), "ultima_importacion" timestamp, "web" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512134843')[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateLicitacions (20100512135028)
+  [4;35;1mSQL (0.5ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (7.0ms)[0m   [0;1mCREATE TABLE licitacions ("id" serial primary key, "organo_contratacion_id" integer, "expediente" character varying(255), "tipo_procedimiento_id" integer, "tipo_licitacion_id" integer, "importe_estimado" float, "fecha_publicacion" timestamp, "fecha_adjudicacion" timestamp, "titulo" character varying(255), "descripcion" text, "codigo_cpv_ppal" character varying(255), "url_licitacion" text, "votes_up" integer DEFAULT 0, "votes_down" integer DEFAULT 0, "num_comentarios" integer DEFAULT 0, "ref_publicacion" text, "mesa_contratacion" text, "fuente_datos_id" integer, "programa_financion_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (3.6ms)[0m   [0mSELECT AddGeometryColumn('licitacions','the_geom',4326,'POINT',2)[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mCREATE INDEX "index_licitacions_on_expediente" ON "licitacions" ("expediente")[0m
+  [4;35;1mSQL (10.9ms)[0m   [0mCREATE INDEX "index_licitacions_on_importe_estimado" ON "licitacions" ("importe_estimado")[0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mCREATE INDEX "index_licitacions_on_titulo" ON "licitacions" ("titulo")[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mCREATE INDEX "index_licitacions_on_codigo_cpv_ppal" ON "licitacions" ("codigo_cpv_ppal")[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mCREATE INDEX "index_licitacions_on_tipo_procedimiento_id" ON "licitacions" ("tipo_procedimiento_id")[0m
+  [4;35;1mSQL (11.5ms)[0m   [0mCREATE INDEX "index_licitacions_on_organo_contratacion_id" ON "licitacions" ("organo_contratacion_id")[0m
+  [4;36;1mSQL (3.7ms)[0m   [0;1mCREATE INDEX "index_licitacions_on_tipo_licitacion_id" ON "licitacions" ("tipo_licitacion_id")[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mCREATE INDEX "index_licitacions_on_fuente_datos_id" ON "licitacions" ("fuente_datos_id")[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mCREATE INDEX "index_licitacions_on_programa_financion_id" ON "licitacions" ("programa_financion_id")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512135028')[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateAdjudicacions (20100512135113)
+  [4;35;1mSQL (0.9ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (4.1ms)[0m   [0;1mCREATE TABLE adjudicacions ("id" serial primary key, "licitacion_id" integer, "adjudicatario_id" integer, "importe" float, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (1.2ms)[0m   [0mCREATE INDEX "index_adjudicacions_on_licitacion_id" ON "adjudicacions" ("licitacion_id")[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mCREATE INDEX "index_adjudicacions_on_adjudicatario_id" ON "adjudicacions" ("adjudicatario_id")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512135113')[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateOrganoContratacions (20100512135214)
+  [4;35;1mSQL (3.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (8.7ms)[0m   [0;1mCREATE TABLE organo_contratacions ("id" serial primary key, "administracion_id" integer, "nombre" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (1.3ms)[0m   [0mCREATE INDEX "index_organo_contratacions_on_administracion_id" ON "organo_contratacions" ("administracion_id")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100512135214')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+Migrating to CreatePartidoPoliticos (20100512135331)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (7.9ms)[0m   [0mCREATE TABLE partido_politicos ("id" serial primary key, "nombre" character varying(255), "siglas" character varying(255), "web" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100512135331')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+Migrating to CreateAdministracions (20100512135522)
+  [4;36;1mSQL (3.9ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (8.0ms)[0m   [0mCREATE TABLE administracions ("id" serial primary key, "nombre" character varying(255), "cif" character varying(255), "wikipedia_url" text, "foto" text, "escudo" text, "habitantes" integer, "alcalde_voota_link" text, "presupuesto_total" float, "presupuesto_url" text, "parent_id" integer, "lft" integer, "rgt" integer, "tipo_administracion_id" integer, "provincia_id" integer, "comunidad_autonoma_id" integer, "partido_politico_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (2.8ms)[0m   [0;1mSELECT AddGeometryColumn('administracions','the_geom',4326,'POINT',2)[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mCREATE INDEX "index_administracions_on_cif" ON "administracions" ("cif")[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mCREATE INDEX "index_administracions_on_tipo_administracion_id" ON "administracions" ("tipo_administracion_id")[0m
+  [4;35;1mSQL (4.3ms)[0m   [0mCREATE INDEX "index_administracions_on_partido_politico_id" ON "administracions" ("partido_politico_id")[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mCREATE INDEX "index_administracions_on_provincia_id" ON "administracions" ("provincia_id")[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mCREATE INDEX "index_administracions_on_comunidad_autonoma_id" ON "administracions" ("comunidad_autonoma_id")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100512135522')[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mCOMMIT[0m
+Migrating to CreateProgramaFinanciacions (20100512135537)
+  [4;36;1mSQL (0.7ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (46.4ms)[0m   [0mCREATE TABLE programa_financiacions ("id" serial primary key, "nombre" character varying(255), "nivel" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100512135537')[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mCOMMIT[0m
+Migrating to CreateProvincias (20100512135559)
+  [4;36;1mSQL (0.7ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (7.3ms)[0m   [0mCREATE TABLE provincias ("id" serial primary key, "nombre" character varying(255), "comunidad_autonoma_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (6.3ms)[0m   [0;1mCREATE INDEX "index_provincias_on_comunidad_autonoma_id" ON "provincias" ("comunidad_autonoma_id")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512135559')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateTipoLicitacions (20100512135609)
+  [4;35;1mSQL (0.5ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (8.2ms)[0m   [0;1mCREATE TABLE tipo_licitacions ("id" serial primary key, "nombre" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512135609')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateTipoAdministracions (20100512135621)
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (5.2ms)[0m   [0;1mCREATE TABLE tipo_administracions ("id" serial primary key, "nombre" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512135621')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateTipoProcedimientos (20100512135628)
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (11.9ms)[0m   [0;1mCREATE TABLE tipo_procedimientos ("id" serial primary key, "nombre" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512135628')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateUsuarios (20100512135842)
+  [4;35;1mSQL (0.9ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (5.6ms)[0m   [0;1mCREATE TABLE usuarios ("id" serial primary key, "token" character varying(255), "nombre" character varying(255), "email" character varying(255), "web" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (1.5ms)[0m   [0mCREATE INDEX "index_usuarios_on_token" ON "usuarios" ("token")[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mCREATE INDEX "index_usuarios_on_email" ON "usuarios" ("email")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512135842')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateContacts (20100517101743)
+  [4;35;1mSQL (0.6ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (9.6ms)[0m   [0;1mCREATE TABLE contacts ("id" serial primary key, "direccion" character varying(255), "poblacion" character varying(255), "cp" character varying(255), "tlf" character varying(255), "fax" character varying(255), "email" character varying(255), "web" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100517101743')[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (5.8ms)[0m   [0;1mCREATE TABLE schema_migrations ("version" character varying(255) NOT NULL) [0m
+  [4;35;1mSQL (2.7ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateAdjudicatarios (20100512134700)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (7.5ms)[0m   [0;1mCREATE TABLE adjudicatarios ("id" serial primary key, "cif" character varying(255), "nombre" character varying(255), "direccion" character varying(255), "poblacion" character varying(255), "cp" character varying(255), "tlf" character varying(255), "fax" character varying(255), "email" character varying(255), "web" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (94.5ms)[0m   [0mSELECT AddGeometryColumn('adjudicatarios','the_geom',4326,'POINT',2)[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mCREATE INDEX "index_adjudicatarios_on_cif" ON "adjudicatarios" ("cif")[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512134700')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateComentarios (20100512134744)
+  [4;35;1mSQL (1.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (7.1ms)[0m   [0;1mCREATE TABLE comentarios ("id" serial primary key, "usuario_id" integer, "licitacion_id" integer, "tipo_licitacion_id" integer, "comentario" text, "is_vote" boolean, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSELECT AddGeometryColumn('comentarios','the_geom',4326,'POINT',2)[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mCREATE INDEX "index_comentarios_on_usuario_id" ON "comentarios" ("usuario_id")[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mCREATE INDEX "index_comentarios_on_licitacion_id" ON "comentarios" ("licitacion_id")[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mCREATE INDEX "index_comentarios_on_tipo_licitacion_id" ON "comentarios" ("tipo_licitacion_id")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512134744')[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateComunidadAutonomas (20100512134805)
+  [4;35;1mSQL (0.6ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (3.5ms)[0m   [0;1mCREATE TABLE comunidad_autonomas ("id" serial primary key, "nombre" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512134805')[0m
+  [4;36;1mSQL (11.1ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateFuenteDatos (20100512134843)
+  [4;35;1mSQL (0.7ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (7.1ms)[0m   [0;1mCREATE TABLE fuente_datos ("id" serial primary key, "nombre" character varying(255), "ultima_importacion" timestamp, "web" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512134843')[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateLicitacions (20100512135028)
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (7.6ms)[0m   [0;1mCREATE TABLE licitacions ("id" serial primary key, "organo_contratacion_id" integer, "expediente" character varying(255), "tipo_procedimiento_id" integer, "tipo_licitacion_id" integer, "importe_estimado" float, "fecha_publicacion" timestamp, "fecha_adjudicacion" timestamp, "titulo" character varying(255), "descripcion" text, "codigo_cpv_ppal" character varying(255), "url_licitacion" text, "votes_up" integer DEFAULT 0, "votes_down" integer DEFAULT 0, "num_comentarios" integer DEFAULT 0, "ref_publicacion" text, "mesa_contratacion" text, "fuente_datos_id" integer, "programa_financion_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (2.9ms)[0m   [0mSELECT AddGeometryColumn('licitacions','the_geom',4326,'POINT',2)[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mCREATE INDEX "index_licitacions_on_expediente" ON "licitacions" ("expediente")[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mCREATE INDEX "index_licitacions_on_importe_estimado" ON "licitacions" ("importe_estimado")[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mCREATE INDEX "index_licitacions_on_titulo" ON "licitacions" ("titulo")[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mCREATE INDEX "index_licitacions_on_codigo_cpv_ppal" ON "licitacions" ("codigo_cpv_ppal")[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mCREATE INDEX "index_licitacions_on_tipo_procedimiento_id" ON "licitacions" ("tipo_procedimiento_id")[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mCREATE INDEX "index_licitacions_on_organo_contratacion_id" ON "licitacions" ("organo_contratacion_id")[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mCREATE INDEX "index_licitacions_on_tipo_licitacion_id" ON "licitacions" ("tipo_licitacion_id")[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mCREATE INDEX "index_licitacions_on_fuente_datos_id" ON "licitacions" ("fuente_datos_id")[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mCREATE INDEX "index_licitacions_on_programa_financion_id" ON "licitacions" ("programa_financion_id")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512135028')[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateAdjudicacions (20100512135113)
+  [4;35;1mSQL (0.8ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (11.1ms)[0m   [0;1mCREATE TABLE adjudicacions ("id" serial primary key, "licitacion_id" integer, "adjudicatario_id" integer, "importe" float, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (2.5ms)[0m   [0mCREATE INDEX "index_adjudicacions_on_licitacion_id" ON "adjudicacions" ("licitacion_id")[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mCREATE INDEX "index_adjudicacions_on_adjudicatario_id" ON "adjudicacions" ("adjudicatario_id")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512135113')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateOrganoContratacions (20100512135214)
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (5.4ms)[0m   [0;1mCREATE TABLE organo_contratacions ("id" serial primary key, "administracion_id" integer, "nombre" text, "direccion" character varying(255), "poblacion" character varying(255), "cp" character varying(255), "tlf" character varying(255), "fax" character varying(255), "email" character varying(255), "web" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (1.4ms)[0m   [0mCREATE INDEX "index_organo_contratacions_on_administracion_id" ON "organo_contratacions" ("administracion_id")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100512135214')[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mCOMMIT[0m
+Migrating to CreatePartidoPoliticos (20100512135331)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (6.1ms)[0m   [0mCREATE TABLE partido_politicos ("id" serial primary key, "nombre" character varying(255), "siglas" character varying(255), "web" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100512135331')[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mCOMMIT[0m
+Migrating to CreateAdministracions (20100512135522)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (6.9ms)[0m   [0mCREATE TABLE administracions ("id" serial primary key, "nombre" character varying(255), "cif" character varying(255), "wikipedia_url" text, "foto" text, "escudo" text, "habitantes" integer, "alcalde_voota_link" text, "presupuesto_total" float, "presupuesto_url" text, "parent_id" integer, "lft" integer, "rgt" integer, "direccion" character varying(255), "poblacion" character varying(255), "cp" character varying(255), "tlf" character varying(255), "fax" character varying(255), "email" character varying(255), "web" character varying(255), "tipo_administracion_id" integer, "provincia_id" integer, "comunidad_autonoma_id" integer, "partido_politico_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mSELECT AddGeometryColumn('administracions','the_geom',4326,'POINT',2)[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mCREATE INDEX "index_administracions_on_cif" ON "administracions" ("cif")[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mCREATE INDEX "index_administracions_on_tipo_administracion_id" ON "administracions" ("tipo_administracion_id")[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE INDEX "index_administracions_on_partido_politico_id" ON "administracions" ("partido_politico_id")[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mCREATE INDEX "index_administracions_on_provincia_id" ON "administracions" ("provincia_id")[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mCREATE INDEX "index_administracions_on_comunidad_autonoma_id" ON "administracions" ("comunidad_autonoma_id")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100512135522')[0m
+  [4;35;1mSQL (2.2ms)[0m   [0mCOMMIT[0m
+Migrating to CreateProgramaFinanciacions (20100512135537)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (5.4ms)[0m   [0mCREATE TABLE programa_financiacions ("id" serial primary key, "nombre" character varying(255), "nivel" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100512135537')[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mCOMMIT[0m
+Migrating to CreateProvincias (20100512135559)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (4.5ms)[0m   [0mCREATE TABLE provincias ("id" serial primary key, "nombre" character varying(255), "comunidad_autonoma_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mCREATE INDEX "index_provincias_on_comunidad_autonoma_id" ON "provincias" ("comunidad_autonoma_id")[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512135559')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateTipoLicitacions (20100512135609)
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (3.5ms)[0m   [0;1mCREATE TABLE tipo_licitacions ("id" serial primary key, "nombre" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512135609')[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateTipoAdministracions (20100512135621)
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (10.6ms)[0m   [0;1mCREATE TABLE tipo_administracions ("id" serial primary key, "nombre" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512135621')[0m
+  [4;36;1mSQL (12.3ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateTipoProcedimientos (20100512135628)
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (3.6ms)[0m   [0;1mCREATE TABLE tipo_procedimientos ("id" serial primary key, "nombre" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512135628')[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateUsuarios (20100512135842)
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (6.8ms)[0m   [0;1mCREATE TABLE usuarios ("id" serial primary key, "token" character varying(255), "nombre" character varying(255), "email" character varying(255), "web" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (1.4ms)[0m   [0mCREATE INDEX "index_usuarios_on_token" ON "usuarios" ("token")[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mCREATE INDEX "index_usuarios_on_email" ON "usuarios" ("email")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512135842')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (111.2ms)[0m   [0mINSERT INTO "provincias" ("created_at", "nombre", "updated_at", "comunidad_autonoma_id") VALUES('2010-05-17 18:58:57.409448', E'Madrid', '2010-05-17 18:58:57.409448', NULL) RETURNING "id"[0m
+  [4;36;1mSQL (46.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (80.7ms)[0m   [0;1mINSERT INTO "comunidad_autonomas" ("created_at", "nombre", "updated_at") VALUES('2010-05-17 18:59:54.552844', E'Madrid', '2010-05-17 18:59:54.552844') RETURNING "id"[0m
+  [4;35;1mProvincia Update (0.7ms)[0m   [0mUPDATE "provincias" SET "updated_at" = '2010-05-17 18:59:54.640654', "comunidad_autonoma_id" = 1 WHERE "id" = 1[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+DEPRECATION WARNING: require "activerecord" is deprecated and will be removed in Rails 3. Use require "active_record" instead.. (called from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/activerecord.rb:2)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
